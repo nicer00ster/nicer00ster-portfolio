@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-48.9035" y1="652.7143" x2="-47.8946" y2="651.7234" gradientTransform="matrix(485.5172 0 0 -494.3448 23759 322677)">
+		<stop  offset="0" style="stop-color:#D4E1F4"/>
+		<stop  offset="0.1717" style="stop-color:#D4E1F4"/>
+		<stop  offset="0.2" style="stop-color:#D4E1F4"/>
+		<stop  offset="0.2001" style="stop-color:#DAE4F4"/>
+		<stop  offset="0.2007" style="stop-color:#EBEBF4"/>
+		<stop  offset="0.2014" style="stop-color:#F6F1F4"/>
+		<stop  offset="0.2023" style="stop-color:#FDF4F4"/>
+		<stop  offset="0.205" style="stop-color:#FFF5F4"/>
+		<stop  offset="0.2522" style="stop-color:#FFF5F4"/>
+		<stop  offset="0.26" style="stop-color:#FFF5F4"/>
+		<stop  offset="0.26" style="stop-color:#D4E1F4"/>
+		<stop  offset="0.3974" style="stop-color:#D4E1F4"/>
+		<stop  offset="0.42" style="stop-color:#D4E1F4"/>
+		<stop  offset="0.4201" style="stop-color:#DAE4F4"/>
+		<stop  offset="0.4207" style="stop-color:#EBEBF4"/>
+		<stop  offset="0.4214" style="stop-color:#F6F1F4"/>
+		<stop  offset="0.4223" style="stop-color:#FDF4F4"/>
+		<stop  offset="0.425" style="stop-color:#FFF5F4"/>
+		<stop  offset="0.4894" style="stop-color:#FFF5F4"/>
+		<stop  offset="0.5" style="stop-color:#FFF5F4"/>
+		<stop  offset="0.5" style="stop-color:#F9F2F4"/>
+		<stop  offset="0.5001" style="stop-color:#E8EBF4"/>
+		<stop  offset="0.5003" style="stop-color:#DDE5F4"/>
+		<stop  offset="0.5005" style="stop-color:#D6E2F4"/>
+		<stop  offset="0.501" style="stop-color:#D4E1F4"/>
+		<stop  offset="0.7062" style="stop-color:#D4E1F4"/>
+		<stop  offset="0.74" style="stop-color:#D4E1F4"/>
+		<stop  offset="0.741" style="stop-color:#FFF5F4"/>
+		<stop  offset="0.8346" style="stop-color:#FFF5F4"/>
+		<stop  offset="0.85" style="stop-color:#FFF5F4"/>
+		<stop  offset="0.851" style="stop-color:#D4E1F4"/>
+	</linearGradient>
+	<polygon style="fill:url(#SVGID_1_);" points="476.69,8.828 17.655,8.828 17.655,114.759 17.655,132.414 17.655,503.172 
+		476.69,503.172 503.172,503.172 503.172,8.828 	"/>
+	<rect x="17.655" y="8.828" style="fill:#FFFFFF;" width="17.655" height="494.345"/>
+	<g>
+		<path style="fill:#428DFF;" d="M432.552,123.586H79.448c-4.875,0-8.828-3.952-8.828-8.828s3.952-8.828,8.828-8.828h353.103
+			c4.875,0,8.828,3.952,8.828,8.828S437.427,123.586,432.552,123.586z"/>
+		<path style="fill:#428DFF;" d="M432.552,264.828H79.448c-4.875,0-8.828-3.952-8.828-8.828s3.952-8.828,8.828-8.828h353.103
+			c4.875,0,8.828,3.952,8.828,8.828S437.427,264.828,432.552,264.828z"/>
+		<path style="fill:#428DFF;" d="M432.552,406.069H79.448c-4.875,0-8.828-3.952-8.828-8.828c0-4.875,3.952-8.828,8.828-8.828
+			h353.103c4.875,0,8.828,3.952,8.828,8.828C441.379,402.117,437.427,406.069,432.552,406.069z"/>
+		<path style="fill:#428DFF;" d="M503.172,512H8.828c-2.341,0.001-4.587-0.929-6.243-2.585c-1.656-1.656-2.585-3.901-2.585-6.243
+			V176.552c0-4.875,3.952-8.828,8.828-8.828s8.828,3.952,8.828,8.828v317.793h476.69V379.586c0-4.875,3.952-8.828,8.828-8.828
+			s8.828,3.952,8.828,8.828v123.586c0.001,2.341-0.929,4.587-2.585,6.243C507.759,511.071,505.514,512.001,503.172,512z"/>
+		<path style="fill:#428DFF;" d="M503.172,317.797c-2.341,0.001-4.587-0.929-6.243-2.585c-1.656-1.656-2.585-3.901-2.585-6.243
+			V17.655H17.655v88.276c0,4.875-3.952,8.828-8.828,8.828S0,110.806,0,105.931V8.828C-0.001,6.486,0.929,4.24,2.585,2.585
+			S6.486-0.001,8.828,0h494.345c2.341-0.001,4.587,0.929,6.243,2.585c1.656,1.656,2.585,3.901,2.585,6.243V308.97
+			c0.001,2.341-0.929,4.587-2.585,6.243C507.759,316.868,505.514,317.798,503.172,317.797z"/>
+		<circle style="fill:#428DFF;" cx="8.828" cy="141.241" r="8.828"/>
+		<circle style="fill:#428DFF;" cx="503.172" cy="344.276" r="8.828"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
