@@ -1,6 +1,6 @@
 import NextHead from 'next/head';
-import { nextConnect } from './store'
 import Navbar from './Navbar';
+import { nextConnect } from './store'
 import '../static/sass/styles.scss';
 
 const defaultDesc = 'nicer00ster\'s portfolio';

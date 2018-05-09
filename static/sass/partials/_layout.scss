@@ -17,7 +17,7 @@ body {
 .wrapper {
   border-bottom: 1px solid #3f3f3f;
   background-color: #fff;
-  background-image: $blueLineSVG;
+  background-image: $foodSVG;
   // max-width: 1200px;
   display: flex;
   justify-content: flex-start;
@@ -31,6 +31,7 @@ body {
     box-shadow: $boxshad;
     margin: 6rem -2rem -4rem;
     max-width: 475px;
+    min-width: 250px;
     text-align: center;
     z-index: 1;
     &--header {
@@ -44,32 +45,47 @@ body {
     &--content {
       flex: 1;
       background-color: #ffffff;
-      background-image: $foodSVG;
+      background-image: $blueLineSVG;
     }
     &--skill {
       display: flex;
       flex-wrap: wrap;
-      margin: 2rem auto;
-      width: 200px;
-      max-height: 550px;
+      margin: 2rem 8rem 4rem;
+      width: 205px;
+      min-width: 125px;
+      min-height: 550px;
       border: 1px solid #3f3f3f;
       box-shadow: $boxshad;
       background: #eeeeee;
       z-index: 2;
       &-heading {
+        box-shadow: -6px 6px 0 black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         border: 1px solid #3f3f3f;
+        box-shadow: 8px 8px 0 rgba(0,0,0,.15);
         transform: scale(1.1) translateX(-35px) translateY(30px);
         height: 75px;
         width: 100%;
+        z-index: 3;
         background-color: #ffffff;
         background-image: $expertiseSVG;
         text-transform: uppercase;
-        & p, div {
+        & * {
+          justify-content: center;
           font-size: 18px;
           font-weight: bold;
-          display: flex;
-          justify-content: center;
-          // margin: 0;
+          margin: 0;
+          & div {
+            color: #000;
+            font-family: 'Fredoka One', sans-serif;
+            text-shadow:  0.2rem -0.2rem rgba(cyan, 0.75),
+                         -0.2rem -0.2rem rgba(magenta, 0.75),
+                          0        0.25rem  rgba(yellow, 0.75);
+            filter: drop-shadow(4px 4px 2px #999);
+          }
         }
       }
       & ul {
@@ -90,59 +106,60 @@ body {
   &__image img {
     // box-shadow:$boxshad;
     max-width: 450px;
+    min-width: 450px;
+    max-height: 700px;
     width: 100%;
     height: 100%;
   }
 
 
-
-.word {
-  display: flex;
-  font-size: 24px;
-  font-weight: bolder;
-  justify-content: center;
-  position: absolute;
-  opacity: 0;
-}
-
-.letter {
-  margin: -1rem auto;
-  transform-origin: 50% 50% 25px;
-}
-
-.letter.out {
-  transform: rotateX(90deg);
-  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.letter.behind {
-  transform: rotateX(-90deg);
-}
-
-.letter.in {
-  transform: rotateX(0deg);
-  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.passion {
-  color: #8e44ad;
-}
-
-.expertise {
-  color: #2980b9;
-}
-
-.craft {
-  color: #ED4C67;
-}
-
-.life {
-  color: #009432;
-}
-
-.art {
-  color: #ff7979;
-}
+// .word {
+//   display: flex;
+  // font-size: 24px;
+  // font-weight: bolder;
+  // justify-content: center;
+  // position: absolute;
+  // opacity: 0;
+// }
+//
+// .letter {
+//   margin: -1rem auto;
+//   transform-origin: 50% 50% 25px;
+// }
+//
+// .letter.out {
+//   transform: rotateX(90deg);
+//   transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+// }
+//
+// .letter.behind {
+//   transform: rotateX(-90deg);
+// }
+//
+// .letter.in {
+//   transform: rotateX(0deg);
+//   transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+// }
+//
+// .passion {
+//   color: #8e44ad;
+// }
+//
+// .expertise {
+//   color: #2980b9;
+// }
+//
+// .craft {
+//   color: #ED4C67;
+// }
+//
+// .life {
+//   color: #009432;
+// }
+//
+// .art {
+//   color: #ff7979;
+// }
 
 
 

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import Hamburger from 'svg-react-loader?name=Menu!../static/images/svg/nav/menu.svg';
 import { toggleMenu } from './store';
+import Hamburger from 'svg-react-loader?name=Menu!../static/images/svg/nav/menu.svg';
 
 const Menu = ({ toggleMenu }) => {
   return (

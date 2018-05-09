@@ -1,5 +1,6 @@
 import Layout from '../components/Layout';
 import Wrapper from '../components/Wrapper';
+import Overdrive from 'react-overdrive';
 import { nextConnect } from '../components/store';
 
 class Connect extends React.Component {
@@ -8,7 +9,11 @@ class Connect extends React.Component {
       <div>
         <Layout title="nicer00ster | Connect" />
         <Wrapper page={'landing'} />
-        <p>Connect</p>
+        <Overdrive id="page-transition">
+          <div>
+            <p>Connect</p>
+          </div>
+        </Overdrive>
       </div>
     )
   }

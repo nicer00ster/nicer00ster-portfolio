@@ -27,12 +27,12 @@ export const reducer = (state = initialState, action) => {
 
 // Action Types
 export const actionTypes = {
-  TOGGLE_MENU: 'TOGGLE'
+  TOGGLE_MENU: 'TOGGLE_MENU'
 }
 
 // Action Creators
-export function toggleMenu(initialState) {
-  return { type: 'TOGGLE_MENU', initialState }
+export function toggleMenu() {
+  return { type: 'TOGGLE_MENU'  }
 }
 
 
