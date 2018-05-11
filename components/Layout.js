@@ -1,6 +1,6 @@
 import NextHead from 'next/head';
 import Navbar from './Navbar';
-import { nextConnect } from './store'
+import { connect } from 'react-redux';
 import '../static/sass/styles.scss';
 
 const defaultDesc = 'nicer00ster\'s portfolio';
@@ -15,7 +15,7 @@ class Layout extends React.Component {
       <div>
         <NextHead>
           <meta charSet="UTF-8" />
-          <title>{this.props.title}</title>
+          <title>{props.title}</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta name="description" content={props.description || defaultDesc} />
           <meta name="theme-color" content="#3f3f3f" />
@@ -32,8 +32,16 @@ class Layout extends React.Component {
               font-family: 'Courier Prime Sans';
               src: url('../static/fonts/Courier Prime Sans.ttf');
             }
+            @font-face {
+              font-family: 'FFF Tusj';
+              font-weight: bold;
+              src: url('../static/fonts/FFF Tusj.ttf');
+            }
             body, span {
               font-family: Courier Prime Sans;
+            }
+            h1 {
+              font-family: FFF Tusj;
             }
             `}</style>
           </NextHead>
@@ -44,4 +52,4 @@ class Layout extends React.Component {
   }
 }
 
-export default nextConnect((state) => state)(Layout);
+export default connect()(Layout);

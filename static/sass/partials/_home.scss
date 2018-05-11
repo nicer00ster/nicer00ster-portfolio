@@ -1,0 +1,14 @@
+.home__wrapper {
+  display: flex;
+  border: 1px solid black;
+  margin: 50px;
+  &--first {
+    flex: 2;
+    height: 400px;
+    border: 1px solid black;
+  }
+  &--second {
+    flex: 1;
+    border: 1px solid black;
+  }
+}

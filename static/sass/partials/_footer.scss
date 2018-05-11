@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  background: $footerSVG;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid black;
+  margin-top: 1vw;
+  height: 300px;
+  &__links {
+    // display: flex;
+    // flex-wrap: wrap;
+    margin-top: auto;
+  }
+  &__trademark {
+    margin-top: auto;
+  }
+}

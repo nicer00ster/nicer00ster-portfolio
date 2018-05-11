@@ -1,5 +1,6 @@
 import svg from '../static/scripts/svgimports';
 import TextLoop from 'react-text-loop';
+import { connect } from 'react-redux';
 
 class Wrapper extends React.Component {
   constructor(props) {
@@ -21,16 +22,25 @@ class Wrapper extends React.Component {
     return (
       <div className="wrapper">
       <div className="wrapper__image">
-        <img src={`../static/images/photos/${props.page}-img.png`} alt="nicer00ster"/>
+        <picture>
+          <source
+            media="(min-width: 850px)"
+            srcSet={`../static/images/photos/${props.page}-img.png`}
+          />
+          <img src="" alt="nicer00ster"/>
+        </picture>
       </div>
       <div className={`wrapper__${props.page}`}>
         <div className={`wrapper__${props.page}--header`}>
-          <h1 className={`wrapper__${props.page}--header-text`}>Hey!</h1>
+          <div class="snip1285">
+            <h1>Alex Busch</h1>
+            <h5>Front-End Web Developer</h5>
+          </div>
         </div>
         <div className={`wrapper__${props.page}--content`}>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+          <h2>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
           turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
-          ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris</p>
+          ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris</h2>
         </div>
       </div>
       <div className={`wrapper__${props.page}--skill`}>
@@ -100,4 +110,4 @@ class Wrapper extends React.Component {
   }
 }
 
-export default Wrapper;
+export default connect()(Wrapper);

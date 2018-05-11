@@ -21,7 +21,12 @@ import Babel from 'svg-react-loader?name=Babel!../../static/images/svg/landing/b
 import Github from 'svg-react-loader?name=Github!../../static/images/svg/landing/github-icon.svg';
 import NextJS from 'svg-react-loader?name=NextJS!../../static/images/svg/landing/nextjs.svg';
 import Sass from 'svg-react-loader?name=Sass!../../static/images/svg/landing/sass.svg';
-
+// Social media
+import Facebook from 'svg-react-loader?name=Facebook!../../static/images/svg/footer/005-facebook.svg'
+import Instagram from 'svg-react-loader?name=Instagram!../../static/images/svg/footer/004-instagram-draw-logo.svg'
+import Twitter from 'svg-react-loader?name=Twitter!../../static/images/svg/footer/003-twitter-draw-logo.svg'
+import GithubIcon from 'svg-react-loader?name=GithubIcon!../../static/images/svg/footer/002-social-media.svg'
+import LinkedIn from 'svg-react-loader?name=LinkedIn!../../static/images/svg/footer/001-linkedin-draw-logo.svg'
 
 const svg = {
   'React': <ReactSVG width={50} height={50}/>,
@@ -48,7 +53,12 @@ const svg = {
   'Github': <Github width={50} height={50} />,
   'NextJS': <NextJS width={50} height={50} />,
   'Sass': <Sass width={50} height={50} />,
-
+  'Node': <Node width={50} height={50} />,
+  'Facebook': <Facebook width={50} height={50} />,
+  'Instagram': <Instagram width={50} height={50} />,
+  'Twitter': <Twitter width={50} height={50} />,
+  'GithubIcon': <GithubIcon width={50} height={50} />,
+  'LinkedIn': <LinkedIn width={50} height={50} />,
 }
 
 export default svg;
