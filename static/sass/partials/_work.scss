@@ -1,0 +1,15 @@
+.work__wrapper {
+  display: flex;
+  height: 400px;
+  &--card {
+    flex: 1;
+    border: 1px solid black;
+  }
+  &--projects {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    flex: 1;
+    border: 1px solid black;
+  }
+}

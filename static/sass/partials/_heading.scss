@@ -1,0 +1,44 @@
+.snip1285 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 24px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.snip1285 h1,
+.snip1285 h5 {
+  margin: 0 0 0 50px;
+  text-transform: uppercase;
+}
+.snip1285 h1 {
+  font-size: 2.2em;
+  letter-spacing: 4px;
+  line-height: 1.2em;
+  position: relative;
+  font-weight: bold;
+}
+.snip1285 h1:after {
+  content: '';
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border: 3px solid #000;
+  left: 0;
+  // top: 50%;
+  -webkit-transform: translate(-40px, -68%);
+  transform: translate(-40px, -65%);
+  border-width: 4px 0 0 4px;
+  border-radius: 50%;
+  box-shadow:  0.2rem -0.3rem hsla(185, 80%, 45%, 0.65),
+               -0.5rem -0.5rem hsla(60, 98%, 50%, 0.5)  ,
+                0        0.15rem  hsla(60, 98%, 50%, 0.5);
+
+}
+.snip1285 i {
+  font-size: 4.8em;
+  color: #000;
+  position: relative;
+}
