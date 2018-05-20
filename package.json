@@ -12,7 +12,6 @@
     "node-sass": "^4.9.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-overdrive": "^0.0.9",
     "react-redux": "^5.0.7",
     "react-text-loop": "^1.1.0",
     "redux": "^4.0.0",

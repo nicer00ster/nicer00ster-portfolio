@@ -1,7 +1,6 @@
 import Layout from '../components/Layout';
 import Footer from '../components/Footer';
 import Wrapper from '../components/Wrapper';
-import Overdrive from 'react-overdrive';
 import { nextConnect } from '../components/store';
 
 class Work extends React.Component {
@@ -9,8 +8,7 @@ class Work extends React.Component {
     return (
       <div>
       <Layout title="nicer00ster | Work" />
-      <Wrapper page={'landing'} />
-      <Overdrive id="page-transition">
+      <Wrapper page={'work'} />
         <div className="work__wrapper">
           <div className="work__wrapper--card">
 
@@ -19,7 +17,6 @@ class Work extends React.Component {
 
           </div>
         </div>
-      </Overdrive>
       <Footer />
     </div>
     )

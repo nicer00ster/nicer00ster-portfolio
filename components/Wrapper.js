@@ -32,7 +32,7 @@ class Wrapper extends React.Component {
       </div>
       <div className={`wrapper__${props.page}`}>
         <div className={`wrapper__${props.page}--header`}>
-          <div class="snip1285">
+          <div className="wrapper__landing--header-text">
             <h1>Alex Busch</h1>
             <h5>Front-End Web Developer</h5>
           </div>

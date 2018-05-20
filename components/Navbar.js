@@ -13,41 +13,41 @@ import Trophy from 'svg-react-loader?name=Trophy!../static/images/svg/nav/trophy
 const Navbar = ({ isOpen, toggleMenu }) => {
   return (
     <div>
-      <div className={ isOpen ? "navbar open" : "navbar" }>
+      <div className={ isOpen ? "navbar open active" : "navbar" }>
         <div className="navbar__links">
           <li className="navbar__item">
             <Link href="/">
               <Chicken className="logo" width={200} height={100}/>
             </Link>
           </li>
-          <li className="navbar__item" >
+          <li className="navbar__item" onClick={ toggleMenu }>
             <Link href="/">
               <a className="navbar__link">
-                <House className="navbar__item--svg" width={100} height={50} onClick={ toggleMenu }/>
+                <House className="navbar__item--svg" width={100} height={50} />
                 <span className="navbar__item--text">Home</span>
               </a>
             </Link>
           </li>
-          <li className="navbar__item">
+          <li className="navbar__item" onClick={ toggleMenu }>
             <Link href="/work">
               <a className="navbar__link">
-                <Smartphone className="navbar__item--svg" width={100} height={50} onClick={ toggleMenu } />
+                <Smartphone className="navbar__item--svg" width={100} height={50} />
                 <span className="navbar__item--text">Work</span>
               </a>
             </Link>
           </li>
-          <li className="navbar__item">
+          <li className="navbar__item" onClick={ toggleMenu }>
             <Link href="/connect">
               <a className="navbar__link">
-                <Telephone className="navbar__item--svg" width={100} height={50} onClick={ toggleMenu }/>
+                <Telephone className="navbar__item--svg" width={100} height={50} />
                 <span className="navbar__item--text">Connect</span>
               </a>
             </Link>
           </li>
-          <li className="navbar__item">
+          <li className="navbar__item" onClick={ toggleMenu }>
             <Link href="/about">
               <a className="navbar__link">
-                <Trophy className="navbar__item--svg" width={100} height={50} onClick={ toggleMenu }/>
+                <Trophy className="navbar__item--svg" width={100} height={50} />
                 <span className="navbar__item--text">About</span>
               </a>
             </Link>

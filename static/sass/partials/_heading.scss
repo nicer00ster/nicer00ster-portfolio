@@ -1,4 +1,4 @@
-.snip1285 {
+.wrapper__landing--header-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,19 +8,19 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.snip1285 h1,
-.snip1285 h5 {
+.wrapper__landing--header-text h1,
+.wrapper__landing--header-text h5 {
   margin: 0 0 0 50px;
   text-transform: uppercase;
 }
-.snip1285 h1 {
+.wrapper__landing--header-text h1 {
   font-size: 2.2em;
   letter-spacing: 4px;
   line-height: 1.2em;
   position: relative;
   font-weight: bold;
 }
-.snip1285 h1:after {
+.wrapper__landing--header-text h1:after {
   content: '';
   position: absolute;
   width: 110px;
@@ -37,7 +37,7 @@
                 0        0.15rem  hsla(60, 98%, 50%, 0.5);
 
 }
-.snip1285 i {
+.wrapper__landing--header-text i {
   font-size: 4.8em;
   color: #000;
   position: relative;
