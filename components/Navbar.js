@@ -13,7 +13,7 @@ import Trophy from 'svg-react-loader?name=Trophy!../static/images/svg/nav/trophy
 const Navbar = ({ isOpen, toggleMenu }) => {
   return (
     <div>
-      <div className={ isOpen ? "navbar open active" : "navbar" }>
+      <div className={ isOpen ? "navbar open" : "navbar" }>
         <div className="navbar__links">
           <li className="navbar__item">
             <Link href="/">

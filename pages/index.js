@@ -8,7 +8,7 @@ class Index extends React.Component {
   render() {
     return (
       <div>
-        <Layout title="nicer00ster | Home" children={this.props.children} />
+        <Layout title="nicer00ster | Home" />
         <Wrapper page={'landing'} />
           <div className="home__wrapper">
             <div className="home__wrapper--first">
