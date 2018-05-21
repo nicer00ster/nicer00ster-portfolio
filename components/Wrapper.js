@@ -21,7 +21,7 @@ class Wrapper extends React.Component {
     ];
     return (
       <div className="wrapper">
-      <div className="wrapper__image">
+      <div className={`wrapper__image--${props.page}`}>
         <picture>
           <source
             media="(min-width: 850px)"
@@ -38,9 +38,9 @@ class Wrapper extends React.Component {
           </div>
         </div>
         <div className={`wrapper__${props.page}--content`}>
-          <h2>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-          turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
-          ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris</h2>
+          <h2>
+          Fully responsive design, 
+          </h2>
         </div>
       </div>
       <div className={`wrapper__${props.page}--skill`}>

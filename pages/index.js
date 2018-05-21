@@ -9,7 +9,7 @@ class Index extends React.Component {
     return (
       <div>
         <Layout title="nicer00ster | Home" />
-        <Wrapper page={'landing'} />
+        <Wrapper page={'home'} />
           <div className="home__wrapper">
             <div className="home__wrapper--first">
 
