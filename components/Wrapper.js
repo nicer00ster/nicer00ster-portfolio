@@ -32,15 +32,13 @@ class Wrapper extends React.Component {
       </div>
       <div className={`wrapper__${props.page}`}>
         <div className={`wrapper__${props.page}--header`}>
-          <div className="wrapper__landing--header-text">
-            <h1>Alex Busch</h1>
-            <h5>Front-End Web Developer</h5>
+          <div className={`wrapper__${props.page}--header-text`}>
+            <h1></h1>
+            <h5></h5>
           </div>
         </div>
         <div className={`wrapper__${props.page}--content`}>
-          <h2>
-          Fully responsive design, 
-          </h2>
+          <h2></h2>
         </div>
       </div>
       <div className={`wrapper__${props.page}--skill`}>

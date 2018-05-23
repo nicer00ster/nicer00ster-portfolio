@@ -1,22 +1,87 @@
 body, html {
   font-size: 16px;
+  background: #efefef;
+  overflow-x: hidden;
 }
 
 body {
-  background: #efefef;
-  border: 1px solid #3f3f3f;
+  position: relative;
+  background-image: $topSVG;
+  // background-color: #fff;
+  border: 1px solid #555;
 }
 
-
+.seperator {
+  height: 85px;
+  width: 100%;
+  background-color: transparent;
+  z-index:9000;
+  // border: 1px solid black;
+  // position: relative;
+  // background-image: $navSVG;
+  // border-bottom: 1px solid #3f3f3f;
+}
 
 .wrapper {
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid #3f3f3f;
+  border-bottom: 1px solid #555;
   background-color: #fff;
   background-image: $foodSVG;
   margin: 0 auto;
-  &__image--home img {
+
+  &__home {
+    &--header {
+      &-text {
+        & h1:before {
+          content: 'Alex Busch';
+        }
+        & h5:before {
+          content: 'Front-end Web Developer';
+        }
+      }
+    }
+    &--content {
+      & h2 {
+        &:before {
+          content: $homeContent;
+        }
+      }
+    }
+  }
+
+  &__work {
+    &--header {
+      &-text {
+        & h1:before {
+          content: 'Work';
+        }
+        & h5:before {
+          content: '';
+        }
+      }
+    }
+    &--content {
+      & h2 {
+        &:before {
+          content: $workContent;
+        }
+      }
+    }
+  }
+  // Hero images for each page
+  &__image--home {
+    & img {
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      max-width: 450px;
+      min-width: 450px;
+      max-height: auto;
+    }
+  }
+
+  &__image--work img {
     margin: 0 auto;
     width: 100%;
     height: 100%;
@@ -24,30 +89,20 @@ body {
     min-width: 450px;
     max-height: auto;
   }
-  &__image--work img {
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    max-width: 500px;
-    min-width: 450px;
-    max-height: auto;
-  }
 
   &__home, &__work {
     display: flex;
     flex-direction: column;
-    border: 1px solid #3f3f3f;
+    border: 1.5px solid #555;
     box-shadow: $boxshad;
-    margin: 0 auto;
     margin: 6rem -2rem -4rem;
     max-width: 475px;
-    min-width: 350px;
+    min-width: 375px;
     height: auto;
-    z-index: 1;
+    z-index:1;
     &--header {
       height: 150px;
-      border-bottom: 1px solid #3f3f3f;
-      background-color: #ffffff;
+      border-bottom: 1px solid #555;
       background-image: $footerSVG;
       & h2 {
         margin: 20px;
@@ -55,11 +110,16 @@ body {
     }
     &--content {
       flex: 1;
-      background-color: #ffffff;
-      background-image: $blueLineSVG;
+      background: $blueLineSVG;
       & h2 {
         margin: 20px;
-        border: 1px solid black;
+        text-align:center;
+        &:before {
+          font-family: 'Squada One', cursive;
+          color: #333;
+          font-size: 32px;
+          letter-spacing: 1px;
+        }
       }
     }
     &--skill {
@@ -69,7 +129,7 @@ body {
       width: 200px;
       min-width: 200px;
       height: 450px;
-      border: 1px solid #3f3f3f;
+      border: 1px solid #555;
       box-shadow: $boxshad;
       background: $footerSVG;
       z-index: 2;
@@ -83,7 +143,7 @@ body {
         transform: scale(1.1) translateX(-35px) translateY(-10px);
         width: 100%;
         z-index: 3;
-        background-color: #ffffff;
+        background-color: #fff;
         background-image: $footerSVG;
         text-transform: uppercase;
         & h2 {
@@ -96,19 +156,20 @@ body {
           text-align: center;
           text-decoration: none;
           position: relative;
-          text-shadow: 
-                1px 1px 0px #FFF, 
+          background: #fff;
+          text-shadow:
+                1px 1px 0px #FFF,
                 2px 2px 0px #999,
                 3px 3px 0px #FFF;
           background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.05) 100%);
-          background-image: -webkit-linear-gradient(left top, 
-              transparent 0%, transparent 25%, 
-              rgba(0,0,0,.15) 25%, rgba(0,0,0,.15) 50%, 
-              transparent 50%, transparent 75%, 
+          background-image: -webkit-linear-gradient(left top,
+              transparent 0%, transparent 25%,
+              rgba(0,0,0,.15) 25%, rgba(0,0,0,.15) 50%,
+              transparent 50%, transparent 75%,
               rgba(0,0,0,.15) 75%);
           background-size: 4px 4px;
-          box-shadow: 
-              0 0 0 1px rgba(0,0,0,.4) inset, 
+          box-shadow:
+              0 0 0 1px rgba(0,0,0,.4) inset,
               0 0 20px -5px rgba(0,0,0,.4),
               0 0 0px 3px #FFF inset;
         }
@@ -124,7 +185,7 @@ body {
             letter-spacing: 2px;
             font-size: 24px;
             font-family: 'Squada One', cursive;
-            text-shadow:  
+            text-shadow:
               0.2rem -0.2rem 0px rgba(cyan, 0.75),
               -0.2rem -0.2rem 0px rgba(magenta, 0.75),
               0 0.25rem 0.25rem rgba(yellow, 0.75);
@@ -148,10 +209,8 @@ body {
   }
 
 
-
-
-
 // Media Queries
+  // 1200px
   @media all and (max-width: 1200px) {
     .wrapper {
       margin-left: 1rem;
@@ -164,16 +223,7 @@ body {
       }
     }
   }
-  //
-  // @media all and (max-width: 925px) {
-  //   .wrapper__landing {
-  //     max-width: 350px;
-  //     &--skill {
-  //       display: none;
-  //     }
-  //   }
-  // }
-
+  // 850px
   @media all and (max-width: 850px) {
     flex-direction: column;
     margin: 0;
@@ -191,7 +241,7 @@ body {
       }
     }
   }
-
+  // 600px
   @media all and (max-width: 600px) {
     padding: 2rem;
     .wrapper {

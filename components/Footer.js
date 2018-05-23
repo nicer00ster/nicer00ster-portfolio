@@ -7,28 +7,28 @@ const Footer = () => {
     <div className="footer">
       <div className="footer__links">
 
-        <div class="hexagon__wrapper">
-          <div class="hexagon">
+        <div className="hexagon__wrapper">
+          <div className="hexagon">
             {svg.GithubIcon}
           </div>
         </div>
-        <div class="hexagon__wrapper">
-          <div class="hexagon">
+        <div className="hexagon__wrapper">
+          <div className="hexagon">
             {svg.Facebook}
           </div>
         </div>
-        <div class="hexagon__wrapper">
-          <div class="hexagon">
+        <div className="hexagon__wrapper">
+          <div className="hexagon">
             {svg.Instagram}
           </div>
         </div>
-        <div class="hexagon__wrapper">
-          <div class="hexagon">
+        <div className="hexagon__wrapper">
+          <div className="hexagon">
             {svg.LinkedIn}
           </div>
         </div>
-        <div class="hexagon__wrapper">
-          <div class="hexagon">
+        <div className="hexagon__wrapper">
+          <div className="hexagon">
             {svg.Twitter}
           </div>
         </div>

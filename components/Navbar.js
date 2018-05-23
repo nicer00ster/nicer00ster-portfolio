@@ -19,6 +19,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
             <Link href="/">
               <Chicken className="logo" width={200} height={100}/>
             </Link>
+            <Menu />
           </li>
           <li className="navbar__item" onClick={ toggleMenu }>
             <Link href="/">
@@ -54,7 +55,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
           </li>
         </div>
       </div>
-      <Menu />
+      <Menu isOpen={isOpen} />
     </div>
   )
 }

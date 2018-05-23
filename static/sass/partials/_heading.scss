@@ -1,4 +1,5 @@
-.wrapper__landing--header-text {
+.wrapper__home--header-text,
+.wrapper__work--header-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,19 +18,21 @@
     letter-spacing: 2px;
     line-height: 1;
     text-shadow:
-      1px 1px 0px #FFF, 
+      1px 1px 0px #FFF,
       2px 2px 0px #999,
       3px 3px 0px #FFF;
     position: relative;
-    
   }
 }
-.wrapper__landing--header-text h1,
-.wrapper__landing--header-text h5 {
+.wrapper__home--header-text h1,
+.wrapper__home--header-text h5,
+.wrapper__work--header-text h1,
+.wrapper__work--header-text h5 {
   margin: 0 auto;
   text-transform: uppercase;
 }
-.wrapper__landing--header-text h1 {
+.wrapper__home--header-text h1,
+.wrapper__work--header-text h1 {
     width: 255px;
     letter-spacing: 4px;
     font-family: 'Squada One', cursive;
@@ -43,30 +46,30 @@
     text-decoration: none;
     position: relative;
     z-index: 1;
-    text-shadow: 
-          1px 1px 0px #FFF, 
+    text-shadow:
+          1px 1px 0px #FFF,
           2px 2px 0px #999,
           3px 3px 0px #FFF;
     background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.05) 100%);
-    background-image: -webkit-linear-gradient(left top, 
-        transparent 0%, transparent 25%, 
-        rgba(0,0,0,.15) 25%, rgba(0,0,0,.15) 50%, 
-        transparent 50%, transparent 75%, 
+    background-image: -webkit-linear-gradient(left top,
+        transparent 0%, transparent 25%,
+        rgba(0,0,0,.15) 25%, rgba(0,0,0,.15) 50%,
+        transparent 50%, transparent 75%,
         rgba(0,0,0,.15) 75%);
     background-size: 4px 4px;
-    box-shadow: 
-        0 0 0 1px rgba(0,0,0,.4) inset, 
+    box-shadow:
+        0 0 0 1px rgba(0,0,0,.4) inset,
         0 0 20px -5px rgba(0,0,0,.4),
         0 0 0px 3px #FFF inset;
 }
-.wrapper__landing--header-text h1:after {
+.wrapper__home--header-text h1:after,
+.wrapper__work--header-text h1:after {
   content: '';
   position: absolute;
   width: 110px;
   height: 110px;
   border: 3px solid #000;
   left: 0;
-  // top: 50%;
   -webkit-transform: translate(-40px, -68%);
   transform: translate(-40px, -65%);
   border-width: 4px 0 0 4px;
@@ -76,7 +79,8 @@
                 0        0.15rem  hsla(60, 98%, 50%, 0.5);
 
 }
-.wrapper__landing--header-text i {
+.wrapper__home--header-text i,
+.wrapper__work--header-text i {
   font-size: 4.8em;
   color: #000;
   position: relative;

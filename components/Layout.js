@@ -16,7 +16,7 @@ class Layout extends React.Component {
         <NextHead>
           <meta charSet="UTF-8" />
           <title>{props.title}</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
           <meta name="description" content={props.description || defaultDesc} />
           <meta name="theme-color" content="#3f3f3f" />
           <meta name="apple-mobile-web-app-title" content="nicer00ster" />
@@ -36,6 +36,11 @@ class Layout extends React.Component {
             }
             body, span {
               font-family: Courier Prime Sans;
+            }
+            @media all and (max-width: 600px) {
+              main {
+                ${this.props.open ? 'filter: blur(7px);' : '' };
+              }
             }
             `}</style>
           </NextHead>
