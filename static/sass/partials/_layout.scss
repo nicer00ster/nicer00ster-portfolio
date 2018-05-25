@@ -1,14 +1,14 @@
 body, html {
   font-size: 16px;
-  background: #efefef;
+  background: #fefefe;
   overflow-x: hidden;
 }
 
 body {
   position: relative;
   background-image: $topSVG;
-  // background-color: #fff;
-  border: 1px solid #555;
+  background-color: #effaff;
+  border: 1px solid #999;
 }
 
 .seperator {
@@ -16,20 +16,25 @@ body {
   width: 100%;
   background-color: transparent;
   z-index:9000;
-  // border: 1px solid black;
+  // border: 1px solid 999;
   // position: relative;
   // background-image: $navSVG;
-  // border-bottom: 1px solid #3f3f3f;
+  // border-bottom: 1px solid #999;
 }
 
 .wrapper {
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid #999;
+  border-right: 1px solid #999;
+  border-left: 1px solid #999;
   background-color: #fff;
   background-image: $foodSVG;
   margin: 0 auto;
-
+  max-width: 1600px;
+  box-shadow: $boxshad;
+  // z-index: 2
+  // box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   &__home {
     &--header {
       &-text {
@@ -93,7 +98,7 @@ body {
   &__home, &__work {
     display: flex;
     flex-direction: column;
-    border: 1.5px solid #555;
+    border: 1.5px solid #999;
     box-shadow: $boxshad;
     margin: 6rem -2rem -4rem;
     max-width: 475px;
@@ -102,7 +107,7 @@ body {
     z-index:1;
     &--header {
       height: 150px;
-      border-bottom: 1px solid #555;
+      border-bottom: 1px solid #999;
       background-image: $footerSVG;
       & h2 {
         margin: 20px;
@@ -110,7 +115,7 @@ body {
     }
     &--content {
       flex: 1;
-      background: $blueLineSVG;
+      background: repeating-linear-gradient(45deg, #74b9ff, #74b9ff 2.5px, #fff 2.5px, #fff 60px);
       & h2 {
         margin: 20px;
         text-align:center;
@@ -129,16 +134,17 @@ body {
       width: 200px;
       min-width: 200px;
       height: 450px;
-      border: 1px solid #555;
+      border: 1px solid #999;
       box-shadow: $boxshad;
       background: $footerSVG;
       z-index: 2;
+
       &-heading {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border: 1px solid #555;
+        border: 1px solid #999;
         box-shadow: 8px 8px 0 rgba(0,0,0,.15);
         transform: scale(1.1) translateX(-35px) translateY(-10px);
         width: 100%;

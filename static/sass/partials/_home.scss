@@ -2,21 +2,25 @@
   display: flex;
   flex-direction: column;
   margin: 1rem;
-  border: 1px solid #555;
   &--latest {
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    max-width: 1800px;
+    margin: 0 auto;
     height: 500px;
     text-align: center;
-    background: $footerSVG;
-    border-top: 1px solid #555;
-    border-bottom: 1px solid #555;
-    // border: 1px solid black;
+    background: $cogSVG;
+    background-color: #fff;
+    border: 1px solid #999;
+    box-shadow: $boxshad;
     &-header {
       display: flex;
       justify-content: center;
-      border: 1px solid #555;
+      border: 1px solid #999;
       width: 50%;
       min-width: 275px;
+      max-width: 350px;
       transform: translateY(20px);
       text-transform: uppercase;
       margin: 0 auto;
@@ -56,7 +60,8 @@
       }
       &_second {
         & img {
-          transform: translateY(-78px) translateX(-80px) scale(1.8);
+          align-self: center;
+          transform: translateY(-78px) scale(1.8);
         }
       }
       &_third {
@@ -80,27 +85,26 @@
   &--second {
     display: flex;
     width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
     height: 400px;
     // border: 1px solid black;
     &-item {
       flex: 1;
-      border: 1px solid #555;
+      border: 1px solid #999;
       margin: 5px;
+      background: repeating-linear-gradient(135deg, rgba(251,251,251,0.75), rgba(251,251,251,0.75) 24px, #ECECEC 24px, rgba(251,251,251,0.9) 25px, rgba(251,251,251,0.95) 25px, rgba(251,251,251,0.95)100px, #ececec 100px, #ececec 101px);
+      box-shadow: $boxshad;
     }
     &-item2 {
       flex: 1;
-      border: 1px solid #555;
+      border: 1px solid #999;
       margin: 5px;
+      box-shadow: $boxshad;
     }
   }
 }
 
-hr {
-  margin: 6rem;
-  border : 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-}
 
 // Media Queries
   @media all and (max-width: 1025px) {
@@ -154,11 +158,8 @@ hr {
               transform: scale(.8);
             }
           }
-          &_second {
-
-          }
           &_third {
-            transform: rotate(-10deg) translateY(-160px) translateX(-140px);
+            transform: rotate(-10deg) translateY(-160px) translateX(-100px);
             & img {
               transform: scale(.7);
             }

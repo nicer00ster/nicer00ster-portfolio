@@ -1,10 +1,20 @@
 .work__wrapper {
   display: flex;
-  margin: 0;
+  flex-direction: column;
+  margin: 0 auto;
   padding: 0;
+  width: 100%;
+  max-width: 1800px;
   height: auto;
   overflow: hidden;
-  position:relative;
+  // position:relative;
+  // &--greeting {
+  //   display: flex;
+  //   margin: 0 auto;
+  //   width: 75%;
+  //   border: 1px solid #555;
+  //   height: 400px;
+  // }
   &--cards {
     display: flex;
     flex-wrap: wrap;

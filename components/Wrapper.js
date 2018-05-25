@@ -19,8 +19,9 @@ class Wrapper extends React.Component {
       'Motive',
       'Drive'
     ];
-    return (
+    return ( 
       <div className="wrapper">
+
       <div className={`wrapper__image--${props.page}`}>
         <picture>
           <source

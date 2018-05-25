@@ -14,8 +14,12 @@ class Work extends React.Component {
           <Wrapper page={'work'} />
             <Seperator />
             <div className="work__wrapper">
+              {/* <div className="work__wrapper--greeting">
+                <div className="work__wrapper--greeting-heading">
+                  HELLO WELCOME TO MY PROJECTS PAGE
+                </div>
+              </div> */}
               <div className="work__wrapper--cards">
-                <Card />
                 <Card />
                 <Card />
                 <Card />

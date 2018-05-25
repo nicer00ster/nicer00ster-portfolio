@@ -4,15 +4,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid black;
-  height: 300px;
-  // margin-top: 1vw;
+  border-top: 1px solid #999;
+  height: 250px;
+  margin-top: 1vw;
   &__links {
     // display: flex;
     // flex-wrap: wrap;
     margin-top: auto;
   }
   &__trademark {
-    margin-top: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
