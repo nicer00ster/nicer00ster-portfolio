@@ -1,21 +1,22 @@
 import Link from 'next/link';
+import { connect } from 'react-redux';
 
-const Card = () => {
+const Card = ({ imageUrl, imageAlt, title, desc, buttonText }) => {
   return (
     <div className="card">
       <div className="card__image">
-
+        <img src={imageUrl} alt={imageAlt} />
       </div>
       <div className="card__content">
         <div className="card__content--title">
-          title
+          {title}
         </div>
         <div className="card__content--text">
-          description
+          {desc}
         </div>
         <button className="card__content--button">
           <p className="card__content--button-text">
-            View source code
+            {buttonText}
           </p>
         </button>
       </div>
@@ -23,4 +24,4 @@ const Card = () => {
   )
 }
 
-export default Card;
+export default connect()(Card);

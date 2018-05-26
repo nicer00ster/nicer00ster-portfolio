@@ -1,68 +1,116 @@
 import Cursor from '../components/Cursor';
+import Progress from '../components/Progress';
 import Typing from 'react-typing-animation';
 import { toggleTerminal } from './store';
 import { connect } from 'react-redux';
 
-const Terminal = ({ isDone, toggleTerminal }) => {
-
-  return (
-    <div className="hypertext">
-      <Typing
-        startDelay={1000}
-        className={'hypertext__nicer00ster'}
-        onFinishedTyping={ toggleTerminal }
-        >
-          <span></span>
-      </Typing>
-
-      {isDone && (
-        <Typing loop cursor={<Cursor />} className={'hypertext_cursor'} speed={55} className={'hypertext__content'}>
+class Terminal extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstSegment: false,
+      secondSegment: false,
+      thirdSegment: false,
+      fourthSegment: false,
+    }
+  }
+  nextText(segment) {
+    this.setState({ [segment]: true });
+  }
+  render() {
+    return (
+      <div className="hypertext">
+        <Typing onFinishedTyping={() => this.nextText('firstSegment')} cursor={<Cursor />} className="hypertext__line" speed={45} >
           <Typing.Delay ms={500} />
           <ul>
             <li>
-              <span className={'hypertext__span'}>
-                <span className={'hypertext__cursor'}> $ >></span>{' '}
-                JavaScript: [&#9632;&#9632;&#9632;&#9632;&#9632;&#9633;&#9633;] 85%
+              <span className="hypertext__span">
+                <span className="hypertext__line"> $ >></span>{' '}
+                JavaScript: [&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9633;&#9633;] <Progress num={85}/>
               </span>
             </li>
+          </ul>
+            <Typing.Delay ms={1000} />
+          </Typing>
+          {this.state.firstSegment && (
+            <Typing onFinishedTyping={() => this.nextText('secondSegment')} startDelay={500} cursor={<Cursor />} className="hypertext__line" speed={45} >
+            <Typing.Delay ms={500} />
+            <ul>
+              <li>
+                <span className="hypertext__span">
+                  <span className="hypertext__line"> $ >></span>{' '}
+                  React: [&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9633;&#9633;&#9633;] <Progress num={80}/>
+                </span>
+              </li>
+            </ul>
             <Typing.Delay ms={2000} />
-            <li>
-              <span className={'hypertext__span'}>
-                <span className={'hypertext__cursor'}> $ >></span>{' '}
+          </Typing>
+          )}
+          {this.state.secondSegment && (
+            <Typing onFinishedTyping={() => this.nextText('thirdSegment')} startDelay={500} cursor={<Cursor />} className="hypertext__line" speed={45} >
+            <Typing.Delay ms={500} />
+            <ul>
+              <li>
+                <span className="hypertext__span">
+                  <span className="hypertext__line"> $ >></span>{' '}
+                  NodeJS: [&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9633;&#9633;&#9633;&#9633;] <Progress num={70}/>
+                </span>
+              </li>
+            </ul>
+            <Typing.Delay ms={2000} />
+          </Typing>
+          )}
+          {this.state.thirdSegment && (
+            <Typing startDelay={500} cursor={<Cursor />} className="hypertext__line" speed={45} >
+            <Typing.Delay ms={500} />
+            <ul>
+              <li>
+                <span className="hypertext__span">
+                  <span className="hypertext__line"> $ >></span>{' '}
+                  Sketch: [&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9633;&#9633;&#9633;&#9633;] <Progress num={65}/>
+                </span>
+                <Typing.Cursor cursor={<Cursor />} loop />
+              </li>
+            </ul>
+            <Typing.Delay ms={2000} />
+          </Typing>
+          )}
+            {/* <li>
+              <span className="hypertext__span">
+                <span className="hypertext__line"> $ >></span>{' '}
                 React: [&#9632;&#9632;&#9632;&#9632;&#9632;&#9633;&#9633;] 80%
               </span>
             </li>
             <Typing.Delay ms={1000} />
             <li>
-              <span className={'hypertext__span'}>
-                <span className={'hypertext__cursor'}> $ >></span>{' '}
+              <span className="hypertext__span">
+                <span className="hypertext__line"> $ >></span>{' '}
                 Sketch: [&#9632;&#9632;&#9632;&#9632;&#9632;&#9633;&#9633;] 65%
               </span>
             </li>
             <Typing.Delay ms={1000} />
             <li>
               <span className="hypertext__span">
-                <span className={'hypertext__cursor'}> $ >></span>{' '}
+                <span className="hypertext__line"> $ >></span>{' '}
 
                 <Typing.Backspace count={10} delay={750} />
               </span>
             </li>
             <Typing.Delay ms={1000} />
             <li>
-              <span className={'hypertext__cursor'}> $ >></span> Neither
-              could deleting a line of text.
-              <Typing.Reset count={1} delay={750} />
-              <span> Or the entire tree.</span>
-              <Typing.Reset delay={2000} />
+              <span className="hypertext__span">
+                <span className="hypertext__line"> $ >></span> Neither
+                could deleting a line of text.
+                <Typing.Reset count={1} delay={750} />
+                <span> Or the entire tree.</span>
+                <Typing.Reset delay={2000} />
+              </span>
             </li>
             </ul>
-          </Typing>
-      )}
-    </div>
-
-  )
+          </Typing> */}
+      </div>
+    )
+  }
 }
 
-export default connect(function(state) {
-  return { isDone: state.terminal }
-}, {toggleTerminal})(Terminal);
+export default connect()(Terminal);

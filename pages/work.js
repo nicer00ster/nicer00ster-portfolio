@@ -20,7 +20,13 @@ class Work extends React.Component {
                 </div>
               </div> */}
               <div className="work__wrapper--cards">
-                <Card />
+                <Card
+                  imageUrl = {'https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
+                  imageAlt = {'Flowers'}
+                  title = {'First'}
+                  desc = {'This is my first project'}
+                  buttonText = {'VIEW SOURCE CODE'}
+                />
                 <Card />
                 <Card />
                 <Card />
