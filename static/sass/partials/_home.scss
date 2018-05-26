@@ -51,7 +51,8 @@
       width: auto;
       height: 100%;
       &_first {
-        transform: translateY(-100px) rotate(80deg);
+        // transform: translateY(-100px) rotate(80deg);
+        transform: rotate(80deg);
         z-index: 9999;
         background-size: cover;
         background-repeat: no-repeat;
@@ -59,14 +60,20 @@
         }
       }
       &_second {
-        & img {
-          align-self: center;
-          transform: translateY(-78px) scale(1.8);
-        }
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
       }
       &_third {
         z-index: 1;
-        transform: rotate(-10deg) translateY(-80px) translateX(20px);
+        transform: rotate(-10deg);
+        // transform: rotate(-10deg) translateY(-80px) translateX(20px);
       }
       &_first, &_second, &_third {
         flex: 1;

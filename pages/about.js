@@ -1,6 +1,7 @@
 import Layout from '../components/Layout';
 import Footer from '../components/Footer';
 import Wrapper from '../components/Wrapper';
+
 import { nextConnect } from '../components/store';
 
 class About extends React.Component {
@@ -10,7 +11,7 @@ class About extends React.Component {
         <Layout title="nicer00ster | About" />
         {/* <Wrapper page={'landing'} /> */}
           <div>
-            <p>about</p>
+
           </div>
         <Footer />
       </div>

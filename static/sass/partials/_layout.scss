@@ -6,13 +6,13 @@ body, html {
 
 body {
   position: relative;
-  background-image: $topSVG;
-  background-color: #effaff;
   border: 1px solid #999;
+  background-image: $topSVG;
+  background-color: #e0f1ff;
 }
 
 .seperator {
-  height: 85px;
+  height: 125px;
   width: 100%;
   background-color: transparent;
   z-index:9000;

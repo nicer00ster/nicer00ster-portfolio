@@ -4,7 +4,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 
 const initialState = {
-  open: false
+  open: false,
+  terminal: false
 }
 
 // Store
@@ -20,6 +21,8 @@ export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.TOGGLE_MENU:
       return { ...state.open, open: !state.open }
+    case actionTypes.TOGGLE_TERMINAL:
+      return { ...state.terminal, terminal: !state.terminal }
     default:
       return state;
   }
@@ -27,12 +30,17 @@ export const reducer = (state = initialState, action) => {
 
 // Action Types
 export const actionTypes = {
-  TOGGLE_MENU: 'TOGGLE_MENU'
+  TOGGLE_MENU: 'TOGGLE_MENU',
+  TOGGLE_TERMINAL: 'TOGGLE_TERMINAL'
 }
 
 // Action Creators
 export function toggleMenu() {
   return { type: 'TOGGLE_MENU'  }
+}
+
+export function toggleTerminal() {
+  return { type: 'TOGGLE_TERMINAL' }
 }
 
 

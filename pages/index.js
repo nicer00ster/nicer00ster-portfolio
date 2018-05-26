@@ -3,9 +3,12 @@ import Footer from '../components/Footer';
 import Layout from '../components/Layout';
 import Wrapper from '../components/Wrapper';
 import Seperator from '../components/Seperator';
+import Terminal from '../components/Terminal';
+
 import { nextConnect } from '../components/store';
 
 class Index extends React.Component {
+
   render() {
     return (
       <div>
@@ -23,7 +26,8 @@ class Index extends React.Component {
                       <img src="../../static/images/photos/S9Coconuts.png" alt="Money saving app built with React Native"/>
                     </div>
                     <div className="home__wrapper--latest-content_second">
-                      <img src="../../static/images/photos/3Browser.png" alt="Web app built with React"/>
+                      <img src="../../static/images/photos/HyperTerminal.png" alt="Web app built with React"/>
+                      <Terminal />
                     </div>
                     <div className="home__wrapper--latest-content_third">
                       <img src="../../static/images/photos/S9I2M.png" alt="Company I2M application built with React Native"/>
