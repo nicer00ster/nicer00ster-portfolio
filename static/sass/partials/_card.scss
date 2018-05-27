@@ -10,28 +10,16 @@
   margin: 0 auto;
   margin-top: 1rem;
   width: 300px;
-  height: 500px;
+  height: 550px;
   box-shadow: $boxshad;
   border: 1.5px solid #555;
-  background-color: #fff;
+  // background-color: #fff;
   &:hover &__image img {
     -webkit-filter: contrast(100%);
     filter: constrast(100%);
   }
   &__image {
     height: 50%;
-    // background-image: url('https://unsplash.it/800/600?image=11');
-    // background-position: center center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // -webkit-filter: contrast(70%);
-    //     filter: contrast(70%);
-    // overflow: hidden;
-    // position: relative;
-    // transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
-    // transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
-    // transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91),
-    //             -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
     &:before {
       content: '';
       display: block;
@@ -55,31 +43,46 @@
   }
   &__content {
     display: flex;
-    flex: 1;
+    background: repeating-linear-gradient(135deg, rgba(251,251,251,0.75), rgba(251,251,251,0.75) 24px, #ECECEC 24px, rgba(251,251,251,0.9) 25px, rgba(251,251,251,0.95) 25px, rgba(251,251,251,0.95)100px, #ececec 100px, #ececec 101px);
     flex-direction: column;
+    flex: 1;
     padding: 1rem;
+    font-family: 'Squada One', cursive;
     &--title {
       color: #696969;
       flex: 1;
-      font-size: 1.25rem;
+      font-size: 1.50rem;
       font-weight: 300;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
     &--text {
       flex: 1;
+      font-size: 1.25rem;
+      color: #3f3f3f;
+    }
+    &--tags {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      height: auto;
+      padding: 5px;
+      opacity: .90;
+      transform: scale(.8);
+      // margin: 0 auto;
     }
     &--button {
+      flex: 1;
       background-color: #fff;
       border: 1px solid #555;
       color: #696969;
-      padding: .5rem;
+      // padding: .5rem;
       text-transform: uppercase;
-      transition: all 0.25s;
+      transition: all 0.15s;
       cursor: pointer;
-      &:hover {
-        letter-spacing: 2px;
-      }
+        &:hover {
+          letter-spacing: 1.5px;
+        }
     }
   }
 }
@@ -88,8 +91,6 @@
 @media all and (max-width: 650px) {
   .card {
     width: 100%;
-    max-width: 400px;
-    height: 350px;
-    // min-width: 325px;
+    max-width: 350px;
   }
 }

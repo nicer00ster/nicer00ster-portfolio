@@ -8,7 +8,6 @@ import Chicken from 'svg-react-loader?name=Chicken!../static/images/svg/nav/chic
 import Smartphone from 'svg-react-loader?name=Smartphone!../static/images/svg/nav/smartphone.svg';
 import House from 'svg-react-loader?name=House!../static/images/svg/nav/house.svg';
 import Telephone from 'svg-react-loader?name=Telephone!../static/images/svg/nav/telephone.svg';
-import Trophy from 'svg-react-loader?name=Trophy!../static/images/svg/nav/trophy.svg';
 
 const Navbar = ({ isOpen, toggleMenu }) => {
   return (
@@ -21,38 +20,32 @@ const Navbar = ({ isOpen, toggleMenu }) => {
             </Link>
             <Menu />
           </li>
-          <li className="navbar__item" onClick={ toggleMenu }>
-            <Link href="/">
-              <a className="navbar__link">
-                <House className="navbar__item--svg" width={100} height={50} />
-                <span className="navbar__item--text">Home</span>
-              </a>
-            </Link>
-          </li>
-          <li className="navbar__item" onClick={ toggleMenu }>
-            <Link href="/work">
-              <a className="navbar__link">
-                <Smartphone className="navbar__item--svg" width={100} height={50} />
-                <span className="navbar__item--text">Work</span>
-              </a>
-            </Link>
-          </li>
-          <li className="navbar__item" onClick={ toggleMenu }>
-            <Link href="/connect">
-              <a className="navbar__link">
-                <Telephone className="navbar__item--svg" width={100} height={50} />
-                <span className="navbar__item--text">Connect</span>
-              </a>
-            </Link>
-          </li>
-          <li className="navbar__item" onClick={ toggleMenu }>
-            <Link href="/about">
-              <a className="navbar__link">
-                <Trophy className="navbar__item--svg" width={100} height={50} />
-                <span className="navbar__item--text">About</span>
-              </a>
-            </Link>
-          </li>
+          <div className="navbar__navigation">
+            <li className="navbar__item" onClick={ toggleMenu }>
+              <Link href="/">
+                <a className="navbar__link">
+                  <House className="navbar__item--svg" width={100} height={50} />
+                  <span className="navbar__item--text">Home</span>
+                </a>
+              </Link>
+            </li>
+            <li className="navbar__item" onClick={ toggleMenu }>
+              <Link href="/work">
+                <a className="navbar__link">
+                  <Smartphone className="navbar__item--svg" width={100} height={50} />
+                  <span className="navbar__item--text">Work</span>
+                </a>
+              </Link>
+            </li>
+            <li className="navbar__item" onClick={ toggleMenu }>
+              <Link href="/connect">
+                <a className="navbar__link">
+                  <Telephone className="navbar__item--svg" width={100} height={50} />
+                  <span className="navbar__item--text">Connect</span>
+                </a>
+              </Link>
+            </li>
+          </div>
         </div>
       </div>
       <Menu isOpen={isOpen} />

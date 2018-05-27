@@ -20,20 +20,34 @@ class Terminal extends React.Component {
   render() {
     return (
       <div className="hypertext">
-        <Typing onFinishedTyping={() => this.nextText('firstSegment')} cursor={<Cursor />} className="hypertext__line" speed={45} >
-          <Typing.Delay ms={500} />
+        <Typing onFinishedTyping={() => this.nextText('firstSegment')} startDelay={1000} cursor={<Cursor />} className="hypertext__line" speed={25} >
+          <Typing.Delay ms={2000} />
           <ul>
             <li>
               <span className="hypertext__span">
-                <span className="hypertext__line"> $ >></span>{' '}
-                JavaScript: [&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9633;&#9633;] <Progress num={85}/>
+                <span className="hypertext__line">$ >></span>{' '}
+                <span className="hypertext__line">npm install -g nicer00ster</span>
               </span>
             </li>
           </ul>
-            <Typing.Delay ms={1000} />
+            <Typing.Delay ms={500} />
           </Typing>
           {this.state.firstSegment && (
-            <Typing onFinishedTyping={() => this.nextText('secondSegment')} startDelay={500} cursor={<Cursor />} className="hypertext__line" speed={45} >
+            <Typing onFinishedTyping={() => this.nextText('secondSegment')} cursor={<Cursor />} className="hypertext__line" speed={25} >
+            <Typing.Delay ms={500} />
+            <ul>
+              <li>
+                <span className="hypertext__span">
+                  <span className="hypertext__line"> $ >></span>{' '}
+                  JavaScript: [&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9633;&#9633;] <Progress num={85}/>
+                </span>
+              </li>
+            </ul>
+            <Typing.Delay ms={500} />
+          </Typing>
+          )}
+          {this.state.secondSegment && (
+            <Typing onFinishedTyping={() => this.nextText('thirdSegment')} cursor={<Cursor />} className="hypertext__line" speed={25} >
             <Typing.Delay ms={500} />
             <ul>
               <li>
@@ -43,11 +57,11 @@ class Terminal extends React.Component {
                 </span>
               </li>
             </ul>
-            <Typing.Delay ms={2000} />
+            <Typing.Delay ms={500} />
           </Typing>
           )}
-          {this.state.secondSegment && (
-            <Typing onFinishedTyping={() => this.nextText('thirdSegment')} startDelay={500} cursor={<Cursor />} className="hypertext__line" speed={45} >
+          {this.state.thirdSegment && (
+            <Typing onFinishedTyping={() => this.nextText('fourthSegment')} cursor={<Cursor />} className="hypertext__line" speed={25} >
             <Typing.Delay ms={500} />
             <ul>
               <li>
@@ -57,11 +71,11 @@ class Terminal extends React.Component {
                 </span>
               </li>
             </ul>
-            <Typing.Delay ms={2000} />
+            <Typing.Delay ms={500} />
           </Typing>
           )}
-          {this.state.thirdSegment && (
-            <Typing startDelay={500} cursor={<Cursor />} className="hypertext__line" speed={45} >
+          {this.state.fourthSegment && (
+            <Typing cursor={<Cursor />} className="hypertext__line" speed={25} >
             <Typing.Delay ms={500} />
             <ul>
               <li>
@@ -69,10 +83,9 @@ class Terminal extends React.Component {
                   <span className="hypertext__line"> $ >></span>{' '}
                   Sketch: [&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9633;&#9633;&#9633;&#9633;] <Progress num={65}/>
                 </span>
-                <Typing.Cursor cursor={<Cursor />} loop />
               </li>
             </ul>
-            <Typing.Delay ms={2000} />
+            <Typing.Delay loop cursor={<Cursor />} ms={500} />
           </Typing>
           )}
             {/* <li>

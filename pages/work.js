@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import Wrapper from '../components/Wrapper';
 import Card from '../components/Card';
 import Seperator from '../components/Seperator';
+import svg from '../static/scripts/svgimports';
 import { nextConnect } from '../components/store';
 
 class Work extends React.Component {
@@ -23,14 +24,41 @@ class Work extends React.Component {
                 <Card
                   imageUrl = {'https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
                   imageAlt = {'Flowers'}
-                  title = {'First'}
-                  desc = {'This is my first project'}
+                  title = {'My Old Blog'}
+                  desc = {'Blog I built when I first began programming.'}
+                  tags = {[svg.Javascript, svg.Python, svg.Django, svg.Bootstrap]}
                   buttonText = {'VIEW SOURCE CODE'}
                 />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                <Card
+                  imageUrl = {'https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
+                  imageAlt = {'Flowers'}
+                  title = {'I2M Mobile App'}
+                  desc = {'Mobile application built for the company I currently work for.'}
+                  tags = {[svg.Javascript, svg.React, svg.Firebase, svg.Aws]}
+                  buttonText = {'VIEW SOURCE CODE'}
+                />
+                <Card
+                  imageUrl = {'https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
+                  imageAlt = {'Flowers'}
+                  title = {'Coconut Cash'}
+                  desc = {'Internship project done for a company in Switzerland.'}
+                  tags = {[svg.Javascript, svg.React, svg.Firebase]}
+                  buttonText = {'VIEW SOURCE CODE'}
+                />
+                {/* <Card
+                  imageUrl
+                  imageAlt
+                  title
+                  desc
+                  buttonText
+                />
+                <Card
+                  imageUrl
+                  imageAlt
+                  title
+                  desc
+                  buttonText
+                /> */}
               </div>
             </div>
             <Seperator />
