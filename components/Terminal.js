@@ -12,6 +12,8 @@ class Terminal extends React.Component {
       secondSegment: false,
       thirdSegment: false,
       fourthSegment: false,
+      fifthSegment: false,
+      sixthSegment: false
     }
   }
   nextText(segment) {
@@ -75,7 +77,7 @@ class Terminal extends React.Component {
           </Typing>
           )}
           {this.state.fourthSegment && (
-            <Typing cursor={<Cursor />} className="hypertext__line" speed={25} >
+            <Typing onFinishedTyping={() => this.nextText('fifthSegment')} cursor={<Cursor />} className="hypertext__line" speed={25} >
             <Typing.Delay ms={500} />
             <ul>
               <li>
@@ -86,6 +88,34 @@ class Terminal extends React.Component {
               </li>
             </ul>
             <Typing.Delay loop cursor={<Cursor />} ms={500} />
+          </Typing>
+          )}
+          {this.state.fifthSegment && (
+            <Typing onFinishedTyping={() => this.nextText('sixthSegment')} cursor={<Cursor />} className="hypertext__line" speed={25} >
+            <Typing.Delay ms={500} />
+            <ul>
+              <li>
+                <span className="hypertext__span">
+                  <span className="hypertext__line"> $ >></span>{' '}
+                  Python/Django: [&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9633;&#9633;&#9633;&#9633;] <Progress num={70}/>
+                </span>
+              </li>
+            </ul>
+            <Typing.Delay ms={500} />
+          </Typing>
+          )}
+          {this.state.sixthSegment && (
+            <Typing cursor={<Cursor />} className="hypertext__line" speed={25} >
+            <Typing.Delay ms={500} />
+            <ul>
+              <li>
+                <span className="hypertext__span">
+                  <span className="hypertext__line"> $ >></span>{' '}
+                  Cooking: [&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;] <Progress num={99.9}/>
+                </span>
+              </li>
+            </ul>
+            <Typing.Delay ms={500} />
           </Typing>
           )}
             {/* <li>

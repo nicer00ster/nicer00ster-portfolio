@@ -16,10 +16,6 @@ body {
   width: 100%;
   background-color: transparent;
   z-index:9000;
-  // border: 1px solid 999;
-  // position: relative;
-  // background-image: $navSVG;
-  // border-bottom: 1px solid #999;
 }
 
 .wrapper {
@@ -35,6 +31,7 @@ body {
   box-shadow: $boxshad;
   // z-index: 2
   // box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+
   &__home {
     &--header {
       &-text {
@@ -56,13 +53,15 @@ body {
   }
 
   &__work {
+    max-height: 400px;
+    transform: translateY(10rem);
     &--header {
       &-text {
         & h1:before {
           content: 'Work';
         }
         & h5:before {
-          content: '';
+          content: 'Projects and contributions';
         }
       }
     }
@@ -74,34 +73,62 @@ body {
       }
     }
   }
+
+  &__connect {
+    max-height: 400px;
+    transform: translateY(10rem);
+    &--header {
+      &-text {
+        & h1:before {
+          content: 'Questions?';
+        }
+        & h5:before {
+          content: 'You\'ve came to the right place';
+        }
+      }
+    }
+    &--content {
+      & h2 {
+        &:before {
+          content: $connectContent;
+        }
+      }
+    }
+  }
+
   // Hero images for each page
-  &__image--home {
-    & img {
+  &__image--home img {
       margin: 0 auto;
       width: 100%;
       height: 100%;
       max-width: 450px;
       min-width: 450px;
       max-height: auto;
-    }
   }
-
   &__image--work img {
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    max-width: 450px;
-    min-width: 450px;
-    max-height: auto;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      max-width: 450px;
+      min-width: 450px;
+      max-height: auto;
+  }
+  &__image--connect img {
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      max-width: 450px;
+      min-width: 450px;
+      max-height: auto;
   }
 
-  &__home, &__work {
+  &__home, &__work, &__connect {
     display: flex;
     flex-direction: column;
     border: 1.5px solid #999;
     box-shadow: $boxshad;
     margin: 6rem -2rem -4rem;
-    max-width: 475px;
+    max-width: 450px;
     min-width: 375px;
     height: auto;
     z-index:1;
@@ -109,9 +136,10 @@ body {
       height: 150px;
       border-bottom: 1px solid #999;
       background-image: $footerSVG;
-      & h2 {
-        margin: 20px;
-      }
+      text-align: center;
+      // & h2 {
+      //   margin: 20px;
+      // }
     }
     &--content {
       flex: 1;
@@ -220,7 +248,7 @@ body {
       margin-left: 1rem;
       margin-right: 1rem;
     }
-    &__home, &__work {
+    &__home, &__work, &__connect {
       max-width: 350px;
     }
   }
@@ -229,10 +257,11 @@ body {
     flex-direction: column;
     margin: 0;
     .wrapper {
-      &__image--home, &__image--work {
+      &__image--home, &__image--work, &__image--connect {
         display: none;
       }
-      &__home, &__work {
+      &__home, &__work, &__connect {
+        transform: none;
         width: 100%;
         min-width: 450px;
         align-self: center;
@@ -249,7 +278,7 @@ body {
             box-shadow: $boxshad;
           }
           & ul > li {
-            padding: 5px;
+            padding: 2.5px;
           }
         }
       }
@@ -259,9 +288,24 @@ body {
   @media all and (max-width: 600px) {
     padding: 2rem;
     .wrapper {
-      &__home, &__work {
+      &__home, &__work, &__connect {
         margin-top: 4rem;
         min-width: 350px;
+      }
+    }
+  }
+  // 400px
+  @media all and (max-width: 400px) {
+    .wrapper {
+      margin-left: 2rem;
+      margin-right: 2rem;
+      &__home, &__work, &__connect {
+        &--skill {
+          max-width: 300px;
+          &-heading {
+            width: 75%;
+          }
+        }
       }
     }
   }

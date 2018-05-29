@@ -20,7 +20,8 @@
   border-bottom: 1.35px solid #000;
   border-top: 1.35px solid #000;
   height: 100%;
-  width: 59.15%;
+  width: 59%;
+  border-radius: 1.75px;
   &:hover {
     opacity: .5;
     transition: all .25s;
@@ -35,9 +36,10 @@
 .hexagon:before {
   border-bottom: 1.35px solid #000;
   border-top: 1.35px solid #000;
+  border-radius: 1.75px;
   position: absolute;
   top: 0;
-  right: 20%;
+  right: 20.5%;
   background-color: inherit;
   height: inherit;
   width: inherit;
@@ -48,9 +50,10 @@
 .hexagon:after {
   border-bottom: 1.35px solid #000;
   border-top: 1.35px solid #000;
+  border-radius: 1.75px;
   position: absolute;
   top: 0;
-  right: 20%;
+  right: 20.5%;
   background-color: inherit;
   height: inherit;
   width: inherit;
@@ -65,6 +68,17 @@
     height: 65px;
     &:nth-of-type(odd) {
       transform: translateY(-40px);
+    }
+  }
+}
+
+@media all and (max-width: 400px) {
+  .hexagon__wrapper {
+    transition: all .2s;
+    width: 55px;
+    height: 55px;
+    &:nth-of-type(odd) {
+      transform: translateY(-30px);
     }
   }
 }

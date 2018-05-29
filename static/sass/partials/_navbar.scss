@@ -57,9 +57,6 @@
     font-weight: 600;
     padding: 1.2rem 2rem 1rem 2rem;
     transition: transform 0.3s;
-    // border-right: 1px solid #3f3f3f;
-    // border-bottom: 6px solid transparent;
-    // border-right: 4.5px solid transparent;
     svg {
       transition: all 0.2s;
       fill: #3f3f3f;
@@ -107,6 +104,7 @@
     }
   }
 }
+
 @media all and (max-width: 650px) {
   .navbar {
     &__links {

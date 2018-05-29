@@ -1,5 +1,6 @@
 .wrapper__home--header-text,
-.wrapper__work--header-text {
+.wrapper__work--header-text,
+.wrapper__connect--header-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,12 +28,15 @@
 .wrapper__home--header-text h1,
 .wrapper__home--header-text h5,
 .wrapper__work--header-text h1,
-.wrapper__work--header-text h5 {
+.wrapper__work--header-text h5,
+.wrapper__connect--header-text h1,
+.wrapper__connect--header-text h5 {
   margin: 0 auto;
   text-transform: uppercase;
 }
 .wrapper__home--header-text h1,
-.wrapper__work--header-text h1 {
+.wrapper__work--header-text h1,
+.wrapper__connect--header-text h1 {
     width: 255px;
     letter-spacing: 4px;
     font-family: 'Squada One', cursive;
@@ -63,7 +67,8 @@
         0 0 0px 3px #FFF inset;
 }
 .wrapper__home--header-text h1:after,
-.wrapper__work--header-text h1:after {
+.wrapper__work--header-text h1:after,
+.wrapper__connect--header-text h1:after {
   content: '';
   position: absolute;
   width: 110px;
@@ -80,7 +85,8 @@
 
 }
 .wrapper__home--header-text i,
-.wrapper__work--header-text i {
+.wrapper__work--header-text i,
+.wrapper__connect--header-text i {
   font-size: 4.8em;
   color: #000;
   position: relative;
