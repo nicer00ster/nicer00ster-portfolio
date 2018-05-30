@@ -145,13 +145,13 @@ body {
       flex: 1;
       background: repeating-linear-gradient(45deg, #74b9ff, #74b9ff 2.5px, #fff 2.5px, #fff 60px);
       & h2 {
-        margin: 20px;
+        margin: 2.5rem;
         text-align:center;
         &:before {
           font-family: 'Squada One', cursive;
           color: #333;
-          font-size: 32px;
-          letter-spacing: 1px;
+          font-size: 36px;
+          letter-spacing: 2px;
         }
       }
     }

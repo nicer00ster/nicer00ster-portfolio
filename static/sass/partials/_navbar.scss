@@ -25,7 +25,7 @@
     cursor: pointer;
     &:hover {
       transform: scale(1.2);
-      filter: drop-shadow(2px 2px 1px #3f3f3f) contrast(150%);
+      filter: contrast(150%);
     }
   }
   &__links {
@@ -38,7 +38,7 @@
     display: flex;
     flex: 1;
     .logo {
-      filter: drop-shadow(6px 6px 3px #3f3f3f);
+      filter: drop-shadow(3px 3px 1.5px #3f3f3f);
       margin: 1em;
     }
   }
@@ -71,7 +71,7 @@
       svg {
         transform: scale(1.25);
       }
-      filter: drop-shadow(2.5px 2.5px 2px #3f3f3f) contrast(150%);
+      filter: contrast(150%);
     }
   }
 }
