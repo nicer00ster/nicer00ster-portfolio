@@ -17,12 +17,9 @@ Router.onRouteChangeStart = (url) => {
   NProgress.start();
 }
 
-Router.onRouterChangeComplete = () => NProgress.done();
-Router.onRouterChangeError = () => NProgress.done();
+Router.onRouteChangeComplete = () => NProgress.done();
 
-const linkStyle = {
-  margin: '0 10px 0 0'
-}
+Router.onRouteChangeError = () => NProgress.done();
 
 const Navbar = ({ isOpen, toggleMenu }) => {
   return (
@@ -44,7 +41,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
                 <Link href="/">
                   <a className="navbar__link">
                     <House className="navbar__item--svg" width={100} height={50} />
-                    <span className="navbar__item--text"><a style={linkStyle}>Home</a></span>
+                    <span className="navbar__item--text">Home</span>
                   </a>
                 </Link>
               </li>
@@ -52,7 +49,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
                 <Link href="/work">
                   <a className="navbar__link">
                     <Smartphone className="navbar__item--svg" width={100} height={50} />
-                    <span className="navbar__item--text"><a link={linkStyle}>Work</a></span>
+                    <span className="navbar__item--text">Work</span>
                   </a>
                 </Link>
               </li>
@@ -60,7 +57,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
                 <Link href="/connect">
                   <a className="navbar__link">
                     <Telephone className="navbar__item--svg" width={100} height={50} />
-                    <span className="navbar__item--text"><a style={linkStyle}>Connect</a></span>
+                    <span className="navbar__item--text">Connect</span>
                   </a>
                 </Link>
               </li>

@@ -1,0 +1,29 @@
+.form__container {
+  display: flex;
+  flex-direction: column;
+  &--firstname {
+    flex: 1;
+    width: 470px;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+    transition: all 0.925s;
+    &:hover {
+      background: gray;
+    }
+  }
+  &--lastname {
+    flex: 1;
+    width: 470px;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+  }
+  &--message {
+    flex: 1;
+    width: 470px;
+    height: 270px;
+    padding: 0px 15px 0px 15px;
+  }
+  &--submit {
+    flex: 1;
+  }
+}

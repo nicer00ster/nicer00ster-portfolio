@@ -63,10 +63,10 @@
       margin-bottom: 1rem;
     }
     &:hover, &--active {
-      border-bottom-color: rgba(0,0,0,0.2);
-      border-right-color: rgba(0,0,0,0.05);
-      letter-spacing: 2.5px;
-      font-weight: bold;
+      // border-bottom-color: rgba(0,0,0,0.2);
+      // border-right-color: rgba(0,0,0,0.05);
+      letter-spacing: 3.5px;
+      font-size: 1.1em;
       transition: all 0.25s;
       svg {
         transform: scale(1.25);
@@ -88,13 +88,10 @@
 
 @media all and (max-width: 900px) {
   .navbar {
-    display: flex;
-    &__links {
-      order: 1;
-    }
     &__link {
       svg {
-        width: 30px;
+        width: 40px;
+        margin: 3px;
       }
       &--logo {
         svg {

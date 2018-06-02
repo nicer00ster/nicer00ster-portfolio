@@ -4,8 +4,8 @@
 
 #nprogress .bar {
   background: #00c3ff;
-  background: -webkit-linear-gradient(to left, #ffff1c, #00c3ff);
-  background: linear-gradient(to left, #ffff1c, #00c3ff);
+  /* background: -webkit-linear-gradient(to left, #fffe99, #00c3ff); */
+  /* background: linear-gradient(to left, #fffe99, #00c3ff); */
   position: fixed;
   z-index: 1031;
   top: 0;

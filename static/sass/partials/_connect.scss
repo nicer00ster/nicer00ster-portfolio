@@ -1,0 +1,12 @@
+.connect__wrapper {
+  display: flex;
+  border: 1px solid #555;
+  &--form {
+    flex: 1;
+    border: 1px solid #555;
+  }
+  &--formphoto {
+    flex: 1;
+    border: 1px solid #555;
+  }
+}
