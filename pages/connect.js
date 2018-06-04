@@ -15,10 +15,17 @@ class Connect extends React.Component {
             <Seperator />
               <div className="connect__wrapper">
                 <div className="connect__wrapper--form">
+                  <h2>Contact Form</h2>
                   <Form />
                 </div>
-                <div className="connect__wrapper--formphoto">
-                  
+                <div className="connect__wrapper--self">
+                  <picture>
+                    <source
+                      media="(min-width: 850px)"
+                      srcSet={`../static/images/photos/WinstonS9.png`}
+                    />
+                    <img src="" alt="nicer00ster"/>
+                  </picture>
                 </div>
               </div>
               <Seperator />

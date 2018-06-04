@@ -34,7 +34,7 @@ export const actionTypes = {
   TOGGLE_TERMINAL: 'TOGGLE_TERMINAL'
 }
 
-// Action Creators
+// Actions
 export function toggleMenu() {
   return { type: 'TOGGLE_MENU'  }
 }

@@ -105,7 +105,7 @@ class Terminal extends React.Component {
           </Typing>
           )}
           {this.state.sixthSegment && (
-            <Typing cursor={<Cursor />} className="hypertext__line" speed={25} >
+            <Typing cursor={<Cursor />} className="hypertext__line" speed={25}>
             <Typing.Delay ms={500} />
             <ul>
               <li>
@@ -118,39 +118,6 @@ class Terminal extends React.Component {
             <Typing.Delay ms={500} />
           </Typing>
           )}
-            {/* <li>
-              <span className="hypertext__span">
-                <span className="hypertext__line"> $ >></span>{' '}
-                React: [&#9632;&#9632;&#9632;&#9632;&#9632;&#9633;&#9633;] 80%
-              </span>
-            </li>
-            <Typing.Delay ms={1000} />
-            <li>
-              <span className="hypertext__span">
-                <span className="hypertext__line"> $ >></span>{' '}
-                Sketch: [&#9632;&#9632;&#9632;&#9632;&#9632;&#9633;&#9633;] 65%
-              </span>
-            </li>
-            <Typing.Delay ms={1000} />
-            <li>
-              <span className="hypertext__span">
-                <span className="hypertext__line"> $ >></span>{' '}
-
-                <Typing.Backspace count={10} delay={750} />
-              </span>
-            </li>
-            <Typing.Delay ms={1000} />
-            <li>
-              <span className="hypertext__span">
-                <span className="hypertext__line"> $ >></span> Neither
-                could deleting a line of text.
-                <Typing.Reset count={1} delay={750} />
-                <span> Or the entire tree.</span>
-                <Typing.Reset delay={2000} />
-              </span>
-            </li>
-            </ul>
-          </Typing> */}
       </div>
     )
   }

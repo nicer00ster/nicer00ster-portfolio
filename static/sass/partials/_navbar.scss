@@ -89,6 +89,7 @@
 @media all and (max-width: 900px) {
   .navbar {
     &__link {
+      width: 6rem;
       svg {
         width: 40px;
         margin: 3px;

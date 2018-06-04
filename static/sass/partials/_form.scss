@@ -1,29 +1,62 @@
 .form__container {
   display: flex;
   flex-direction: column;
+  margin-left: 1rem;
+  margin-right: 1rem;
   &--firstname {
     flex: 1;
-    width: 470px;
+    width: 100%;
     height: 50px;
     padding: 0px 15px 0px 15px;
-    transition: all 0.925s;
+    margin: 1rem auto;
+    transition: all 0.25s;
     &:hover {
-      background: gray;
+      background: #f3f3f3;
     }
   }
   &--lastname {
     flex: 1;
-    width: 470px;
+    width: 100%;
     height: 50px;
     padding: 0px 15px 0px 15px;
+    margin: 1rem auto;
+    transition: all 0.25s;
+    &:hover {
+      background: #f3f3f3;
+    }
   }
   &--message {
     flex: 1;
-    width: 470px;
-    height: 270px;
-    padding: 0px 15px 0px 15px;
+    width: 100%;
+    height: 150px;
+    padding: 15px 15px 0px 15px;
+    margin: 1rem auto;
+    transition: all 0.25s;
+    &:hover {
+      background: #f3f3f3;
+    }
   }
-  &--submit {
-    flex: 1;
+  &--button {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    width: 50%;
+    transition: all 0.25s;
+    // border: 2px solid black;
+    &-svg {
+      fill: transparent;
+      align-self: center;
+      stroke-dasharray: 140 540;
+      stroke-dashoffset: -474;
+      stroke-width: 8px;
+      stroke: #19f6e8;
+    }
+    &-submit {
+      cursor: pointer;
+
+    }
+    &:hover .form__container--button-svg {
+
+    }
   }
 }
