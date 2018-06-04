@@ -30,9 +30,9 @@
       font-weight: 800;
       background: #fff;
       text-shadow:
-            1px 1px 0px #FFF,
+            1px 1px 0px #fff,
             2px 2px 0px #999,
-            3px 3px 0px #FFF;
+            3px 3px 0px #fff;
       background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.05) 100%);
       background-image: -webkit-linear-gradient(left top,
           transparent 0%, transparent 25%,
@@ -100,7 +100,7 @@
       flex: 1;
       border: 1px solid #999;
       margin: 5px;
-      background: repeating-linear-gradient(135deg, rgba(251,251,251,0.75), rgba(251,251,251,0.75) 24px, #ECECEC 24px, rgba(251,251,251,0.9) 25px, rgba(251,251,251,0.95) 25px, rgba(251,251,251,0.95)100px, #ececec 100px, #ececec 101px);
+      background: repeating-linear-gradient(135deg, rgba(251,251,251,0.75), rgba(251,251,251,0.75) 24px, #ececec 24px, rgba(251,251,251,0.9) 25px, rgba(251,251,251,0.95) 25px, rgba(251,251,251,0.95)100px, #ececec 100px, #ececec 101px);
       box-shadow: $boxshad;
     }
     &-item2 {

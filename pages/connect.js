@@ -16,7 +16,7 @@ class Connect extends React.Component {
               <div className="connect__wrapper">
                 <div className="connect__wrapper--form">
                   <h2>Contact Form</h2>
-                  <Form />
+                  <Form url={this.props.url} />
                 </div>
                 <div className="connect__wrapper--self">
                   <picture>

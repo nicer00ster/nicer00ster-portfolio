@@ -29,13 +29,17 @@ class Layout extends React.Component {
           <link rel="icon" href="/static/favicon.ico" />
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
           <style>{`
             @font-face {
               font-family: 'Courier Prime Sans';
               src: url('../static/fonts/Courier Prime Sans.ttf');
             }
             body, span {
-              font-family: Courier Prime Sans;
+              font-family: 'Courier Prime Sans';
+            }
+            button > span {
+              font-family: 'Raleway';
             }
             @media all and (max-width: 600px) {
               main {
