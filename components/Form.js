@@ -5,7 +5,6 @@ class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      submitting: false,
       submitted: false,
       name: '',
       email: '',
@@ -74,7 +73,7 @@ class Form extends React.Component {
           placeholder="What's up?" />
         <button className="form__container--button">
           <span className="form__container--button-submit">
-            <svg style={{ display: !this.state.submitted ? 'none' : 'visible' }} version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" enableBackground="new 0 0 512 512">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" enableBackground="new 0 0 512 512">
               <path id="paper-plane-icon" d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z
               M202.992,332.528v124.517l58.738-67.927L202.992,332.528z">
               </path>

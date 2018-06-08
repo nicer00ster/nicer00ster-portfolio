@@ -1,5 +1,5 @@
-const express = require('express');
 const next = require('next');
+const express = require('express');
 
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
@@ -24,6 +24,7 @@ const sendMail = text => {
 
 
 app.prepare().then(() => {
+
   const server = express();
 
   server.use(bodyParser.json());
@@ -57,8 +58,8 @@ app.prepare().then(() => {
     return handle(req, res);
   });
 
-  server.listen(3000, (err) => {
+  server.listen(3000, err => {
     if (err) throw err;
     console.log('Listening on http://localhost:3000');
-  });
+  })
 });

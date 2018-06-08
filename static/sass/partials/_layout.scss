@@ -241,7 +241,6 @@ body {
   }
 
 
-// Media Queries
   // 1200px
   @media all and (max-width: 1200px) {
     .wrapper {
@@ -309,5 +308,13 @@ body {
       }
     }
   }
+}
 
+// Max width(1725px)
+@media all and (min-width: 1725px) {
+  body {
+    max-width: 1725px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

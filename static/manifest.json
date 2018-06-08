@@ -1,0 +1,26 @@
+{
+  "name": "nicer00ster",
+  "short_name": "nicer00ster",
+  "icons":
+  [{
+    "src": "/static/icons/icon-72x72.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "/static/icons/icon-128x128.png",
+    "sizes": "128x128",
+    "type": "image/png"
+  }, {
+    "src": "/static/icons/icon-152x152.png",
+    "sizes": "152x152",
+    "type": "image/png"
+  }, {
+    "src": "/static/icons/icon-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#5bb6ff",
+  "background_color": "#ffc18e"
+}

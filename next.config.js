@@ -1,20 +1,13 @@
 const withSass = require('@zeit/next-sass');
-// module.exports = withSass();
-module.exports = withSass({
-  webpack(config, { dev }) {
-    if (dev) {
-      config.devtool = 'cheap-module-source-map';
-    }
-    return config;
-  }
-});
+const withOffline = require('next-offline');
+const compose = require("recompose/compose").default;
 
 module: {
     loaders: [
         {
             test: /\.svg$/,
             exclude: /node_modules/,
-            loader: 'svg-react-loader',
+            loader: ['svg-react-loader'],
             query: {
                 classIdPrefix: '[name]-[hash:8]__',
                 filters: [
@@ -32,3 +25,14 @@ module: {
         }
     ]
 }
+
+module.exports = compose(withOffline, withSass);
+
+// module.exports = withSass({
+//   webpack(config, { dev }) {
+//     if (dev) {
+//       config.devtool = 'cheap-module-source-map';
+//     }
+//     return config;
+//   }
+// });

@@ -29,6 +29,7 @@ class Wrapper extends React.Component {
             />
             <img src="" alt="nicer00ster"/>
           </picture>
+          {/* <img src={require(`../static/images/photos/${props.page}-img.png`)} alt="nicer00ster"/> */}
         </div>
         <div className={`wrapper__${props.page}`}>
           <div className={`wrapper__${props.page}--header`}>

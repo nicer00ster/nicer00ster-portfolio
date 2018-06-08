@@ -18,11 +18,12 @@ class Layout extends React.Component {
           <title>{props.title}</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
           <meta name="description" content={props.description || defaultDesc} />
-          <meta name="theme-color" content="#3f3f3f" />
+          <meta name="theme-color" content="#fefefe" />
           <meta name="apple-mobile-web-app-title" content="nicer00ster" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="mobile-web-app-capable" content="yes" />
+          <link rel="manifest" href="/static/manifest/manifest.json" />
           <link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882" />
           <link rel="apple-touch-icon" href="/static/touch-icon.png" />
           <link rel="icon" sizes="192x192" href="/static/touch-icon.png" />

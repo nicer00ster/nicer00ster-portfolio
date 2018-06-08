@@ -29,40 +29,40 @@ const Navbar = ({ isOpen, toggleMenu }) => {
       </Head>
       <div>
         <div className={ isOpen ? "navbar open" : "navbar" }>
-          <div className="navbar__links">
-            <li className="navbar__item">
-              <Link href="/">
-                <Chicken className="logo" width={200} height={100}/>
-              </Link>
-              <Menu />
-            </li>
-            <div className="navbar__navigation">
-              <li className="navbar__item" onClick={ toggleMenu }>
+            <ul className="navbar__links">
+              <li className="navbar__item">
                 <Link href="/">
-                  <a className="navbar__link">
-                    <House className="navbar__item--svg" width={100} height={50} />
-                    <span className="navbar__item--text">Home</span>
-                  </a>
+                  <Chicken className="logo" width={200} height={100}/>
                 </Link>
+                <Menu />
               </li>
-              <li className="navbar__item" onClick={ toggleMenu }>
-                <Link href="/work">
-                  <a className="navbar__link">
-                    <Smartphone className="navbar__item--svg" width={100} height={50} />
-                    <span className="navbar__item--text">Work</span>
-                  </a>
-                </Link>
-              </li>
-              <li className="navbar__item" onClick={ toggleMenu }>
-                <Link href="/connect">
-                  <a className="navbar__link">
-                    <Telephone className="navbar__item--svg" width={100} height={50} />
-                    <span className="navbar__item--text">Connect</span>
-                  </a>
-                </Link>
-              </li>
-            </div>
-          </div>
+              <div className="navbar__navigation">
+                <li className="navbar__item" onClick={ toggleMenu }>
+                  <Link href="/">
+                    <a className="navbar__link">
+                      <House className="navbar__item--svg" width={100} height={50} />
+                      <span className="navbar__item--text">Home</span>
+                    </a>
+                  </Link>
+                </li>
+                <li className="navbar__item" onClick={ toggleMenu }>
+                  <Link href="/work">
+                    <a className="navbar__link">
+                      <Smartphone className="navbar__item--svg" width={100} height={50} />
+                      <span className="navbar__item--text">Work</span>
+                    </a>
+                  </Link>
+                </li>
+                <li className="navbar__item" onClick={ toggleMenu }>
+                  <Link href="/connect">
+                    <a className="navbar__link">
+                      <Telephone className="navbar__item--svg" width={100} height={50} />
+                      <span className="navbar__item--text">Connect</span>
+                    </a>
+                  </Link>
+                </li>
+              </div>
+            </ul>
         </div>
         <Menu isOpen={isOpen} />
       </div>
