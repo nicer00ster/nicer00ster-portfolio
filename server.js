@@ -1,5 +1,7 @@
 const next = require('next');
-const express = require('express');
+const { createServer } = require('http');
+const { join } = require('path');
+const { parse } = require('url');
 
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
@@ -7,7 +9,7 @@ const smtpTransport = require('nodemailer-smtp-transport');
 const info = require('./private');
 
 const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev });
+const app = next();
 const handle = app.getRequestHandler();
 
 const sendMail = text => {
@@ -22,44 +24,55 @@ const sendMail = text => {
   });
 }
 
-
 app.prepare().then(() => {
+  createServer((req, res) => {
+    const { headers, method, url } = req;
+    let body = [];
+    req.on('error', (err) => {
+      console.error(err);
+    }).on('data', (data) => {
+      body.push(data);
+    }).on('end', () => {
+      body = Buffer.concat(body).toString();
+    })
 
-  const server = express();
-
-  server.use(bodyParser.json());
-
-  server.post('/api/contact', (req, res) => {
-    const { name, email, message } = req.body;
-    const transporter = nodemailer.createTransport(smtpTransport({
-      service: 'gmail',
-      auth: {
-        user: info.EMAIL,
-        pass: info.PASS
+    // Handle emails here
+    if(req.method === 'POST' && req.url === '/api/contact') {
+      const { name, email, message } = body;
+      const transporter = nodemailer.createTransport(smtpTransport({
+        service: 'gmail',
+        auth: {
+          user: info.EMAIL,
+          pass: info.PASS
+        }
+      }));
+      const mailOptions = {
+        from: email,
+        to: info.EMAIL,
+        subject: name,
+        text: message,
+        replyTo: email
       }
-    }));
-    const mailOptions = {
-      from: email,
-      to: info.EMAIL,
-      subject: name,
-      text: message,
-      replyTo: email
+      transporter.sendMail(mailOptions, (err, res) => {
+        if(err) {
+          console.error('Error: ', err);
+        } else {
+          console.log('Message sent successfully: ', res);
+        }
+      });
     }
-    transporter.sendMail(mailOptions, (err, res) => {
-      if(err) {
-        console.error('Error: ', err);
-      } else {
-        console.log('Message sent successfully: ', res);
-      }
+
+    const parsedUrl = parse(req.url, true);
+    const { pathname } = parsedUrl;
+
+    if (pathname === '/service-worker.js') {
+      const filePath = join(__dirname, '.next', pathname)
+      app.serveStatic(req, res, filePath)
+    } else {
+      handle(req, res, parsedUrl)
+    }
+    }).listen(3000, () => {
+      console.log(`> Ready on http://localhost:${3000}`)
     });
-  });
 
-  server.get('*', (req, res) => {
-    return handle(req, res);
   });
-
-  server.listen(3000, err => {
-    if (err) throw err;
-    console.log('Listening on http://localhost:3000');
-  })
-});

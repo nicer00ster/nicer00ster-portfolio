@@ -47,27 +47,32 @@ class Form extends React.Component {
             e.preventDefault()
             this.submitForm(name, email, message)
           }}>
+        <label htmlFor="name"></label>
         <input
           onChange={event => this.handleName(event)}
-          name="name"
           className="form__container--name"
           required
+          name="name"
+          id="name"
           placeholder="Name"
           type="text" />
+        <label htmlFor="email"></label>
         <input
           onChange={event => this.handleEmail(event)}
-          name="email"
           className="form__container--email"
           required
+          name="email"
+          id="email"
           placeholder="Email"
           type="text" />
+        <label htmlFor="message"></label>
         <textarea
           onChange={event => this.handleMessage(event)}
           name="message"
           className="form__container--message"
           required
           name="message"
-          id=""
+          id="message"
           cols="30"
           rows="10"
           placeholder="What's up?" />

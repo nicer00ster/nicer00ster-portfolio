@@ -1,22 +1,24 @@
 import Document, { Head, Main, NextScript } from 'next/document';
-import NextHead from 'next/head';
+import Manifest from 'next-manifest/manifest';
 
 
-export default class Doc extends Document {
+export default class extends Document {
   render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
-          <link rel="stylesheet" href="/_next/static/style.css" />
+          <Manifest
+            href='/static/manifest/manifest.json'
+            themeColor='#ffc18e'
+            initialScale='1'
+          />
         </Head>
-        <NextHead>
-          <link rel="manifest" href="/_next/static/manifest.json" />
-        </NextHead>
         <body>
           <Main />
+          <link rel="stylesheet" href="/_next/static/style.css" />
           <NextScript />
         </body>
       </html>
-    )
+    );
   }
 }
