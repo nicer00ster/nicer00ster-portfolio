@@ -1,7 +1,6 @@
 const withSass = require('@zeit/next-sass');
 const withOffline = require('next-offline');
 const withManifest = require('next-manifest');
-const compose = require("recompose/compose").default;
 
 module: {
     loaders: [
@@ -32,16 +31,3 @@ module.exports = withManifest(withOffline(withSass({
     }
   }
 })));
-
-// module.exports = withOffline(withSass());
-
-// module.exports = withManifest(withOffline(withSass()));
-
-// module.exports = withSass({
-//   webpack(config, { dev }) {
-//     if (dev) {
-//       config.devtool = 'cheap-module-source-map';
-//     }
-//     return config;
-//   }
-// });
