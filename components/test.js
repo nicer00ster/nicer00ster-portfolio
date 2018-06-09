@@ -79,3 +79,43 @@
     "theme_color": "#5bb6ff",
     "background_color": "#ffc18e"
   }
+
+
+
+
+
+
+// Express
+
+const server = express();
+
+server.get('*', (req, res) => {
+  return handle(req, res);
+});
+
+server.use(bodyParser.json());
+
+server.post('/api/contact', (req, res) => {
+  const { name, email, message } = req.body;
+  const transporter = nodemailer.createTransport(smtpTransport({
+    service: 'gmail',
+    auth: {
+      user: info.EMAIL,
+      pass: info.PASS
+    }
+  }));
+  const mailOptions = {
+    from: email,
+    to: info.EMAIL,
+    subject: name,
+    text: message,
+    replyTo: email
+  }
+  transporter.sendMail(mailOptions, (err, res) => {
+    if(err) {
+      console.error('Error: ', err);
+    } else {
+      console.log('Message sent successfully: ', res);
+    }
+  });
+});
