@@ -9,10 +9,10 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const smtpTransport = require('nodemailer-smtp-transport');
 const info = require('./private');
-const port = parseInt(process.env.PORT, 10) || 3000
+const port = parseInt(process.env.PORT, 10) || 3001
 
 const dev = process.env.NODE_ENV !== 'production';
-const app = next();
+const app = next({ dev });
 const handle = app.getRequestHandler();
 
 // const sendMail = text => {
@@ -27,40 +27,40 @@ const handle = app.getRequestHandler();
 //   });
 // }
 
-  app.prepare().then(() => {
-    const server = express();
-    server
-      .get('/service-worker.js', (req, res) => {
-        const parsedUrl = parse(req.url, true)
-        const { pathname } = parsedUrl
-        const filePath = join(__dirname, '.next', pathname)
-        app.serveStatic(req, res, filePath)
-      })
-      .use(bodyParser.json())
-      .get('*', handle)
-      .post('/api/contact', (req, res) => {
-        const { name, email, message } = req.body;
-        const transporter = nodemailer.createTransport(smtpTransport({
-          service: 'gmail',
-          auth: {
-            user: info.EMAIL,
-            pass: info.PASS
-          }
-        }));
-        const mailOptions = {
-          from: email,
-          to: info.EMAIL,
-          subject: name,
-          text: message,
-          replyTo: email
+app.prepare().then(() => {
+  const server = express();
+  server
+    .get('/service-worker.js', (req, res) => {
+      const parsedUrl = parse(req.url, true);
+      const { pathname } = parsedUrl;
+      const filePath = join(__dirname, '.next', pathname);
+      app.serveStatic(req, res, filePath);
+    })
+    .use(bodyParser.json())
+    .get('*', handle)
+    .post('/api/contact', (req, res) => {
+      const { name, email, message } = req.body;
+      const transporter = nodemailer.createTransport(smtpTransport({
+        service: 'gmail',
+        auth: {
+          user: info.EMAIL,
+          pass: info.PASS
         }
-        transporter.sendMail(mailOptions, (err, res) => {
-          if(err) {
-            console.error('Error: ', err);
-          } else {
-            console.log('Message sent successfully: ', res);
-          }
-        });
-      })
-      .listen(port, err => console.log(err || `> Ready on http://localhost:${port}`))
-  })
+      }));
+      const mailOptions = {
+        from: email,
+        to: info.EMAIL,
+        subject: name,
+        text: message,
+        replyTo: email
+      }
+      transporter.sendMail(mailOptions, (err, res) => {
+        if(err) {
+          console.error('Error: ', err);
+        } else {
+          console.log('Message sent successfully: ', res);
+        }
+      });
+    })
+    .listen(port, err => console.log(err || `> Ready on http://localhost:${port}`))
+});
