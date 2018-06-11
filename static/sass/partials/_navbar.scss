@@ -113,16 +113,16 @@
 
 @media all and (max-width: 600px) {
   .logo {
-    width: 80px;
+    width: 72px;
   }
   .navbar {
     width: 225px;
-    position:fixed;
+    position: fixed;
     box-sizing: border-box;
     -webkit-transform: translate(-325px, 0);
     transition: transform 0.3s ease;
     border: 1px solid #999;
-    box-shadow:$boxshad;
+    box-shadow: $boxshad;
     background: repeating-linear-gradient(45deg, rgba(251,251,251,0.8), rgba(251,251,251,0.8) 24px, #ECECEC 24px, rgba(251,251,251,0.9) 25px, rgba(251,251,251,0.95) 25px, rgba(251,251,251,0.95)100px, #ececec 100px, #ececec 101px);
     &:before {
       filter: blur(5px);
@@ -137,12 +137,13 @@
     &__links {
       flex-direction: column;
       align-items: center;
+      padding: .5rem;
     }
     &__navigation {
       flex-direction: column;
+      width: 100%;
     }
     &__link {
-      border-right: none;
       width: 100%;
       svg {
         width: 48px;
@@ -150,6 +151,9 @@
     }
     &__item {
       width: 100%;
+      &--text {
+        margin: .5rem;
+      }
     }
   }
 }

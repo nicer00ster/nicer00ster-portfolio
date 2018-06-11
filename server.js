@@ -9,10 +9,10 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const smtpTransport = require('nodemailer-smtp-transport');
 const info = require('./private');
-const port = parseInt(process.env.PORT, 10) || 3000
+const port = parseInt(process.env.PORT, 10) || 3001
 
 const dev = process.env.NODE_ENV !== 'production';
-const app = next();
+const app = next({ dev });
 const handle = app.getRequestHandler();
 
 // const sendMail = text => {
@@ -31,10 +31,17 @@ app.prepare().then(() => {
   const server = express();
   server
     .get('/service-worker.js', (req, res) => {
+<<<<<<< HEAD
       const parsedUrl = parse(req.url, true)
       const { pathname } = parsedUrl
       const filePath = join(__dirname, '.next', pathname)
       app.serveStatic(req, res, filePath)
+=======
+      const parsedUrl = parse(req.url, true);
+      const { pathname } = parsedUrl;
+      const filePath = join(__dirname, '.next', pathname);
+      app.serveStatic(req, res, filePath);
+>>>>>>> bebca0cdfda00c00cda4145938d473eac6cbeff0
     })
     .use(bodyParser.json())
     .get('*', handle)
