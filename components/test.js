@@ -119,3 +119,44 @@ server.post('/api/contact', (req, res) => {
     }
   });
 });
+
+
+
+
+
+// createServer((req, res) => {
+//   const { headers, method, url } = req;
+//   let body = [];
+//   req.on('error', (err) => {
+//     console.error(err);
+//   }).on('data', (data) => {
+//     body.push(data);
+//   }).on('end', () => {
+//     body = Buffer.concat(body).toString();
+//     // Handle emails here
+//     if(req.method === 'POST' && req.url === '/api/contact') {
+//       const { name, email, message } = body;
+//       console.log(body);
+//       const transporter = nodemailer.createTransport(smtpTransport({
+//         service: 'gmail',
+//         auth: {
+//           user: info.EMAIL,
+//           pass: info.PASS
+//         }
+//       }));
+//       const mailOptions = {
+//         from: email,
+//         to: info.EMAIL,
+//         subject: name,
+//         text: message,
+//         replyTo: email
+//       }
+//       transporter.sendMail(mailOptions, (err, res) => {
+//         if(err) {
+//           console.error('Error: ', err);
+//         } else {
+//           console.log('Message sent successfully: ', res);
+//         }
+//       });
+//     }
+//   })
