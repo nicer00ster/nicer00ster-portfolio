@@ -31,14 +31,14 @@ const Navbar = ({ isOpen, toggleMenu }) => {
         <div className={ isOpen ? "navbar open" : "navbar" }>
             <ul className="navbar__links">
               <li className="navbar__item">
-                <Link href="/">
+                <Link prefetch href="/">
                   <Chicken className="logo" width={200} height={100}/>
                 </Link>
                 <Menu />
               </li>
               <div className="navbar__navigation">
                 <li className="navbar__item" onClick={ toggleMenu }>
-                  <Link href="/">
+                  <Link prefetch href="/">
                     <a className="navbar__link">
                       <House className="navbar__item--svg" width={100} height={50} />
                       <span className="navbar__item--text">Home</span>
@@ -46,7 +46,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
                   </Link>
                 </li>
                 <li className="navbar__item" onClick={ toggleMenu }>
-                  <Link href="/work">
+                  <Link prefetch href="/work">
                     <a className="navbar__link">
                       <Smartphone className="navbar__item--svg" width={100} height={50} />
                       <span className="navbar__item--text">Work</span>
@@ -54,7 +54,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
                   </Link>
                 </li>
                 <li className="navbar__item" onClick={ toggleMenu }>
-                  <Link href="/connect">
+                  <Link prefetch href="/connect">
                     <a className="navbar__link">
                       <Telephone className="navbar__item--svg" width={100} height={50} />
                       <span className="navbar__item--text">Connect</span>

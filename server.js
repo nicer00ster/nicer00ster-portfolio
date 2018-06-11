@@ -1,6 +1,7 @@
 const next = require('next');
 const express = require('express');
 const path = require('path');
+
 const { createServer } = require('http');
 const { join } = require('path');
 const { parse } = require('url');
@@ -27,24 +28,20 @@ const handle = app.getRequestHandler();
 //   });
 // }
 
+
 app.prepare().then(() => {
   const server = express();
   server
+    .use(bodyParser.json())
     .get('/service-worker.js', (req, res) => {
-<<<<<<< HEAD
-      const parsedUrl = parse(req.url, true)
-      const { pathname } = parsedUrl
-      const filePath = join(__dirname, '.next', pathname)
-      app.serveStatic(req, res, filePath)
-=======
       const parsedUrl = parse(req.url, true);
       const { pathname } = parsedUrl;
       const filePath = join(__dirname, '.next', pathname);
       app.serveStatic(req, res, filePath);
->>>>>>> bebca0cdfda00c00cda4145938d473eac6cbeff0
     })
-    .use(bodyParser.json())
-    .get('*', handle)
+    .get('*', (req, res) => {
+      return handle(req, res);
+    })
     .post('/api/contact', (req, res) => {
       const { name, email, message } = req.body;
       const transporter = nodemailer.createTransport(smtpTransport({
