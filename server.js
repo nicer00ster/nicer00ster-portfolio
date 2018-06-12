@@ -1,6 +1,7 @@
 const next = require('next');
 const express = require('express');
 const path = require('path');
+const Router = require('next/router');
 
 const { createServer } = require('http');
 const { join } = require('path');
@@ -40,10 +41,11 @@ app.prepare().then(() => {
       app.serveStatic(req, res, filePath);
     })
     .get('*', (req, res) => {
+      console.log(req.url)
       return handle(req, res);
     })
     .post('/api/contact', (req, res) => {
-      const { name, email, message } = req.body;
+      const { name, email, selected, message } = req.body;
       const transporter = nodemailer.createTransport(smtpTransport({
         service: 'gmail',
         auth: {
@@ -54,7 +56,7 @@ app.prepare().then(() => {
       const mailOptions = {
         from: email,
         to: info.EMAIL,
-        subject: name,
+        subject: `${name} -- ${selected}`,
         text: message,
         replyTo: email
       }

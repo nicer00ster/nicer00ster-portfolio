@@ -4,11 +4,9 @@ import Layout from '../components/Layout';
 import Wrapper from '../components/Wrapper';
 import Seperator from '../components/Seperator';
 import Terminal from '../components/Terminal';
-
 import { nextConnect } from '../components/store';
 
 class Index extends React.Component {
-
   render() {
     return (
       <div>

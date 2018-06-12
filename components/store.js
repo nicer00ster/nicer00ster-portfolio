@@ -5,7 +5,9 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 const initialState = {
   open: false,
-  terminal: false
+  terminal: false,
+  filled: false,
+  submitted: false
 }
 
 // Store
@@ -23,6 +25,10 @@ export const reducer = (state = initialState, action) => {
       return { ...state.open, open: !state.open }
     case actionTypes.TOGGLE_TERMINAL:
       return { ...state.terminal, terminal: !state.terminal }
+    case actionTypes.FILLED:
+      return { ...state.filled, filled: !state.filled }
+    case actionTypes.SUBMIT_FORM:
+      return { ...state.submitted, submitted: !state.submitted }
     default:
       return state;
   }
@@ -31,7 +37,9 @@ export const reducer = (state = initialState, action) => {
 // Action Types
 export const actionTypes = {
   TOGGLE_MENU: 'TOGGLE_MENU',
-  TOGGLE_TERMINAL: 'TOGGLE_TERMINAL'
+  TOGGLE_TERMINAL: 'TOGGLE_TERMINAL',
+  FILLED: 'FILLED',
+  SUBMIT_FORM: 'SUBMIT_FORM'
 }
 
 // Actions
@@ -43,5 +51,27 @@ export function toggleTerminal() {
   return { type: 'TOGGLE_TERMINAL' }
 }
 
+export function filledSection() {
+  return { type: 'FILLED' }
+}
+
+export function submitForm(name, email, selected, message) {
+  fetch('/api/contact', {
+    method: 'post',
+    headers: {
+      'Accept': 'application/json, text/plain, /*/',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      name,
+      email,
+      selected,
+      message
+    })
+  }).then((res) => {
+    res.status === 200 ? this.setState({ submitted: true }) : '';
+  })
+  return { type: 'SUBMIT_FORM' }
+}
 
 export const nextConnect = nextConnectRedux(initStore);

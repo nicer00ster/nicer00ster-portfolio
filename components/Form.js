@@ -1,43 +1,47 @@
 import { connect } from 'react-redux';
+import { filledSection, submitForm } from './store';
 import 'isomorphic-fetch';
 
 class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      submitted: false,
       name: '',
       email: '',
+      selected: '',
       message: ''
     }
   }
-  submitForm(name, email, message) {
-    fetch('/api/contact', {
-      method: 'post',
-      headers: {
-        'Accept': 'application/json, text/plain, /*/',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        message
-      })
-    }).then((res) => {
-      res.status === 200 ? this.setState({ submitted: true }) : '';
-    })
-  }
+  // submitForm(name, email, message) {
+  //   fetch('/api/contact', {
+  //     method: 'post',
+  //     headers: {
+  //       'Accept': 'application/json, text/plain, /*/',
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify({
+  //       name,
+  //       email,
+  //       message
+  //     })
+  //   }).then((res) => {
+  //     res.status === 200 ? this.setState({ submitted: true }) : '';
+  //   })
+  // }
   handleName(event) {
     this.setState({ name: event.target.value })
   }
   handleEmail(event) {
     this.setState({ email: event.target.value })
   }
+  handleSelected(event) {
+    this.setState({ selected: event.target.value })
+  }
   handleMessage(event) {
     this.setState({ message: event.target.value })
   }
   render() {
-    const { name, email, message } = this.state;
+    const { name, email, selected, message } = this.state;
     return (
       <form
           className="form__container"
@@ -45,12 +49,12 @@ class Form extends React.Component {
           action="/api/contact"
           onSubmit={e => {
             e.preventDefault()
-            this.submitForm(name, email, message)
+            this.props.submitForm(name, email, selected, message)
           }}>
         <label htmlFor="name"></label>
         <input
           onChange={event => this.handleName(event)}
-          className="form__container--name"
+          className={ this.state.name.length >= 2 ? "form__container--name filled" : "form__container--name" }
           required
           name="name"
           id="name"
@@ -59,17 +63,23 @@ class Form extends React.Component {
         <label htmlFor="email"></label>
         <input
           onChange={event => this.handleEmail(event)}
-          className="form__container--email"
+          className={ this.state.email.length >= 2 ? "form__container--email filled" : "form__container--email" }
           required
           name="email"
           id="email"
           placeholder="Email"
           type="text" />
         <label htmlFor="message"></label>
+        <select onChange={event => this.handleSelected(event)} className={ this.state.selected ? "form__container--select filled" : "form__container--select" } placeholder="Subject" name="subject" id="subject_input" required>
+          <option value="SUBJECT" disabled selected hidden>Subject</option>
+          <option value="JOB">Job Opportunity</option>
+          <option value="ADVICE">Advice</option>
+          <option value="OTHER">Other</option>
+        </select>
         <textarea
           onChange={event => this.handleMessage(event)}
           name="message"
-          className="form__container--message"
+          className={ this.state.message.length >= 2 ? "form__container--message filled" : "form__container--message" }
           required
           name="message"
           id="message"
@@ -90,4 +100,9 @@ class Form extends React.Component {
   }
 }
 
-export default connect()(Form);
+export default connect(function(state) {
+  return {
+    filled: state.filled,
+    submitted: state.submitted
+   }
+}, { filledSection, submitForm })(Form);
