@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { filledSection, submitForm } from './store';
+import Modal from 'react-responsive-modal';
 import 'isomorphic-fetch';
 
 class Form extends React.Component {
@@ -9,7 +10,8 @@ class Form extends React.Component {
       name: '',
       email: '',
       selected: '',
-      message: ''
+      message: '',
+      open: false
     }
   }
   // submitForm(name, email, message) {
@@ -40,8 +42,22 @@ class Form extends React.Component {
   handleMessage(event) {
     this.setState({ message: event.target.value })
   }
+  handleForm() {
+    return new Promise(resolve => {
+      setTimeout(resolve, 2000);
+    }).then(() => {
+      this.setState({ name: '', email: '', message: '', selected: '' })
+      this.onOpenModal();
+    })
+  }
+  onOpenModal() {
+    this.setState({ open: true })
+  }
+  onCloseModal() {
+    this.setState({ open: false })
+  }
   render() {
-    const { name, email, selected, message } = this.state;
+    const { name, email, selected, message, open } = this.state;
     return (
       <form
           className="form__container"
@@ -50,6 +66,7 @@ class Form extends React.Component {
           onSubmit={e => {
             e.preventDefault()
             this.props.submitForm(name, email, selected, message)
+            this.handleForm();
           }}>
         <label htmlFor="name"></label>
         <input
@@ -59,6 +76,7 @@ class Form extends React.Component {
           name="name"
           id="name"
           placeholder="Name"
+          value={this.state.name}
           type="text" />
         <label htmlFor="email"></label>
         <input
@@ -67,11 +85,12 @@ class Form extends React.Component {
           required
           name="email"
           id="email"
+          value={this.state.email}
           placeholder="Email"
           type="text" />
         <label htmlFor="message"></label>
-        <select onChange={event => this.handleSelected(event)} className={ this.state.selected ? "form__container--select filled" : "form__container--select" } placeholder="Subject" name="subject" id="subject_input" required>
-          <option value="SUBJECT" disabled selected hidden>Subject</option>
+        <select value={this.state.selected} onChange={event => this.handleSelected(event)} className={ this.state.selected ? "form__container--select filled" : "form__container--select" } placeholder="Subject" name="subject" id="subject_input" required>
+          <option value="SUBJECT" hidden>Subject</option>
           <option value="JOB">Job Opportunity</option>
           <option value="ADVICE">Advice</option>
           <option value="OTHER">Other</option>
@@ -82,6 +101,7 @@ class Form extends React.Component {
           className={ this.state.message.length >= 2 ? "form__container--message filled" : "form__container--message" }
           required
           name="message"
+          value={this.state.message}
           id="message"
           cols="30"
           rows="10"
@@ -95,6 +115,12 @@ class Form extends React.Component {
             </svg>
           </span>
         </button>
+        <Modal open={open} classNames={{ modal: 'checkmark__modal'}} onClose={() => this.onCloseModal()} center>
+          <div class="circle-loader load-complete">
+            <div class="checkmark draw">
+            </div>
+          </div>
+        </Modal>
       </form>
     )
   }
