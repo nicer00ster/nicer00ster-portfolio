@@ -17,7 +17,7 @@ class Index extends React.Component {
               <div className="home__wrapper">
                 <div className="home__wrapper--latest">
                   <div className="home__wrapper--latest-header">
-                    <h1>Recent work...</h1>
+                    <h1>Recent work</h1>
                   </div>
                   <div className="home__wrapper--latest-content">
                     <div className="home__wrapper--latest-content_first">

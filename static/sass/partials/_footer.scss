@@ -9,11 +9,17 @@
   margin-top: 1vw;
   &__links {
     display: flex;
-    // flex-wrap: wrap;
     margin-top: auto;
   }
   &__trademark {
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .footer {
+    margin-top: .5vw;
+    height: 12rem;
   }
 }

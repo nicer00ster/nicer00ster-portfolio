@@ -12,10 +12,9 @@ body {
 }
 
 .seperator {
-  height: 125px;
+  height: 100px;
   width: 100%;
   background-color: transparent;
-  z-index:9000;
 }
 
 .wrapper {
@@ -137,9 +136,9 @@ body {
       border-bottom: 1px solid #999;
       background-image: $footerSVG;
       text-align: center;
-      // & h2 {
-      //   margin: 20px;
-      // }
+      @media all and (max-width: 600px) {
+        height: 175px;
+      }
     }
     &--content {
       flex: 1;
@@ -212,15 +211,15 @@ body {
           font-weight: bold;
           margin: 5px auto;
           & div {
-            color: #333;
+            color: #777;
             margin: 0 auto;
             letter-spacing: 2px;
             font-size: 24px;
             font-family: 'Squada One', cursive;
             text-shadow:
-              0.2rem -0.2rem 0px rgba(cyan, 0.75),
-              -0.2rem -0.2rem 0px rgba(magenta, 0.75),
-              0 0.25rem 0.25rem rgba(yellow, 0.75);
+              0.2rem -0.2rem 0px rgba(#c6ffdd, 0.75),
+              -0.2rem -0.2rem 0px rgba(#fbd786, 0.75),
+              0 0.25rem 0.25rem rgba(#f7797d, 0.75);
           }
         }
       }
@@ -280,7 +279,20 @@ body {
             padding: 2.5px;
           }
         }
+        &--content {
+          & h2 {
+            margin: 1rem;
+          }
+        }
       }
+    }
+  }
+  // Max width(1725px)
+  @media all and (min-width: 1725px) {
+    body {
+      max-width: 1725px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   // 600px
@@ -290,6 +302,17 @@ body {
       &__home, &__work, &__connect {
         margin-top: 4rem;
         min-width: 350px;
+        &--header {
+          &-text {
+            & h1 {
+              // padding: .5rem;
+            }
+            & h5 {
+              padding: 1rem;
+              text-align: center;
+            }
+          }
+        }
       }
     }
   }
@@ -307,14 +330,5 @@ body {
         }
       }
     }
-  }
-}
-
-// Max width(1725px)
-@media all and (min-width: 1725px) {
-  body {
-    max-width: 1725px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }

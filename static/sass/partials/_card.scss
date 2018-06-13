@@ -47,18 +47,25 @@
     flex-direction: column;
     flex: 1;
     padding: 1rem;
-    font-family: 'Squada One', cursive;
+    font-family: inherit, cursive;
     &--title {
-      color: #696969;
+      color: #555;
       flex: 1;
-      font-size: 1.50rem;
+      font-size: 1.85rem;
       font-weight: 300;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       text-transform: uppercase;
+      font-family: 'Squada One', cursive;
+      line-height: 1;
+      text-shadow:
+        1px 1px 0px #FFF,
+        2px 2px 0px #999,
+        3px 3px 0px #FFF;
+      position: relative;
     }
     &--text {
       flex: 1;
-      font-size: 1.25rem;
+      font-size: 1rem;
       color: #3f3f3f;
     }
     &--tags {
@@ -66,7 +73,7 @@
       justify-content: space-around;
       width: 100%;
       height: auto;
-      padding: 5px;
+      padding: 1rem;
       opacity: .90;
       transform: scale(.8);
     }

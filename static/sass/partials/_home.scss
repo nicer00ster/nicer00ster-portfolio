@@ -26,7 +26,7 @@
       margin: 0 auto;
       letter-spacing: 4px;
       font-family: 'Squada One', cursive;
-      color: #333;
+      color: #555;
       font-weight: 800;
       background: #fff;
       text-shadow:
@@ -43,7 +43,7 @@
       box-shadow:
           0 0 0 1px rgba(0,0,0,.4) inset,
           0 0 20px -5px rgba(0,0,0,.4),
-          0 0 0px 3px #FFF inset
+          0 0 0px 3px #FFF inset;
     }
     &-content {
       display: flex;

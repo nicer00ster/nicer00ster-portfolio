@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import { filledSection, submitForm } from './store';
 import Modal from 'react-responsive-modal';
+import Checkmark from './Checkmark';
+import Plane from 'svg-react-loader?name=Plane!../static/images/svg/send.svg';
 import 'isomorphic-fetch';
 
 class Form extends React.Component {
@@ -14,22 +16,6 @@ class Form extends React.Component {
       open: false
     }
   }
-  // submitForm(name, email, message) {
-  //   fetch('/api/contact', {
-  //     method: 'post',
-  //     headers: {
-  //       'Accept': 'application/json, text/plain, /*/',
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify({
-  //       name,
-  //       email,
-  //       message
-  //     })
-  //   }).then((res) => {
-  //     res.status === 200 ? this.setState({ submitted: true }) : '';
-  //   })
-  // }
   handleName(event) {
     this.setState({ name: event.target.value })
   }
@@ -44,10 +30,16 @@ class Form extends React.Component {
   }
   handleForm() {
     return new Promise(resolve => {
-      setTimeout(resolve, 2000);
+      setTimeout(resolve, 1000);
     }).then(() => {
       this.setState({ name: '', email: '', message: '', selected: '' })
       this.onOpenModal();
+    }).then(() => {
+      return new Promise(resolve => {
+        setTimeout(resolve, 2250);
+      }).then(() => {
+        this.onCloseModal();
+      })
     })
   }
   onOpenModal() {
@@ -108,18 +100,11 @@ class Form extends React.Component {
           placeholder="What's up?" />
         <button className="form__container--button">
           <span className="form__container--button-submit">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" enableBackground="new 0 0 512 512">
-              <path id="paper-plane-icon" d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z
-              M202.992,332.528v124.517l58.738-67.927L202.992,332.528z">
-              </path>
-            </svg>
+            <Plane />
           </span>
         </button>
-        <Modal open={open} classNames={{ modal: 'checkmark__modal'}} onClose={() => this.onCloseModal()} center>
-          <div class="circle-loader load-complete">
-            <div class="checkmark draw">
-            </div>
-          </div>
+        <Modal open={open} classNames={{ modal: 'checkmark__modal'}} onClose={() => this.onCloseModal()} showCloseIcon={false} center>
+          <Checkmark />
         </Modal>
       </form>
     )

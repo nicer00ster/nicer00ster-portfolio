@@ -36,7 +36,7 @@
         padding: 2px 10px;
         color: #555;
         font-size: 45px;
-        // text-align: center;
+        text-align: center;
         text-decoration: none;
         // position: relative;
         z-index: 1;
@@ -59,9 +59,27 @@
     }
   }
   &--self {
-    flex: 1;
-    // width: 50%;
+    flex: 1.5;
     margin: 1rem;
     border: 1px solid #555;
+  }
+}
+@media all and (max-width: 825px) {
+  .connect__wrapper {
+    &--form {
+
+    }
+  }
+}
+@media all and (max-width: 600px) {
+  .connect__wrapper {
+    &--form {
+      &-header {
+        width: 75%;
+      }
+    }
+    &--self {
+      display: none;
+    }
   }
 }

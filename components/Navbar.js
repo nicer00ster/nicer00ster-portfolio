@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from './Link';
 import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
@@ -38,7 +38,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
               </li>
               <div className="navbar__navigation">
                 <li className="navbar__item" onClick={ toggleMenu }>
-                  <Link prefetch href="/">
+                  <Link activeClassName="active" prefetch href="/">
                     <a className="navbar__link">
                       <House className="navbar__item--svg" width={100} height={50} />
                       <span className="navbar__item--text">Home</span>
@@ -46,7 +46,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
                   </Link>
                 </li>
                 <li className="navbar__item" onClick={ toggleMenu }>
-                  <Link prefetch href="/work">
+                  <Link activeClassName="active" prefetch href="/work">
                     <a className="navbar__link">
                       <Smartphone className="navbar__item--svg" width={100} height={50} />
                       <span className="navbar__item--text">Work</span>
@@ -54,7 +54,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
                   </Link>
                 </li>
                 <li className="navbar__item" onClick={ toggleMenu }>
-                  <Link prefetch href="/connect">
+                  <Link activeClassName="active" prefetch href="/connect">
                     <a className="navbar__link">
                       <Telephone className="navbar__item--svg" width={100} height={50} />
                       <span className="navbar__item--text">Connect</span>
