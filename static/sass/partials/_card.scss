@@ -12,7 +12,7 @@
   width: 300px;
   height: 550px;
   box-shadow: $boxshad;
-  border: 1.5px solid #555;
+  border: 1px solid #555;
   // background-color: #fff;
   &:hover &__image img {
     -webkit-filter: contrast(100%);

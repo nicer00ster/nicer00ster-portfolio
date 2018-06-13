@@ -59,7 +59,7 @@
     transition: all 0.225s;
     &.active {
       & > span {
-        color: rgba(#f3f3f3, 0.75);
+        font-weight: 800;
         text-shadow:
           0.2rem -0.2rem 0.15rem rgba(#c6ffdd, 0.75),
           -0.2rem -0.2rem 0.2rem rgba(#fbd786, 0.75),

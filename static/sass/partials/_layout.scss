@@ -1,6 +1,6 @@
 body, html {
   font-size: 16px;
-  background: #fefefe;
+  background: linear-gradient(to bottom right, #fbd786, #c6ffdd, #f7797d);
   overflow-x: hidden;
 }
 
@@ -21,15 +21,11 @@ body {
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #999;
-  border-right: 1px solid #999;
-  border-left: 1px solid #999;
   background-color: #fff;
   background-image: $foodSVG;
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 1500px;
   box-shadow: $boxshad;
-  // z-index: 2
-  // box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 
   &__home {
     &--header {
@@ -124,7 +120,7 @@ body {
   &__home, &__work, &__connect {
     display: flex;
     flex-direction: column;
-    border: 1.5px solid #999;
+    border: 1px solid #999;
     box-shadow: $boxshad;
     margin: 6rem -2rem -4rem;
     max-width: 450px;
@@ -165,6 +161,9 @@ body {
       box-shadow: $boxshad;
       background: $footerSVG;
       z-index: 2;
+      &-item {
+        max-width: 75px;
+      }
       &-heading {
         display: flex;
         flex-direction: column;
@@ -211,7 +210,7 @@ body {
           font-weight: bold;
           margin: 5px auto;
           & div {
-            color: #777;
+            color: #666;
             margin: 0 auto;
             letter-spacing: 2px;
             font-size: 24px;
@@ -226,19 +225,19 @@ body {
       & ul {
         display: flex;
         flex-wrap:wrap;
-        padding: 10px;
+        justify-content: space-around;
+        padding: 1rem;
         margin: 0 auto;
         list-style: none;
         & li {
           flex: 1;
           & svg {
-            filter: drop-shadow(4px 4px 2px #999);
+            filter: drop-shadow(2px 2px 1px #999);
           }
         }
       }
     }
   }
-
 
   // 1200px
   @media all and (max-width: 1200px) {
@@ -287,14 +286,7 @@ body {
       }
     }
   }
-  // Max width(1725px)
-  @media all and (min-width: 1725px) {
-    body {
-      max-width: 1725px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
+
   // 600px
   @media all and (max-width: 600px) {
     padding: 2rem;
@@ -330,5 +322,25 @@ body {
         }
       }
     }
+  }
+}
+// Max width
+@media all and (min-width: 1500px) {
+  .wrapper {
+    border-right: 1px solid #999;
+    border-left: 1px solid #999;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body {
+    max-width: 1725px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media all and (min-width: 1725px) {
+  body {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
