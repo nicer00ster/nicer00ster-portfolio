@@ -33,11 +33,25 @@ class Index extends React.Component {
                   </div>
                 </div>
                 <Seperator />
-                <div className="home__wrapper--second">
-                  <div className="home__wrapper--second-item">
-
+                <Seperator />
+                <div className="home__wrapper--section">
+                  <div className="home__wrapper--section-memorable">
+                    <div className="home__wrapper--section-memorable-header">
+                      <h1>Memorable Moments</h1>
+                    </div>
+                    <div className="home__wrapper--section-memorable-content">
+                      <a target="_blank" href="https://30under30.zagat.com/2015/philadelphia#4" className="home__wrapper--section-memorable-content_zagat">
+                        <img src="../../static/images/photos/zagat.png" alt="Picture of culinary award"/>
+                      </a>
+                      <a target="_blank" href="https://www.youtube.com/watch?v=NBhGc065XIs" className="home__wrapper--section-memorable-content_ferrari">
+                        <img src="../../static/images/photos/ferarri.jpg" alt="I won a ferarri, actually"/>
+                      </a>
+                      <a className="home__wrapper--section-memorable-content_other">
+                        <img src="http://www.sheltieplanet.com/img/sheltie-puppy-smile.jpg" alt="Something else here"/>
+                      </a>
+                    </div>
                   </div>
-                  <div className="home__wrapper--second-item2">
+                  <div className="home__wrapper--section-item2">
 
                   </div>
                 </div>

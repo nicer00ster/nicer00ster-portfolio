@@ -59,6 +59,9 @@
     transition: all 0.225s;
     &.active {
       & > span {
+        display: block;
+        border-bottom: 1.25px solid rgba(#f7797d, .75);
+        padding-bottom: 5px;
         font-weight: 800;
         text-shadow:
           0.2rem -0.2rem 0.15rem rgba(#c6ffdd, 0.75),

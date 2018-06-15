@@ -12,6 +12,7 @@ import Smartphone from 'svg-react-loader?name=Smartphone!../static/images/svg/na
 import House from 'svg-react-loader?name=House!../static/images/svg/nav/house.svg';
 import Telephone from 'svg-react-loader?name=Telephone!../static/images/svg/nav/telephone.svg';
 
+
 Router.onRouteChangeStart = (url) => {
   console.log(`Loading ${url}`)
   NProgress.start();
@@ -20,6 +21,8 @@ Router.onRouteChangeStart = (url) => {
 Router.onRouteChangeComplete = () => NProgress.done();
 
 Router.onRouteChangeError = () => NProgress.done();
+
+
 
 const Navbar = ({ isOpen, toggleMenu }) => {
   return (

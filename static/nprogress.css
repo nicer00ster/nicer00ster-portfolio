@@ -3,8 +3,8 @@
 }
 
 #nprogress .bar {
-  background: linear-gradient(to right, #c6ffdd, #f7797d, #fbd786);
-  background: -webkit-linear-gradient(to right, #c6ffdd, #f7797d, #fbd786);
+  background: teal;
+  background: teal;
   position: fixed;
   z-index: 1031;
   top: 0;
