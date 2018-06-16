@@ -3,8 +3,8 @@
 }
 
 #nprogress .bar {
-  background: teal;
-  background: teal;
+  background: #74b9ff;
+  /*background: linear-gradient(to right, #f7797d, #c6ffdd);*/
   position: fixed;
   z-index: 1031;
   top: 0;
