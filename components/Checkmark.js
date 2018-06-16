@@ -14,14 +14,19 @@ const Checkmark = () => (
           74.1,108.4 48.2,86.4 "/>
           <circle className="spin" fill="none" stroke="palegreen" strokeWidth="4" strokeMiterlimit="10" strokeDasharray="12.2175,12.2175" cx="80.6" cy="80.6" r="73.9"/>
         </svg>
-        <p className="message">Message Sent!</p>
+        <p className="success">Message Sent!</p>
       </div>
     }
     { window.location.hash === '#error' &&
     <div className="checkmark">
-      <p>nope</p>
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+        <circle class="path circle" fill="none" stroke="#D06079" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+        <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3"/>
+        <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2"/>
+      </svg>
+      <p class="error">Something Went Wrong!</p>
     </div>
-  }  
+  }
   </div>
 )
 

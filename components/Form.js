@@ -34,7 +34,7 @@ class Form extends React.Component {
       })
       .then(response => {
         console.log(response);
-        response.status === 200 || !response ? this.setState({ status: 'success' }) : this.setState({ status: 'error' })
+        response.status === 200 ? this.setState({ status: 'success' }) : this.setState({ status: 'error' })
       })
       .then(() => {
         this.handleForm();

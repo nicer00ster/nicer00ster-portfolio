@@ -23,8 +23,19 @@
   -webkit-transform-origin: 50% 50%;
 }
 
-.message {
+.success {
   color: palegreen;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px auto;
+  text-align: center;
+  animation: text .5s linear .4s;
+  -webkit-animation: text .4s linear .3s;
+}
+
+.error {
+  color: #D06079;
   text-transform: uppercase;
   font-size: 30px;
   font-weight: bold;
