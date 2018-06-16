@@ -27,8 +27,6 @@ export const reducer = (state = initialState, action) => {
       return { ...state.terminal, terminal: !state.terminal }
     case actionTypes.FILLED:
       return { ...state.filled, filled: !state.filled }
-    case actionTypes.SUBMIT_FORM:
-      return { ...state.submitted, submitted: !state.submitted }
     default:
       return state;
   }
@@ -55,23 +53,6 @@ export function filledSection() {
   return { type: 'FILLED' }
 }
 
-export function submitForm(name, email, selected, message) {
-  fetch('/api/contact', {
-    method: 'post',
-    headers: {
-      'Accept': 'application/json, text/plain, /*/',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      name,
-      email,
-      selected,
-      message
-    })
-  }).then((res) => {
-    res.status === 200 ? this.setState({ submitted: true }) : '';
-  })
-  return { type: 'SUBMIT_FORM' }
-}
+
 
 export const nextConnect = nextConnectRedux(initStore);

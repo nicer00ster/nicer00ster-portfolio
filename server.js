@@ -17,21 +17,36 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-// const sendMail = text => {
-//   return new Promise((resolve, reject) => {
-//     transporter.sendMail(text, (error, info) => {
-//       if (error) {
-//         reject(error);
-//         return;
-//       }
-//       resolve(info);
-//     });
-//   });
-// }
 
+
+const transporter = nodemailer.createTransport(smtpTransport({
+  service: 'gmail',
+  auth: {
+    user: info.EMAIL,
+    pass: info.PASS
+  }
+}));
+
+const send = ({ email, name, selected, message }) => {
+  const from = name && email ? `${name} <${email}>` : `${name || email}`
+  const mailOptions = {
+    from,
+    to: info.EMAIL,
+    subject: `New message from ${from} about ${selected}`,
+    text: message,
+    replyTo: from
+  };
+
+  return new Promise((resolve, reject) => {
+    transporter.sendMail(mailOptions, (error, info) =>
+      error ? reject(error) : resolve(info)
+    )
+  })
+}
 
 app.prepare().then(() => {
   const server = express();
+
   server
     .use(bodyParser.json())
     .get('/service-worker.js', (req, res) => {
@@ -44,29 +59,34 @@ app.prepare().then(() => {
       console.log(req.url)
       return handle(req, res);
     })
-    .post('/api/contact', (req, res) => {
-      const { name, email, selected, message } = req.body;
-      const transporter = nodemailer.createTransport(smtpTransport({
-        service: 'gmail',
-        auth: {
-          user: info.EMAIL,
-          pass: info.PASS
-        }
-      }));
-      const mailOptions = {
-        from: email,
-        to: info.EMAIL,
-        subject: `${name} -- ${selected}`,
-        text: message,
-        replyTo: email
-      }
-      transporter.sendMail(mailOptions, (err, res) => {
-        if(err) {
-          console.error('Error: ', err);
-        } else {
-          console.log('Message sent successfully: ', res);
-        }
-      });
+    .post('/connect', (req, res) => {
+        const { name, email, selected, message } = req.body;
+        send({ email, name, selected, message }).then(() => {
+          console.log(`Sent the message "${message}" from <${name}> ${email}.`);
+          // res.status(200);
+        }).catch((err) => {
+          console.log(`Failed to send the message "${message}" from <${name}> ${email} with the error ${err && err.message}`);
+          // res.status(404);
+        })
+      // const transporter = nodemailer.createTransport(smtpTransport({
+      //   service: 'gmail',
+      //   auth: {
+      //     user: info.EMAIL,
+      //     pass: info.PASS
+      //   }
+      // }));
+      // const mailOptions = {
+      //   from: email,
+      //   to: info.EMAIL,
+      //   subject: `${name} -- ${selected}`,
+      //   text: message,
+      //   replyTo: email
+      // }
+      // transporter.sendMail(mailOptions, (err, res) => {
+      //   if(!res.accepted) {
+      //
+      //   }
+      // });
     })
     .listen(port, err => console.log(err || `> Ready on http://localhost:${port}`))
 });

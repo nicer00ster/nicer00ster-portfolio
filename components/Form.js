@@ -1,20 +1,48 @@
 import { connect } from 'react-redux';
-import { filledSection, submitForm } from './store';
+import { filledSection } from './store';
 import Modal from 'react-responsive-modal';
 import Checkmark from './Checkmark';
 import Plane from 'svg-react-loader?name=Plane!../static/images/svg/send.svg';
+import Router from 'next/router';
 import 'isomorphic-fetch';
+
+
+
 
 class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      // data: {},
+      // error: null,
       name: '',
       email: '',
       selected: '',
       message: '',
+      status: '',
       open: false
     }
+  }
+ submitForm(name, email, selected, message) {
+    fetch('/connect', {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json, text/plain, /*/',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        selected,
+        message
+      })
+    })
+    .then(function(data) {
+      console.log(data);
+    })
+    .catch(function(err) {
+      console.log(err);
+    })
   }
   handleName(event) {
     this.setState({ name: event.target.value })
@@ -29,16 +57,19 @@ class Form extends React.Component {
     this.setState({ message: event.target.value })
   }
   handleForm() {
+    const { status } = this.state;
     return new Promise(resolve => {
       setTimeout(resolve, 1000);
     }).then(() => {
       this.setState({ name: '', email: '', message: '', selected: '' })
+      Router.push(`/connect#${status}`)
       this.onOpenModal();
     }).then(() => {
       return new Promise(resolve => {
         setTimeout(resolve, 2250);
       }).then(() => {
         this.onCloseModal();
+        Router.push('/connect')
       })
     })
   }
@@ -54,10 +85,10 @@ class Form extends React.Component {
       <form
           className="form__container"
           method="POST"
-          action="/api/contact"
+          action="/connect"
           onSubmit={e => {
             e.preventDefault()
-            this.props.submitForm(name, email, selected, message)
+            this.submitForm(name, email, selected, message)
             this.handleForm();
           }}>
         <label htmlFor="name"></label>
@@ -116,4 +147,4 @@ export default connect(function(state) {
     filled: state.filled,
     submitted: state.submitted
    }
-}, { filledSection, submitForm })(Form);
+}, { filledSection })(Form);

@@ -4,8 +4,23 @@ import Wrapper from '../components/Wrapper';
 import Seperator from '../components/Seperator';
 import Form from '../components/Form';
 import { nextConnect } from '../components/store';
+import Router from 'next/router';
+
 
 class Connect extends React.Component {
+  // static async getInitialProps ({ res, query }) {
+  //   const statusCode = !query.eventId ? 404 : 200;
+  //   if(statusCode !== 200) {
+  //     res.statusCode = statusCode;
+  //   }
+  //   return { statusCode };
+  // }
+  // validateEmail() {
+  //   const { url } = this.props
+  //   const currentHash = url.query.hash ? url.query.hash : 'error'
+  //   const href = `/connect#${currentHash}`
+  //   Router.push(href, href, { shallow: true })
+  // }
   render() {
     return (
       <div>
@@ -18,10 +33,11 @@ class Connect extends React.Component {
                   <div className="connect__wrapper--form-header">
                     <h2 className="connect__wrapper--form-header_text">Get In Touch!</h2>
                   </div>
-                  <Form url={this.props.url} />
+                  <Form />
                 </div>
                 <div className="connect__wrapper--self">
-                  <picture>
+                  <picture //onClick={() => this.validateEmail()}
+                    >
                     <source
                       media="(min-width: 850px)"
                       srcSet={`../static/images/photos/WinstonS9.png`}
