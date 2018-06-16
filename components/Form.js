@@ -6,15 +6,10 @@ import Plane from 'svg-react-loader?name=Plane!../static/images/svg/send.svg';
 import Router from 'next/router';
 import 'isomorphic-fetch';
 
-
-
-
 class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // data: {},
-      // error: null,
       name: '',
       email: '',
       selected: '',
@@ -23,26 +18,31 @@ class Form extends React.Component {
       open: false
     }
   }
- submitForm(name, email, selected, message) {
-    fetch('/connect', {
-      method: 'post',
-      headers: {
-        'Accept': 'application/json, text/plain, /*/',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        selected,
-        message
+  submitForm(name, email, selected, message) {
+      fetch('/connect', {
+        method: 'post',
+        headers: {
+          'Accept': 'application/json, text/plain, /*/',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          selected,
+          message
+        })
       })
-    })
-    .then(function(data) {
-      console.log(data);
-    })
-    .catch(function(err) {
-      console.log(err);
-    })
+      .then(response => {
+        console.log(response);
+        response.status === 200 || !response ? this.setState({ status: 'success' }) : this.setState({ status: 'error' })
+      })
+      .then(() => {
+        this.handleForm();
+      })
+      .catch(err => {
+        console.error(err);
+        this.setState({ status: 'error' })
+      })
   }
   handleName(event) {
     this.setState({ name: event.target.value })
@@ -57,7 +57,7 @@ class Form extends React.Component {
     this.setState({ message: event.target.value })
   }
   handleForm() {
-    const { status } = this.state;
+    const { name, email, selected, message, open, status } = this.state;
     return new Promise(resolve => {
       setTimeout(resolve, 1000);
     }).then(() => {
@@ -66,7 +66,7 @@ class Form extends React.Component {
       this.onOpenModal();
     }).then(() => {
       return new Promise(resolve => {
-        setTimeout(resolve, 2250);
+        setTimeout(resolve, 2350);
       }).then(() => {
         this.onCloseModal();
         Router.push('/connect')
@@ -89,30 +89,29 @@ class Form extends React.Component {
           onSubmit={e => {
             e.preventDefault()
             this.submitForm(name, email, selected, message)
-            this.handleForm();
           }}>
         <label htmlFor="name"></label>
         <input
           onChange={event => this.handleName(event)}
-          className={ this.state.name.length >= 2 ? "form__container--name filled" : "form__container--name" }
+          className={ name.length >= 2 ? "form__container--name filled" : "form__container--name" }
           required
           name="name"
           id="name"
           placeholder="Name"
-          value={this.state.name}
+          value={name}
           type="text" />
         <label htmlFor="email"></label>
         <input
           onChange={event => this.handleEmail(event)}
-          className={ this.state.email.length >= 2 ? "form__container--email filled" : "form__container--email" }
+          className={ email.length >= 2 ? "form__container--email filled" : "form__container--email" }
           required
           name="email"
           id="email"
-          value={this.state.email}
+          value={email}
           placeholder="Email"
           type="text" />
         <label htmlFor="message"></label>
-        <select value={this.state.selected} onChange={event => this.handleSelected(event)} className={ this.state.selected ? "form__container--select filled" : "form__container--select" } placeholder="Subject" name="subject" id="subject_input" required>
+        <select value={selected} onChange={event => this.handleSelected(event)} className={ selected ? "form__container--select filled" : "form__container--select" } placeholder="Subject" name="subject" id="subject_input" required>
           <option value="SUBJECT" hidden>Subject</option>
           <option value="JOB">Job Opportunity</option>
           <option value="ADVICE">Advice</option>
@@ -121,10 +120,10 @@ class Form extends React.Component {
         <textarea
           onChange={event => this.handleMessage(event)}
           name="message"
-          className={ this.state.message.length >= 2 ? "form__container--message filled" : "form__container--message" }
+          className={ message.length >= 2 ? "form__container--message filled" : "form__container--message" }
           required
           name="message"
-          value={this.state.message}
+          value={message}
           id="message"
           cols="30"
           rows="10"

@@ -63,30 +63,13 @@ app.prepare().then(() => {
         const { name, email, selected, message } = req.body;
         send({ email, name, selected, message }).then(() => {
           console.log(`Sent the message "${message}" from <${name}> ${email}.`);
-          // res.status(200);
+          res.set({ juice: 'success' })
+          res.send('success');
         }).catch((err) => {
           console.log(`Failed to send the message "${message}" from <${name}> ${email} with the error ${err && err.message}`);
-          // res.status(404);
+          res.set({ juice: 'error' })
+          res.send('error');
         })
-      // const transporter = nodemailer.createTransport(smtpTransport({
-      //   service: 'gmail',
-      //   auth: {
-      //     user: info.EMAIL,
-      //     pass: info.PASS
-      //   }
-      // }));
-      // const mailOptions = {
-      //   from: email,
-      //   to: info.EMAIL,
-      //   subject: `${name} -- ${selected}`,
-      //   text: message,
-      //   replyTo: email
-      // }
-      // transporter.sendMail(mailOptions, (err, res) => {
-      //   if(!res.accepted) {
-      //
-      //   }
-      // });
     })
     .listen(port, err => console.log(err || `> Ready on http://localhost:${port}`))
 });
