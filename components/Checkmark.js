@@ -30,4 +30,4 @@ const Checkmark = () => (
   </div>
 )
 
-export default Checkmark
+export default Checkmark;

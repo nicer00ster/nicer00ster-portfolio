@@ -97,10 +97,11 @@
     &-memorable {
       display: flex;
       flex-direction: column;
-      flex: 2;
+      flex: 3;
+      max-height: 500px;
       padding: 1rem;
       border: 1px solid #999;
-      margin: 5px;
+      margin: 1rem;
       background: repeating-linear-gradient(135deg, rgba(251,251,251,0.75), rgba(251,251,251,0.75) 24px, #ececec 24px, rgba(251,251,251,0.9) 25px, rgba(251,251,251,0.95) 25px, rgba(251,251,251,0.95)100px, #ececec 100px, #ececec 101px);
       box-shadow: $boxshad;
       &-header {
@@ -162,7 +163,7 @@
     &-item2 {
       flex: 1;
       border: 1px solid #999;
-      margin: 5px;
+      margin: 1rem;
       box-shadow: $boxshad;
     }
   }
@@ -192,6 +193,11 @@
               // transform: scale(.8);
             }
           }
+        }
+      }
+      &--section {
+        &-item2 {
+          display: none;
         }
       }
     }

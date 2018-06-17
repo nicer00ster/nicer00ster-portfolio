@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import Wrapper from '../components/Wrapper';
 import Seperator from '../components/Seperator';
 import Terminal from '../components/Terminal';
+import Quote from '../components/Quote';
 import { nextConnect } from '../components/store';
 
 class Index extends React.Component {
@@ -52,7 +53,7 @@ class Index extends React.Component {
                     </div>
                   </div>
                   <div className="home__wrapper--section-item2">
-
+                    <Quote />
                   </div>
                 </div>
               </div>
