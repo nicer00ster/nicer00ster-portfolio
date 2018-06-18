@@ -4,7 +4,7 @@
 .navbar {
   display: flex;
   z-index: 999999;
-  background-image: repeating-linear-gradient(135deg, rgba(251,251,251,0.75), rgba(251,251,251,0.75) 24px, #ECECEC 24px, rgba(251,251,251,0.9) 25px, rgba(251,251,251,0.95) 25px, rgba(251,251,251,0.95)100px, #ececec 100px, #ececec 101px);
+  background-image: repeating-linear-gradient(135deg, rgba(251,251,251,0.75), rgba(251,251,251,0.75) 12px, #ECECEC 12px, rgba(251,251,251,0.9) 13px, rgba(251,251,251,0.95) 13px, rgba(251,251,251,0.95)70px, #ececec 70px, #ececec 71px);
   border-bottom: 1px solid #999;
   min-height: 56px;
   transition: min-height 0.3s;

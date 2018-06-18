@@ -12,7 +12,12 @@ class Work extends React.Component {
       <div>
         <Layout title="nicer00ster | Work" open={this.props.open} />
         <main>
-          <Wrapper page={'work'} />
+          <Wrapper
+            page={'work'}
+            heading={'Work'}
+            subHeading={'Projects and Contributions'}
+            content={'Recognized for back-end proficiency, and an accessible & responsive front-end. Giving \"user-friendly\" a new name. Ready to chat?'}
+           />
             <Seperator />
             <div className="work__wrapper">
               {/* <div className="work__wrapper--greeting">

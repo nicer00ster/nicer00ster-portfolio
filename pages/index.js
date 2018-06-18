@@ -13,7 +13,12 @@ class Index extends React.Component {
       <div>
         <Layout title="nicer00ster | Home" open={this.props.open} />
           <main>
-            <Wrapper page={'home'} />
+            <Wrapper
+              page={'home'}
+              heading={'Alex Busch'}
+              subHeading={'Front-end Web Developer'}
+              content={'Highly proficient in fully responsive design and a strong passion for scalable, clean and maintainable code.'}
+            />
             <Seperator />
               <div className="home__wrapper">
                 <div className="home__wrapper--latest">
@@ -53,7 +58,12 @@ class Index extends React.Component {
                     </div>
                   </div>
                   <div className="home__wrapper--section-item2">
-                    <Quote />
+                    <Quote
+                      url='https://www.franklincovey.com/the-7-habits.html'
+                      quote='The proactive approach to a mistake is to acknowledge it instantly, correct and learn from it.'
+                      author='Stephen Covey'
+                      relation='The 7 Habits of Highly Effective People'
+                    />
                   </div>
                 </div>
               </div>

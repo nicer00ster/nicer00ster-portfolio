@@ -12,7 +12,12 @@ class Connect extends React.Component {
       <div>
         <Layout title="nicer00ster | Connect" open={this.props.open} />
         <main>
-          <Wrapper page={'connect'} />
+          <Wrapper
+            page={'connect'}
+            heading={'Questions?'}
+            subHeading={'You\'ve came to the right place.'}
+            content={'Want to get in touch? Fill out the form below to drop me a line!'}
+           />
             <Seperator />
               <div className="connect__wrapper">
                 <div className="connect__wrapper--form">

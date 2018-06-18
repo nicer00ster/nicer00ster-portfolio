@@ -1,27 +1,22 @@
 import React from 'react';
 
-class Quote extends React.Component {
-  render() {
-    return (
+const Quote = ({ url, quote, author, relation }) => (
       <section class="main">
         <div class="mb-wrap mb-style-2">
-          <blockquote cite="http://www.gutenberg.org/ebboks/11">
-            <p>Measuring programming progress by lines of code is like measuring aircraft building progress by weight.</p>
+          <blockquote cite={url}>
+            <p>{quote}</p>
           </blockquote>
         </div>
 
         <div class="mb-attribution">
           <p class="mb-author">
-            Bill Gates
+            {author}
           </p>
           <cite>
-            <a href="https://www.gatesnotes.com/">Bill Gates of Microsoft</a>
+            <a href={url}>{relation}</a>
           </cite>
         </div>
-
       </section>
-    )
-  }
-}
+)
 
 export default Quote;

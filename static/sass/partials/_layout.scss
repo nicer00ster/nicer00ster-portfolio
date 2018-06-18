@@ -22,74 +22,22 @@ body {
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #999;
-  background-color: #fff;
+  background-color: #fefefe;
   background-image: $foodSVG;
   margin: 0 auto;
   max-width: 1500px;
   box-shadow: $boxshad;
-
   &__home {
-    &--header {
-      &-text {
-        & h1:before {
-          content: 'Alex Busch';
-        }
-        & h5:before {
-          content: 'Front-end Web Developer';
-        }
-      }
-    }
-    &--content {
-      & h2 {
-        &:before {
-          content: $homeContent;
-        }
-      }
-    }
-  }
 
+  }
   &__work {
-    max-height: 400px;
-    transform: translateY(10rem);
-    &--header {
-      &-text {
-        & h1:before {
-          content: 'Work';
-        }
-        & h5:before {
-          content: 'Projects and contributions';
-        }
-      }
-    }
-    &--content {
-      & h2 {
-        &:before {
-          content: $workContent;
-        }
-      }
-    }
+    // max-height: 525px;
+    // transform: translateY(4rem);
   }
 
   &__connect {
     max-height: 400px;
     transform: translateY(10rem);
-    &--header {
-      &-text {
-        & h1:before {
-          content: 'Questions?';
-        }
-        & h5:before {
-          content: 'You\'ve came to the right place';
-        }
-      }
-    }
-    &--content {
-      & h2 {
-        &:before {
-          content: $connectContent;
-        }
-      }
-    }
   }
 
   // Hero images for each page
@@ -126,7 +74,6 @@ body {
     margin: 6rem -2rem -4rem;
     max-width: 450px;
     min-width: 375px;
-    height: auto;
     z-index:1;
     &--header {
       height: 150px;
@@ -139,16 +86,16 @@ body {
     }
     &--content {
       flex: 1;
-      background: repeating-linear-gradient(45deg, #74b9ff, #74b9ff 2.5px, #fff 2.5px, #fff 60px);
+      background: repeating-linear-gradient(45deg, #62c6ef, #62c6ef 0%, #fff 2.5px, #fff 60px);
       & h2 {
-        margin: 2.5rem;
+        margin: 1.5rem;
+        margin-top: 3rem;
         text-align:center;
-        &:before {
-          font-family: 'Squada One', cursive;
-          color: #333;
-          font-size: 36px;
-          letter-spacing: 2px;
-        }
+        font-family: 'Squada One', cursive;
+        color: #555;
+        font-style: italic;
+        font-size: 42px;
+        letter-spacing: 1.5px;
       }
     }
     &--skill {
@@ -241,13 +188,15 @@ body {
   }
 
   // 1200px
-  @media all and (max-width: 1200px) {
+  @media all and (max-width: 1275px) {
     .wrapper {
       margin-left: 1rem;
       margin-right: 1rem;
     }
     &__home, &__work, &__connect {
-      max-width: 350px;
+      max-width: 500px;
+      max-height: 650px;
+      transform: translateY(2rem);
     }
   }
   // 850px

@@ -26,47 +26,34 @@
 
 
 .mb-style-2 blockquote {
-  padding-top: 150px;
+  padding-top: 11rem;
   &:after {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background: none repeat scroll 0 0 rgba(251, 215, 134, 0.8);
       border-radius: 50% 50% 50% 50%;
       color: rgba(255, 255, 255, 0.5);
       content: "❞";
-      font-family: 'icons';
-      font-size: 70px;
+      font-size: 90px;
+      left: 25%;
       height: 130px;
       width: 130px;
-      left: 50%;
-      line-height: 130px;
-      margin-left: -65px;
       position: absolute;
-      text-align: center;
-      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
       top: 0;
   }
   & p {
     background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
-    box-shadow: 0 -6px 0 rgba(250, 169, 172, 0.2);
-    color: #74b9ff;
-    display : inline;
-    font-family: Baskerville, Georgia, serif;
+    box-shadow: 0 -6px 0 rgba(251, 215, 134, 0.4);
+    color: #777;
+    display: inline;
+    font-family: Georgia, serif;
     font-style: italic;
     font-size: 28px;
     line-height: 46px;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
   }
-}
-
-.mb-style-2 blockquote:before {
-    border-left: 5px solid rgba(235, 150, 108, 0.1);
-    border-radius: 50% 50% 50% 50%;
-    content: "";
-    height: 500px;
-    left: -50px;
-    position: absolute;
-    top: 0;
-    width: 500px;
-    z-index: -1;
 }
 
 .mb-attribution {
@@ -75,13 +62,14 @@
 }
 
 .mb-author {
-  color: #74b9ff;
+  color: #777;
+  font-family: Georgia, serif;
   margin: 1rem;
   font-size: 18px;
-  font-weight: bold;
+  font-style: italic;
+  font-weight: 100;
   padding-top: 10px;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
-  text-transform: uppercase;
 }
 
 cite a {
