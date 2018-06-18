@@ -4,6 +4,7 @@ import Wrapper from '../components/Wrapper';
 import Card from '../components/Card';
 import Seperator from '../components/Seperator';
 import svg from '../static/scripts/svgimports';
+import Link from 'next/link';
 import { nextConnect } from '../components/store';
 
 class Work extends React.Component {
@@ -16,7 +17,8 @@ class Work extends React.Component {
             page={'work'}
             heading={'Work'}
             subHeading={'Projects and Contributions'}
-            content={'Recognized for back-end proficiency, and an accessible & responsive front-end. Giving \"user-friendly\" a new name. Ready to chat?'}
+            content={'Recognized for back-end proficiency, and an accessible, responsive design. Giving \"user-friendly\" a new name.'}
+            url={<Link prefetch href="/connect"><a className="wrapper__work--content_url">Let's talk.</a></Link>}
            />
             <Seperator />
             <div className="work__wrapper">

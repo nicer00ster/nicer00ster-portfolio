@@ -18,6 +18,7 @@ class Index extends React.Component {
               heading={'Alex Busch'}
               subHeading={'Front-end Web Developer'}
               content={'Highly proficient in fully responsive design and a strong passion for scalable, clean and maintainable code.'}
+              subContent={<p className="wrapper__work--content_sub">Breaking the barrier of comfort and fulfilling a vision.</p>}
             />
             <Seperator />
               <div className="home__wrapper">

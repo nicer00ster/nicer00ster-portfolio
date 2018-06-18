@@ -39,7 +39,7 @@ class Wrapper extends React.Component {
             </div>
           </div>
           <div className={`wrapper__${props.page}--content`}>
-            <h2>{this.props.content}</h2>
+            <h2>{this.props.content}<br/>{this.props.url}{this.props.subContent}</h2>
           </div>
         </div>
         <div className={`wrapper__${props.page}--skill`}>
