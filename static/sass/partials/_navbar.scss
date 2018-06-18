@@ -57,8 +57,15 @@
     font-weight: 600;
     padding: 1.2rem 2rem 1rem 2rem;
     transition: all 0.225s;
-    &.active {
 
+    &.active {
+      &:after {
+        content: "";
+        position: relative;
+        width: 65%;
+        height: 1.75px;
+        background: linear-gradient(to right, rgba(115, 200, 169, 0.2), #3a7bd5, rgba(115, 200, 169, 0.2));
+      }
       & > span {
         display: block;
         padding-bottom: 5px;
@@ -85,7 +92,6 @@
             2px 2px 0px #999,
             3px 3px 0px #fff;
       position: relative;
-      text-decoration: none;
     }
     &:before {
       content: "";
@@ -94,7 +100,7 @@
       height: 2px;
       bottom: 0;
       background: linear-gradient(to right, rgba(115, 200, 169, .2), #3a7bd5, rgba(115, 200, 169, .2));
-      margin-bottom: .75rem;
+      margin-bottom: 1rem;
       visibility: hidden;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);

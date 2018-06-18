@@ -87,27 +87,30 @@ body {
     &--content {
       flex: 1;
       background: repeating-linear-gradient(45deg, #62c6ef, #62c6ef 0%, #fff 2.5px, #fff 60px);
+      transition: all .25s;
       & h2 {
-        margin: 1.5rem;
-        margin-top: 3rem;
+        margin: 2rem;
+        margin-top: 2rem;
         text-align:center;
         font-family: 'Squada One', cursive;
         color: #555;
-        font-style: italic;
-        font-size: 42px;
-        letter-spacing: 1.5px;
+        font-size: 40px;
+        letter-spacing: 1px;
       }
       &_url {
         color: #fbd786;
         font-weight: 100;
         font-style:normal;
+        font-style: italic;
         transition: .35s;
         &:hover {
           color: #999;
         }
       }
       &_sub {
-        font-size: 36px;
+        font-size: 28px;
+        padding: 1rem;
+        margin: 1rem;
       }
     }
     &--skill {
@@ -207,8 +210,11 @@ body {
     }
     &__home, &__work, &__connect {
       max-width: 500px;
-      max-height: 650px;
-      transform: translateY(2rem);
+      &--content {
+        & h2 {
+          font-size: 34px;
+        }
+      }
     }
   }
   // 850px
@@ -258,9 +264,6 @@ body {
         min-width: 350px;
         &--header {
           &-text {
-            & h1 {
-              // padding: .5rem;
-            }
             & h5 {
               padding: 1rem;
               text-align: center;

@@ -29,7 +29,6 @@ class Wrapper extends React.Component {
             />
             <img src="" alt="nicer00ster"/>
           </picture>
-          {/* <img src={require(`../static/images/photos/${props.page}-img.png`)} alt="nicer00ster"/> */}
         </div>
         <div className={`wrapper__${props.page}`}>
           <div className={`wrapper__${props.page}--header`}>
@@ -39,7 +38,7 @@ class Wrapper extends React.Component {
             </div>
           </div>
           <div className={`wrapper__${props.page}--content`}>
-            <h2>{this.props.content}<br/>{this.props.url}{this.props.subContent}</h2>
+            <h2>{this.props.content}<br/>{this.props.subContent}<br/>{this.props.url}</h2>
           </div>
         </div>
         <div className={`wrapper__${props.page}--skill`}>
