@@ -9,10 +9,9 @@
   flex-direction: column;
   margin: 0 auto;
   margin-top: 1rem;
-  width: 300px;
+  width: 285px;
   height: 550px;
   box-shadow: $boxshad;
-  border: 1px solid #555;
   &:hover &__image img {
     -webkit-filter: contrast(100%);
     filter: constrast(100%);
@@ -42,10 +41,11 @@
   }
   &__content {
     display: flex;
-    background: repeating-linear-gradient(135deg, rgba(251,251,251,0.75), rgba(251,251,251,0.75) 24px, #ECECEC 24px, rgba(251,251,251,0.9) 25px, rgba(251,251,251,0.95) 25px, rgba(251,251,251,0.95)100px, #ececec 100px, #ececec 101px);
     flex-direction: column;
     flex: 1;
+    background: repeating-linear-gradient(135deg, rgba(251,251,251,0.75), rgba(251,251,251,0.75) 24px, #ECECEC 24px, rgba(251,251,251,0.9) 25px, rgba(251,251,251,0.95) 25px, rgba(251,251,251,0.95)100px, #ececec 100px, #ececec 101px);
     padding: 1rem;
+    border: 1px solid #555;
     font-family: inherit, cursive;
     &--title {
       color: #555;
@@ -56,6 +56,8 @@
       text-transform: uppercase;
       font-family: 'Squada One', cursive;
       line-height: 1;
+      transform: scale(1.2);
+      text-align: center;
       text-shadow:
         1px 1px 0px #FFF,
         2px 2px 0px #999,

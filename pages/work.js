@@ -30,7 +30,7 @@ class Work extends React.Component {
               </div> */}
               <div className="work__wrapper--cards">
                 <Card
-                  imageUrl = {'https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
+                  imageUrl = {'../static/images/photos/CardI2M.png'}
                   imageAlt = {'Flowers'}
                   title = {'My Old Blog'}
                   desc = {'Blog I built when I first began programming.'}
@@ -46,8 +46,8 @@ class Work extends React.Component {
                   buttonText = {'VIEW SOURCE CODE'}
                 />
                 <Card
-                  imageUrl = {'https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
-                  imageAlt = {'Flowers'}
+                  imageUrl = {'../static/images/photos/CardCoconuts.png'}
+                  imageAlt = {'Application to help manage finances.'}
                   title = {'Coconut Cash'}
                   desc = {'Internship project done for a company in Switzerland.'}
                   tags = {[svg.Javascript, svg.React, svg.Firebase]}
