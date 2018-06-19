@@ -1,15 +1,15 @@
 import React from 'react';
 
 const Quote = ({ url, quote, author, relation }) => (
-      <section class="main">
-        <div class="mb-wrap mb-style-2">
+      <section className="quote__wrapper">
+        <div className="quote__wrapper--section">
           <blockquote cite={url}>
             <p>{quote}</p>
           </blockquote>
         </div>
 
-        <div class="mb-attribution">
-          <p class="mb-author">
+        <div className="quote__wrapper--cite">
+          <p className="quote__wrapper--cite_author">
             {author}
           </p>
           <cite>

@@ -1,82 +1,73 @@
-.main {
+.quote__wrapper {
   position: relative;
   height: 100%;
   background: $footerSVG;
-}
-
-
-.mb-wrap {
-  margin: 0 auto;
-  padding: 20px;
-  position: relative;
-  width: 300px;
-  & p {
-    margin: 0;
-    padding: 0;
-  }
-  & blockquote {
+  &--section {
     margin: 0 auto;
-    padding: 0 auto;
+    padding: 20px;
     position: relative;
+    width: 300px;
+    & p {
+      margin: 0;
+      padding: 0;
+    }
+    & blockquote {
+      margin: 0 auto;
+      padding: 0 auto;
+      padding-top: 11rem;
+      position: relative;
+      &:after {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: none repeat scroll 0 0 rgba(251, 215, 134, 0.8);
+          border-radius: 50% 50% 50% 50%;
+          color: rgba(255, 255, 255, 0.5);
+          content: "❞";
+          font-size: 90px;
+          left: 25%;
+          height: 130px;
+          width: 130px;
+          position: absolute;
+          text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+          top: 0;
+      }
+      & p {
+        background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+        box-shadow: 0 -6px 0 rgba(251, 215, 134, 0.4);
+        color: #777;
+        display: inline;
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-size: 28px;
+        line-height: 46px;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+      }
+    }
+    & cite {
+      font-style: normal;
+    }
   }
-  & cite {
-    font-style: normal;
+  &--cite {
+    text-align: right;
+    margin: 1rem;
+    &_author {
+      color: #777;
+      font-family: Georgia, serif;
+      margin: 1rem;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 100;
+      padding-top: 10px;
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+    }
   }
-}
-
-
-.mb-style-2 blockquote {
-  padding-top: 11rem;
-  &:after {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: none repeat scroll 0 0 rgba(251, 215, 134, 0.8);
-      border-radius: 50% 50% 50% 50%;
-      color: rgba(255, 255, 255, 0.5);
-      content: "❞";
-      font-size: 90px;
-      left: 25%;
-      height: 130px;
-      width: 130px;
-      position: absolute;
-      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
-      top: 0;
-  }
-  & p {
-    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
-    box-shadow: 0 -6px 0 rgba(251, 215, 134, 0.4);
-    color: #777;
-    display: inline;
-    font-family: Georgia, serif;
+  & cite a {
+    color: #74b9ff;
+    margin: 2rem;
     font-style: italic;
-    font-size: 28px;
-    line-height: 46px;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
-  }
-}
-
-.mb-attribution {
-  text-align: right;
-  margin: 1rem;
-}
-
-.mb-author {
-  color: #777;
-  font-family: Georgia, serif;
-  margin: 1rem;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: 100;
-  padding-top: 10px;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
-}
-
-cite a {
-  color: #74b9ff;
-  margin: 2rem;
-  font-style: italic;
-  &:hover {
-    color: #D48158;
+    &:hover {
+      color: #D48158;
+    }
   }
 }

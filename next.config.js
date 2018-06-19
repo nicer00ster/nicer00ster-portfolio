@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const withSass = require('@zeit/next-sass');
 const withOffline = require('next-offline');
 const withManifest = require('next-manifest');

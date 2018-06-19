@@ -47,13 +47,13 @@ class Index extends React.Component {
                       <h1>Memorable Moments</h1>
                     </div>
                     <div className="home__wrapper--section-memorable-content">
-                      <a target="_blank" href="https://30under30.zagat.com/2015/philadelphia#4" className="home__wrapper--section-memorable-content_zagat">
+                      <a target="_blank" rel="noopener" href="https://30under30.zagat.com/2015/philadelphia#4" className="home__wrapper--section-memorable-content_zagat">
                         <img src="../../static/images/photos/zagat.png" alt="Picture of culinary award"/>
                       </a>
-                      <a target="_blank" href="https://www.youtube.com/watch?v=NBhGc065XIs" className="home__wrapper--section-memorable-content_ferrari">
+                      <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=NBhGc065XIs" className="home__wrapper--section-memorable-content_ferrari">
                         <img src="../../static/images/photos/ferarri.jpg" alt="I won a ferarri, actually"/>
                       </a>
-                      <a className="home__wrapper--section-memorable-content_other">
+                      <a target="_blank" rel="noopener" className="home__wrapper--section-memorable-content_other">
                         <img src="http://www.sheltieplanet.com/img/sheltie-puppy-smile.jpg" alt="Something else here"/>
                       </a>
                     </div>

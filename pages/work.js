@@ -17,7 +17,7 @@ class Work extends React.Component {
             page={'work'}
             heading={'Work'}
             subHeading={'Projects and Contributions'}
-            content={'Recognized for developing robust back-end structures, and producing accessible, responsive designs.'}
+            content={'Recognized for developing robust back-end structures and producing accessible, responsive designs.'}
             subContent={'Giving \"user-friendly\" a new name.'}
             url={<Link prefetch href="/connect"><a className="wrapper__work--content_url">Let's talk.</a></Link>}
            />
