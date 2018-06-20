@@ -146,6 +146,7 @@ textarea {
 .fly > span > svg {
   animation: fly 1.5s forwards;
 }
+
 @media all and (max-width: 600px) {
   .form__container {
     padding: 0 2rem;
@@ -162,6 +163,6 @@ textarea {
   }
   100% {
     transform: translateX(200px) translateY(-100px);
-    opacity: .1;
+    opacity: 0;
   }
 }

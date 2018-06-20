@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { connect } from 'react-redux';
 
-const Card = ({ imageUrl, imageAlt, title, desc, buttonText, tags }) => {
+const Card = ({ imageUrl, imageAlt, title, desc, buttonText, tags, href }) => {
   return (
     <div className="card">
       <div className="card__image">
@@ -17,11 +17,11 @@ const Card = ({ imageUrl, imageAlt, title, desc, buttonText, tags }) => {
         <div className="card__content--tags">
           {tags}
         </div>
-        <button className="card__content--button">
+        <a target="_blank" href={href} className="card__content--button">
           <p className="card__content--button-text">
             {buttonText}
           </p>
-        </button>
+        </a>
       </div>
     </div>
   )

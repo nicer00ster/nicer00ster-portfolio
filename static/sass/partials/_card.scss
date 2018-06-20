@@ -13,8 +13,8 @@
   height: 550px;
   box-shadow: $boxshad;
   &:hover &__image img {
-    -webkit-filter: contrast(100%);
-    filter: constrast(100%);
+    -webkit-filter: contrast(105%);
+    filter: constrast(105%);
   }
   &__image {
     height: 50%;
@@ -65,7 +65,7 @@
     }
     &--text {
       flex: 1;
-      // margin-top: 1em;
+      margin-top: 1em;
       font-size: 1rem;
       color: #3f3f3f;
     }
@@ -81,6 +81,8 @@
     &--button {
       flex: 1;
       width: 50%;
+      text-align: center;
+      text-decoration: none;
       background-color: rgba(255,255,255,.1);
       outline: none;
       border: none;

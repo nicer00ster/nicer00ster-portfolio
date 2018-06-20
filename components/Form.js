@@ -67,7 +67,7 @@ class Form extends React.Component {
       this.onOpenModal();
     }).then(() => {
       return new Promise(resolve => {
-        setTimeout(resolve, 2350);
+        setTimeout(resolve, 1750);
       }).then(() => {
         this.onCloseModal();
         Router.push('/connect')

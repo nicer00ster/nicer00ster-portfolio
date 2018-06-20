@@ -32,14 +32,16 @@ class Work extends React.Component {
                 <Card
                   imageUrl = {'https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
                   imageAlt = {'Flowers'}
+                  href={'https://alexanderbusch.com'}
                   title = {'My Old Blog'}
                   desc = {'Blog I built when I first began programming.'}
                   tags = {[svg.Javascript, svg.Python, svg.Django, svg.Bootstrap]}
-                  buttonText = {'REPO 👀'}
+                  buttonText = {'LINK 👀'}
                 />
                 <Card
                   imageUrl = {'../static/images/photos/CardI2M.png'}
                   imageAlt = {'Application to assist I2M clients.'}
+                  href={'https://github.com/nicer00ster/i2m-mobile-app'}
                   title = {'I2M Mobile App'}
                   desc = {'Mobile application built for the company I currently work for.'}
                   tags = {[svg.Javascript, svg.React, svg.Firebase, svg.Aws]}
@@ -48,6 +50,7 @@ class Work extends React.Component {
                 <Card
                   imageUrl = {'../static/images/photos/CardCoconuts.png'}
                   imageAlt = {'Application to help manage finances.'}
+                  href={'https://github.com/nicer00ster/icon-project-nicer00ster'}
                   title = {'Coconut Cash'}
                   desc = {'Internship project done for a company in Switzerland.'}
                   tags = {[svg.Javascript, svg.React, svg.Firebase]}
