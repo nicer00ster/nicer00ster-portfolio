@@ -98,8 +98,10 @@ textarea {
     align-items: center;
     position: relative;
     background: transparent;
-    width: 75%;
+    width: 50%;
     height: 60px;
+    border: none;
+    outline: none;
     border-bottom: 2px solid #555;
     font-size: 18px;
     font-family: 'Raleway', sans-serif;
@@ -117,60 +119,23 @@ textarea {
       width: auto;
       transition: all .15s;
     }
-    &:before{
-      content: '';
-      text-align: center;
-      display: block;
-      position: absolute;
-      background: rgba(255,255,255,0.5);
-      width: 60px;
-      height: 100%;
-      left: 0;
-      top: 0;
-      opacity: .5;
-      transition: .6s;
-      filter: blur(30px);
-      transform: translateX(-100px)  skewX(-15deg);
-    }
-    &:after{
-      content: '';
-      display: block;
-      position: absolute;
-      background: rgba(255,255,255,0.2);
-      width: 30px;
-      height: 100%;
-      left: 30px;
-      top: 0;
-      opacity: 0;
-      transition: .6s;
-      filter: blur(5px);
-      transform: translateX(-100px) skewX(-15deg);
-    }
     &:hover{
-      background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
       letter-spacing: 4px;
       cursor: pointer;
       & > span {
         font-size: 26px;
         letter-spacing: 4px;
         font-weight: bold;
+        text-shadow:1px 1px 0px #FFF,
+                    2px 2px 0px #999,
+                    3px 3px 0px #FFF;
         & > svg {
           transition: all .15s;
+          transform: rotate(45deg);
         }
-      }
-      &:before{
-        transform: translateX(300px)  skewX(-15deg);
-        opacity: 0.6;
-        transition: .7s;
-      }
-      &:after{
-        transform: translateX(300px) skewX(-15deg);
-        opacity: 1;
-        transition: .7s;
       }
     }
     &-submit {
-      // cursor: pointer;
       color: #f3f3f3;
       font-size: 24px;
       letter-spacing: 2px;
@@ -178,11 +143,25 @@ textarea {
   }
 }
 
+.fly > span > svg {
+  animation: fly 1.5s forwards;
+}
 @media all and (max-width: 600px) {
   .form__container {
     padding: 0 2rem;
     &--button {
       width: 100%;
     }
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0px);
+    opacity: .9;
+  }
+  100% {
+    transform: translateX(200px) translateY(-100px);
+    opacity: .1;
   }
 }

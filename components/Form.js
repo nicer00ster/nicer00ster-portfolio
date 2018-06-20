@@ -15,7 +15,8 @@ class Form extends React.Component {
       selected: '',
       message: '',
       status: '',
-      open: false
+      open: false,
+      fly: false
     }
   }
   submitForm(name, email, selected, message) {
@@ -70,6 +71,7 @@ class Form extends React.Component {
       }).then(() => {
         this.onCloseModal();
         Router.push('/connect')
+        this.setState({ fly: false })
       })
     })
   }
@@ -78,6 +80,9 @@ class Form extends React.Component {
   }
   onCloseModal() {
     this.setState({ open: false })
+  }
+  onSend() {
+    this.setState({ fly: !this.state.fly })
   }
   render() {
     const { name, email, selected, message, open } = this.state;
@@ -128,7 +133,7 @@ class Form extends React.Component {
           cols="30"
           rows="10"
           placeholder="What's up?" />
-        <button className="form__container--button">
+        <button onClick={() => this.onSend()} className={!this.state.fly ? "form__container--button" : "form__container--button fly"}>
           <span className="form__container--button-submit">
             <Plane />
           </span>

@@ -42,6 +42,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     flex: 1;
     background: repeating-linear-gradient(135deg, rgba(251,251,251,0.75), rgba(251,251,251,0.75) 24px, #ECECEC 24px, rgba(251,251,251,0.9) 25px, rgba(251,251,251,0.95) 25px, rgba(251,251,251,0.95)100px, #ececec 100px, #ececec 101px);
     padding: 1rem;
@@ -50,13 +51,11 @@
     &--title {
       color: #555;
       flex: 1;
-      font-size: 1.85rem;
+      font-size: 2rem;
       font-weight: 300;
       letter-spacing: 3px;
       text-transform: uppercase;
       font-family: 'Squada One', cursive;
-      line-height: 1;
-      transform: scale(1.2);
       text-align: center;
       text-shadow:
         1px 1px 0px #FFF,
@@ -66,6 +65,7 @@
     }
     &--text {
       flex: 1;
+      // margin-top: 1em;
       font-size: 1rem;
       color: #3f3f3f;
     }
@@ -80,13 +80,22 @@
     }
     &--button {
       flex: 1;
-      background-color: #fff;
-      border: 1px solid #555;
+      width: 50%;
+      background-color: rgba(255,255,255,.1);
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #999;
       color: #696969;
       text-transform: uppercase;
       transition: all 0.15s;
       cursor: pointer;
         &:hover {
+          color: #555;
+          font-weight: bold;
+          text-shadow:
+            1px 1px 0px #FFF,
+            2px 2px 0px #999,
+            3px 3px 0px #FFF;
           letter-spacing: 1.5px;
         }
     }
