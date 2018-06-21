@@ -35,7 +35,7 @@ class Form extends React.Component {
       })
       .then(response => {
         console.log(response);
-        response.status === 200 ? this.setState({ status: 'success' }) : this.setState({ status: 'error' })
+        response.status === 200 ? this.setState({ status: 'success', fly: true }) : this.setState({ status: 'error' })
       })
       .then(() => {
         this.handleForm();
@@ -133,7 +133,7 @@ class Form extends React.Component {
           cols="30"
           rows="10"
           placeholder="What's up?" />
-        <button onClick={() => this.onSend()} className={!this.state.fly ? "form__container--button" : "form__container--button fly"}>
+        <button className={!this.state.fly ? "form__container--button" : "form__container--button fly"}>
           <span className="form__container--button-submit">
             <Plane />
           </span>

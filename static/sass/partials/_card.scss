@@ -70,10 +70,10 @@
       color: #3f3f3f;
     }
     &--tags {
+      flex: 1;
       display: flex;
       justify-content: space-around;
       width: 100%;
-      height: auto;
       padding: 1rem;
       opacity: .90;
       transform: scale(.8);

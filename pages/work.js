@@ -56,20 +56,6 @@ class Work extends React.Component {
                   tags = {[svg.Javascript, svg.React, svg.Firebase]}
                   buttonText = {'REPO 👀'}
                 />
-                {/* <Card
-                  imageUrl
-                  imageAlt
-                  title
-                  desc
-                  buttonText
-                />
-                <Card
-                  imageUrl
-                  imageAlt
-                  title
-                  desc
-                  buttonText
-                /> */}
               </div>
             </div>
             <Seperator />
