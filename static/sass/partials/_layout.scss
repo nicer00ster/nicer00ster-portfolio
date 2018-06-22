@@ -16,6 +16,9 @@ body {
   height: 100px;
   width: 100%;
   background-color: transparent;
+  @media all and (max-width: 600px) {
+    height: 25px;
+  }
 }
 
 .wrapper {

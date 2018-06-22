@@ -25,7 +25,6 @@
     <li>
       <span className="hypertext__span">
         <span className="hypertext__cursor"> $ >></span>{' '}
-
         <Typing.Backspace count={10} delay={750} />
       </span>
     </li>
