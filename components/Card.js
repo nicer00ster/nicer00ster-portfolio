@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { connect } from 'react-redux';
 
-const Card = ({ imageUrl, imageAlt, title, desc, buttonText, tags, href }) => {
+const Card = ({ imageUrl, imageClass, imageAlt, title, desc, buttonText, tags, href }) => {
   return (
     <div className="card">
       <div className="card__image">
-        <img src={imageUrl} alt={imageAlt} />
+        <img className={imageClass} src={imageUrl} alt={imageAlt} />
       </div>
       <div className="card__content">
         <div className="card__content--title">

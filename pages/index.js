@@ -28,14 +28,14 @@ class Index extends React.Component {
                   </div>
                   <div className="home__wrapper--latest-content">
                     <div className="home__wrapper--latest-content_first">
-                      <img src="../../static/images/photos/S9Coconuts.png" alt="Money saving app built with React Native"/>
+                      <img src="../../static/images/photos/phone-coconuts.png" alt="Money saving app built with React Native"/>
                     </div>
                     <div className="home__wrapper--latest-content_second">
-                      <img src="../../static/images/photos/HyperTerminal.png" alt="Web app built with React"/>
+                      <img src="../../static/images/photos/hyper-terminal.png" alt="Web app built with React"/>
                       <Terminal />
                     </div>
                     <div className="home__wrapper--latest-content_third">
-                      <img src="../../static/images/photos/S9I2M.png" alt="Company I2M application built with React Native"/>
+                      <img src="../../static/images/photos/phone-i2m.png" alt="Company I2M application built with React Native"/>
                     </div>
                   </div>
                 </div>

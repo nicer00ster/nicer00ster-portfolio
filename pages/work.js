@@ -30,16 +30,17 @@ class Work extends React.Component {
               </div> */}
               <div className="work__wrapper--cards">
                 <Card
-                  imageUrl = {'https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
+                  imageUrl = {'../static/images/photos/old-blog.png'}
                   imageAlt = {'Flowers'}
+                  imageClass = {'work__wrapper--cards-oldblog'}
                   href={'https://alexanderbusch.com'}
                   title = {'My Old Blog'}
-                  desc = {'Blog I built when I first began programming.'}
+                  desc = {'Blog I built when I first began programming. Compare and contrast to what you\'re seeing now!'}
                   tags = {[svg.Javascript, svg.Python, svg.Django, svg.Bootstrap]}
                   buttonText = {'LINK 👀'}
                 />
                 <Card
-                  imageUrl = {'../static/images/photos/CardI2M.png'}
+                  imageUrl = {'../static/images/photos/card-i2m.png'}
                   imageAlt = {'Application to assist I2M clients.'}
                   href={'https://github.com/nicer00ster/i2m-mobile-app'}
                   title = {'I2M Mobile App'}
@@ -48,7 +49,7 @@ class Work extends React.Component {
                   buttonText = {'REPO 👀'}
                 />
                 <Card
-                  imageUrl = {'../static/images/photos/CardCoconuts.png'}
+                  imageUrl = {'../static/images/photos/card-coconutcash.png'}
                   imageAlt = {'Application to help manage finances.'}
                   href={'https://github.com/nicer00ster/icon-project-nicer00ster'}
                   title = {'Coconut Cash'}

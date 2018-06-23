@@ -55,7 +55,6 @@
       font-weight: 300;
       letter-spacing: 3px;
       text-transform: uppercase;
-      font-family: 'Squada One', cursive;
       text-align: center;
       text-shadow:
         1px 1px 0px #FFF,
@@ -68,6 +67,7 @@
       margin-top: 1em;
       font-size: 1rem;
       color: #3f3f3f;
+      font-family: 'Courier Prime Sans';
     }
     &--tags {
       flex: 1;
@@ -81,6 +81,8 @@
     &--button {
       flex: 1;
       width: 50%;
+      font-family: 'Courier Prime Sans';
+      line-height: 0;
       text-align: center;
       text-decoration: none;
       background-color: rgba(255,255,255,.1);
@@ -99,6 +101,7 @@
             2px 2px 0px #999,
             3px 3px 0px #FFF;
           letter-spacing: 1.5px;
+          box-shadow: 0 8px 0px -4px rgba(0,0,0,.15);
         }
     }
   }

@@ -9,6 +9,7 @@
     "@zeit/next-sass": "^0.1.2",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "fontfaceobserver": "^2.0.13",
     "next": "^6.0.3",
     "next-connect-redux": "^0.1.5",
     "next-manifest": "^1.5.0",

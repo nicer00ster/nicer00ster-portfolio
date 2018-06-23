@@ -5,7 +5,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1;
+    font-family: 'Courier Prime Sans';
+    flex: 1.5;
     background: $footerSVG;
     border: 1px solid #999;
     margin: 1rem;
@@ -26,7 +27,6 @@
         3px 3px 0px #FFF;
       &_text {
         letter-spacing: 4px;
-        font-family: 'Squada One', cursive;
         font-weight: 800;
         background: #fff;
         padding: 2px 10px;
@@ -54,15 +54,18 @@
     }
   }
   &--self {
-    flex: 1.5;
+    flex: 2;
     margin: 1rem;
     border: 1px solid #999;
   }
 }
-@media all and (max-width: 825px) {
+@media all and (max-width: 850px) {
   .connect__wrapper {
     &--form {
-
+      transform: scale(.9);
+    }
+    &--self {
+      display: none;
     }
   }
 }

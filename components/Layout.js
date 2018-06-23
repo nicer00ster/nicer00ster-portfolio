@@ -27,26 +27,32 @@ class Layout extends React.Component {
           <link rel="apple-touch-icon" href="/static/touch-icon.png" />
           <link rel="icon" sizes="192x192" href="/static/touch-icon.png" />
           <link rel="icon" href="/static/favicon.ico" />
-          <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
-          <style>{`
+          <style dangerouslySetInnerHTML={{__html: `
             @font-face {
               font-family: 'Courier Prime Sans';
               src: url('../static/fonts/Courier Prime Sans.ttf');
             }
-            body, span {
-              font-family: 'Courier Prime Sans';
+
+            @font-face {
+              font-family: 'Squada One';
+              src: url('../static/fonts/SquadaOne-Regular.ttf');
             }
-            button > span {
+
+            @font-face {
               font-family: 'Raleway';
+              src: url('../static/fonts/Raleway-Regular.ttf');
             }
+
+            body {
+              font-family: 'Squada One';
+            }
+
             @media all and (max-width: 600px) {
               main {
                 ${this.props.open ? 'filter: blur(7px);' : '' };
               }
             }
-            `}</style>
+            `}} />
           </NextHead>
           <Navbar />
           {props.children}
