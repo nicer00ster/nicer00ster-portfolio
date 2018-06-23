@@ -58,13 +58,13 @@
     font-weight: 600;
     padding: 1.2rem 2rem 1rem 2rem;
     transition: all 0.225s;
-
     &.active {
+      line-height: 32px;
       &:after {
         content: "";
         position: relative;
         width: 65%;
-        height: 1.75px;
+        height: 2px;
         background: linear-gradient(to right, rgba(115, 200, 169, 0.2), #3a7bd5, rgba(115, 200, 169, 0.2));
       }
       & > span {
