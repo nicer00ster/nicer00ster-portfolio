@@ -16,7 +16,7 @@ class Index extends React.Component {
             <Wrapper
               page={'home'}
               heading={'Alex Busch'}
-              subHeading={'Front-end Web Developer'}
+              subHeading={'Full Stack Web Developer'}
               content={'Highly proficient in fully responsive design and a strong passion for scalable, clean and maintainable code.'}
               subContent={<p className="wrapper__work--content_sub">Breaking the barrier of comfort and fulfilling a vision.</p>}
             />

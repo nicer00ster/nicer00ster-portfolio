@@ -23,22 +23,7 @@ class Work extends React.Component {
            />
             <Seperator />
             <div className="work__wrapper">
-              {/* <div className="work__wrapper--greeting">
-                <div className="work__wrapper--greeting-heading">
-                  HELLO WELCOME TO MY PROJECTS PAGE
-                </div>
-              </div> */}
               <div className="work__wrapper--cards">
-                <Card
-                  imageUrl = {'../static/images/photos/old-blog.png'}
-                  imageAlt = {'Flowers'}
-                  imageClass = {'work__wrapper--cards-oldblog'}
-                  href={'https://alexanderbusch.com'}
-                  title = {'My Old Blog'}
-                  desc = {'Blog I built when I first began programming. Compare and contrast to what you\'re seeing now!'}
-                  tags = {[svg.Javascript, svg.Python, svg.Django, svg.Bootstrap]}
-                  buttonText = {'LINK 👀'}
-                />
                 <Card
                   imageUrl = {'../static/images/photos/card-i2m.png'}
                   imageAlt = {'Application to assist I2M clients.'}
@@ -56,6 +41,25 @@ class Work extends React.Component {
                   desc = {'Internship project done for a company in Switzerland.'}
                   tags = {[svg.Javascript, svg.React, svg.Firebase]}
                   buttonText = {'REPO 👀'}
+                />
+                <Card
+                  imageUrl = {'../static/images/photos/card-coconutcash.png'}
+                  imageAlt = {'My beginners course on React'}
+                  href={'https://www.youtube.com/channel/UC7jI5rJsn7TmlCpb-RPwdvg?view_as=subscriber'}
+                  title = {'React Recipes!'}
+                  desc = {'My beginners course on React, using the Edamam API.'}
+                  tags = {[svg.Javascript, svg.React, svg.Firebase  ]}
+                  buttonText = {'YouTube 👀'}
+                />
+                <Card
+                  imageUrl = {'../static/images/photos/old-blog.png'}
+                  imageAlt = {'Flowers'}
+                  imageClass = {'work__wrapper--cards-oldblog'}
+                  href={'https://alexanderbusch.com'}
+                  title = {'My Old Blog'}
+                  desc = {'Blog I built when I first began programming. Compare and contrast to what you\'re seeing now!'}
+                  tags = {[svg.Javascript, svg.Python, svg.Django, svg.Bootstrap]}
+                  buttonText = {'LINK 👀'}
                 />
               </div>
             </div>

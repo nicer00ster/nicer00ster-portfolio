@@ -20,7 +20,6 @@
     "nprogress": "^0.2.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-particle-effect-button": "^1.0.0",
     "react-redux": "^5.0.7",
     "react-responsive-modal": "^3.0.3",
     "react-text-loop": "^1.1.0",
