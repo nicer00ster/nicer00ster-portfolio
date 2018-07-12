@@ -161,6 +161,8 @@
   }
   .navbar {
     width: 225px;
+    flex-direction: column;
+    margin: 0;
     position: fixed;
     box-sizing: border-box;
     -webkit-transform: translate(-325px, 0);
@@ -180,11 +182,13 @@
     }
     &__links {
       flex-direction: column;
-      align-items: center;
+      margin: 0;
       padding: .5rem;
     }
     &__navigation {
       flex-direction: column;
+      margin: 0;
+      padding: 0;
       width: 100%;
     }
     &__link {

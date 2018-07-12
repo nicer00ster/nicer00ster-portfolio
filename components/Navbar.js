@@ -34,32 +34,32 @@ const Navbar = ({ isOpen, toggleMenu }) => {
               </Link>
               <Menu />
             </li>
-            <div className="navbar__navigation">
-              <li className="navbar__item" onClick={ toggleMenu }>
-                <Link activeClassName="active" prefetch href="/">
-                  <a className="navbar__link">
-                    <House className="navbar__item--svg" width={100} height={50} />
-                    <span className="navbar__item--text">Home</span>
-                  </a>
-                </Link>
-              </li>
-              <li className="navbar__item" onClick={ toggleMenu }>
-                <Link activeClassName="active" prefetch href="/work">
-                  <a className="navbar__link">
-                    <Smartphone className="navbar__item--svg" width={100} height={50} />
-                    <span className="navbar__item--text">Work</span>
-                  </a>
-                </Link>
-              </li>
-              <li className="navbar__item" onClick={ toggleMenu }>
-                <Link activeClassName="active" prefetch href="/connect">
-                  <a className="navbar__link">
-                    <Telephone className="navbar__item--svg" width={100} height={50} />
-                    <span className="navbar__item--text">Connect</span>
-                  </a>
-                </Link>
-              </li>
-            </div>
+          </ul>
+          <ul className="navbar__navigation">
+            <li className="navbar__item" onClick={ toggleMenu }>
+              <Link activeClassName="active" prefetch href="/">
+                <a className="navbar__link">
+                  <House className="navbar__item--svg" width={100} height={50} />
+                  <span className="navbar__item--text">Home</span>
+                </a>
+              </Link>
+            </li>
+            <li className="navbar__item" onClick={ toggleMenu }>
+              <Link activeClassName="active" prefetch href="/work">
+                <a className="navbar__link">
+                  <Smartphone className="navbar__item--svg" width={100} height={50} />
+                  <span className="navbar__item--text">Work</span>
+                </a>
+              </Link>
+            </li>
+            <li className="navbar__item" onClick={ toggleMenu }>
+              <Link activeClassName="active" prefetch href="/connect">
+                <a className="navbar__link">
+                  <Telephone className="navbar__item--svg" width={100} height={50} />
+                  <span className="navbar__item--text">Connect</span>
+                </a>
+              </Link>
+            </li>
           </ul>
       </div>
       <Menu isOpen={isOpen} />

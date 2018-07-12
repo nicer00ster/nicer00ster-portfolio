@@ -30,7 +30,7 @@ class Connect extends React.Component {
                   <picture>
                     <source
                       media="(min-width: 850px)"
-                      srcSet="../static/images/photos/WinstonS9.png"
+                      srcSet="../static/images/photos/home-img.png"
                     />
                     <img src="" alt="nicer00ster"/>
                   </picture>
