@@ -11,9 +11,10 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const smtpTransport = require('nodemailer-smtp-transport');
 const info = require('./private');
-const port = parseInt(process.env.PORT, 10) || 3001
+const port = parseInt(process.env.PORT, 10) || 3333
 
 const dev = process.env.NODE_ENV !== 'production';
+// const app = next(); //set this before pushing live
 const app = next({ dev });
 const handle = app.getRequestHandler();
 

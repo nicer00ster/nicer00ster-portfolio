@@ -2,7 +2,6 @@ import nextConnectRedux from 'next-connect-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-
 const initialState = {
   open: false,
   terminal: false,
