@@ -7,6 +7,7 @@ const { createServer } = require('http');
 const { join } = require('path');
 const { parse } = require('url');
 
+const compression = require('compression');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const smtpTransport = require('nodemailer-smtp-transport');
@@ -50,6 +51,7 @@ app.prepare().then(() => {
 
   server
     .use(bodyParser.json())
+    .use(compression())
     .get('/service-worker.js', (req, res) => {
       const parsedUrl = parse(req.url, true);
       const { pathname } = parsedUrl;
