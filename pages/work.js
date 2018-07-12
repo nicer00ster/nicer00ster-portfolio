@@ -43,7 +43,7 @@ class Work extends React.Component {
                   buttonText = {'REPO 👀'}
                 />
                 <Card
-                  imageUrl = {'../static/images/photos/card-coconutcash.png'}
+                  imageUrl = {'../static/images/photos/card-reactrecipes.png'}
                   imageAlt = {'My beginners course on React'}
                   href={'https://www.youtube.com/channel/UC7jI5rJsn7TmlCpb-RPwdvg?view_as=subscriber'}
                   title = {'React Recipes!'}
@@ -52,7 +52,7 @@ class Work extends React.Component {
                   buttonText = {'YouTube 👀'}
                 />
                 <Card
-                  imageUrl = {'../static/images/photos/old-blog.png'}
+                  imageUrl = {'../static/images/photos/card-oldblog.png'}
                   imageAlt = {'Flowers'}
                   imageClass = {'work__wrapper--cards-oldblog'}
                   href={'https://alexanderbusch.com'}
