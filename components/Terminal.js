@@ -20,6 +20,13 @@ class Terminal extends React.Component {
     this.setState({ [segment]: true });
   }
   render() {
+    const {
+      firstSegment,
+      secondSegment,
+      thirdSegment,
+      fourthSegment,
+      fifthSegment,
+      sixthSegment } = this.state;
     return (
       <div className="hypertext">
         <Typing onFinishedTyping={() => this.nextText('firstSegment')} startDelay={1000} cursor={<Cursor />} className="hypertext__line" speed={45} >
@@ -34,7 +41,7 @@ class Terminal extends React.Component {
           </ul>
             <Typing.Delay ms={500} />
           </Typing>
-          {this.state.firstSegment && (
+          {firstSegment && (
             <Typing onFinishedTyping={() => this.nextText('secondSegment')} cursor={<Cursor />} className="hypertext__line" speed={20} >
             <Typing.Delay ms={500} />
             <ul>
@@ -48,7 +55,7 @@ class Terminal extends React.Component {
             <Typing.Delay ms={500} />
           </Typing>
           )}
-          {this.state.secondSegment && (
+          {secondSegment && (
             <Typing onFinishedTyping={() => this.nextText('thirdSegment')} cursor={<Cursor />} className="hypertext__line" speed={20} >
             <Typing.Delay ms={500} />
             <ul>
@@ -62,7 +69,7 @@ class Terminal extends React.Component {
             <Typing.Delay ms={500} />
           </Typing>
           )}
-          {this.state.thirdSegment && (
+          {thirdSegment && (
             <Typing onFinishedTyping={() => this.nextText('fourthSegment')} cursor={<Cursor />} className="hypertext__line" speed={20} >
             <Typing.Delay ms={500} />
             <ul>
@@ -76,7 +83,7 @@ class Terminal extends React.Component {
             <Typing.Delay ms={500} />
           </Typing>
           )}
-          {this.state.fourthSegment && (
+          {fourthSegment && (
             <Typing onFinishedTyping={() => this.nextText('fifthSegment')} cursor={<Cursor />} className="hypertext__line" speed={20} >
             <Typing.Delay ms={500} />
             <ul>
@@ -90,7 +97,7 @@ class Terminal extends React.Component {
             <Typing.Delay loop cursor={<Cursor />} ms={500} />
           </Typing>
           )}
-          {this.state.fifthSegment && (
+          {fifthSegment && (
             <Typing onFinishedTyping={() => this.nextText('sixthSegment')} cursor={<Cursor />} className="hypertext__line" speed={20} >
             <Typing.Delay ms={500} />
             <ul>
@@ -104,7 +111,7 @@ class Terminal extends React.Component {
             <Typing.Delay ms={500} />
           </Typing>
           )}
-          {this.state.sixthSegment && (
+          {sixthSegment && (
             <Typing cursor={<Cursor />} className="hypertext__line" speed={20}>
             <Typing.Delay ms={500} />
             <ul>

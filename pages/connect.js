@@ -13,10 +13,10 @@ class Connect extends React.Component {
         <Layout title="nicer00ster | Connect" open={this.props.open} />
         <main>
           <Wrapper
-            page={'connect'}
-            heading={'Questions?'}
-            subHeading={'You\'ve came to the right place.'}
-            content={'Want to get in touch? Fill out the form below to drop me a line!'}
+            page="connect"
+            heading="Questions?"
+            subHeading="You've came to the right place."
+            content="Want to get in touch? Fill out the form below to drop me a line!"
            />
             <Seperator />
               <div className="connect__wrapper">
@@ -30,7 +30,7 @@ class Connect extends React.Component {
                   <picture>
                     <source
                       media="(min-width: 850px)"
-                      srcSet={`../static/images/photos/WinstonS9.png`}
+                      srcSet="../static/images/photos/WinstonS9.png"
                     />
                     <img src="" alt="nicer00ster"/>
                   </picture>

@@ -14,10 +14,10 @@ class Index extends React.Component {
         <Layout title="nicer00ster | Home" open={this.props.open} />
           <main>
             <Wrapper
-              page={'home'}
-              heading={'Alex Busch'}
-              subHeading={'Full Stack Web Developer'}
-              content={'Highly proficient in fully responsive design and a strong passion for scalable, clean and maintainable code.'}
+              page="home"
+              heading="Alex Busch"
+              subHeading="Full Stack Web Developer"
+              content="Highly proficient in fully responsive design and a strong passion for scalable, clean and maintainable code."
               subContent={<p className="wrapper__work--content_sub">Breaking the barrier of comfort and fulfilling a vision.</p>}
             />
             <Seperator />

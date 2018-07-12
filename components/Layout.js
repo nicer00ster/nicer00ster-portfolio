@@ -6,18 +6,15 @@ import '../static/sass/styles.scss';
 const defaultDesc = 'nicer00ster\'s portfolio';
 
 class Layout extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
-    const props = this.props;
+    const { title, description, open, children } = this.props;
     return (
       <div>
         <NextHead>
           <meta charSet="UTF-8" />
-          <title>{props.title}</title>
+          <title>{title}</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <meta name="description" content={props.description || defaultDesc} />
+          <meta name="description" content={description || defaultDesc} />
           <meta name="theme-color" content="#ffc18e" />
           <meta name="apple-mobile-web-app-title" content="nicer00ster" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -49,13 +46,13 @@ class Layout extends React.Component {
 
             @media all and (max-width: 600px) {
               main {
-                ${this.props.open ? 'filter: blur(7px);' : '' };
+                ${open ? 'filter: blur(7px);' : '' };
               }
             }
             `}} />
           </NextHead>
           <Navbar />
-          {props.children}
+          {children}
       </div>
     )
   }

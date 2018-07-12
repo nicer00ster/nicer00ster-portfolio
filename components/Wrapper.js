@@ -3,14 +3,14 @@ import TextLoop from 'react-text-loop';
 import { connect } from 'react-redux';
 
 class Wrapper extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showText: false
-    }
-  }
   render() {
-    const props = this.props;
+    const {
+      heading,
+      subHeading,
+      content,
+      subContent,
+      url,
+      page } = this.props;
     const wordArray = [
       'Passion',
       'Inspiration',
@@ -19,88 +19,61 @@ class Wrapper extends React.Component {
       'Motive',
       'Drive'
     ];
+    const svgImages = [
+      svg.Javascript,
+      svg.Node,
+      svg.Html,
+      svg.React,
+      svg.Redux,
+      svg.Python,
+      svg.MongoDB,
+      svg.Django,
+      svg.Es6,
+      svg.Firebase,
+      svg.Bootstrap,
+      svg.Sketch,
+      svg.Aws,
+      svg.Webpack,
+      svg.Babel,
+      svg.Github,
+      svg.NextJS,
+      svg.Sass
+    ];
     return (
         <div className="wrapper">
-        <div className={`wrapper__image--${props.page}`}>
+        <div className={`wrapper__image--${page}`}>
           <picture>
             <source
               media="(min-width: 850px)"
-              srcSet={`../static/images/photos/${props.page}-img.png`}
+              srcSet={`../static/images/photos/${page}-img.png`}
             />
             <img src="" alt="nicer00ster"/>
           </picture>
         </div>
-        <div className={`wrapper__${props.page}`}>
-          <div className={`wrapper__${props.page}--header`}>
-            <div className={`wrapper__${props.page}--header-text`}>
-              <h1>{this.props.heading}</h1>
-              <h5>{this.props.subHeading}</h5>
+        <div className={`wrapper__${page}`}>
+          <div className={`wrapper__${page}--header`}>
+            <div className={`wrapper__${page}--header-text`}>
+              <h1>{heading}</h1>
+              <h5>{subHeading}</h5>
             </div>
           </div>
-          <div className={`wrapper__${props.page}--content`}>
-            <h2>{this.props.content}<br/>{this.props.subContent}<br/>{this.props.url}</h2>
+          <div className={`wrapper__${page}--content`}>
+            <h2>{content}<br/>{subContent}<br/>{url}</h2>
           </div>
         </div>
-        <div className={`wrapper__${props.page}--skill`}>
-          <div className={`wrapper__${props.page}--skill-heading`}>
+        <div className={`wrapper__${page}--skill`}>
+          <div className={`wrapper__${page}--skill-heading`}>
             <h2>This is my</h2>
             <TextLoop children={wordArray} springConfig={{ stiffness: 180, damping: 8 }} />
           </div>
           <ul>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.Javascript}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.Node}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.Html}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.React}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.Redux}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.Python}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.MongoDB}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.Django}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.Es6}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.Firebase}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.Bootstrap}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.Sketch}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.Aws}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.Webpack}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.Babel}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.Github}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.NextJS}
-            </li>
-            <li className={`wrapper__${props.page}--skill-item`}>
-              {svg.Sass}
-            </li>
+            { svgImages.map((image, key) => {
+                return (
+                  <li key={key} className={`wrapper__${page}--skill-item`}>
+                    {image}
+                  </li>
+                )
+              })}
           </ul>
         </div>
       </div>
