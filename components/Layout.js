@@ -48,8 +48,7 @@ class Layout extends React.Component {
               main {
                 ${open ? 'filter: blur(7px);' : '' };
               }
-            }
-            `}} />
+            }`}} />
           </NextHead>
           <Navbar />
           {children}
