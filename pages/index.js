@@ -28,14 +28,14 @@ class Index extends React.Component {
                   </div>
                   <div className="home__wrapper--latest-content">
                     <div className="home__wrapper--latest-content_first">
-                      <img src="../../static/images/photos/phone-coconuts.png" alt="Money saving app built with React Native"/>
+                      <img src="http://ddnvci6v3n3lw.cloudfront.net/alex/phone-coconuts.png" alt="Money saving app built with React Native"/>
                     </div>
                     <div className="home__wrapper--latest-content_second">
-                      <img src="../../static/images/photos/hyper-terminal.png" alt="Web app built with React"/>
+                      <img src="http://ddnvci6v3n3lw.cloudfront.net/alex/hyper-terminal.png" alt="Web app built with React"/>
                       <Terminal />
                     </div>
                     <div className="home__wrapper--latest-content_third">
-                      <img src="../../static/images/photos/phone-i2m.png" alt="Company I2M application built with React Native"/>
+                      <img src="http://ddnvci6v3n3lw.cloudfront.net/alex/phone-i2m.png" alt="Company I2M application built with React Native"/>
                     </div>
                   </div>
                 </div>
@@ -48,10 +48,10 @@ class Index extends React.Component {
                     </div>
                     <div className="home__wrapper--section-memorable-content">
                       <a target="_blank" rel="noopener" href="https://30under30.zagat.com/2015/philadelphia#4" className="home__wrapper--section-memorable-content_zagat">
-                        <img src="../../static/images/photos/zagat.png" alt="Picture of culinary award"/>
+                        <img src="http://ddnvci6v3n3lw.cloudfront.net/alex/zagat.png" alt="Picture of culinary award"/>
                       </a>
                       <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=NBhGc065XIs" className="home__wrapper--section-memorable-content_ferrari">
-                        <img src="../../static/images/photos/ferarri.jpg" alt="I won a ferarri, actually"/>
+                        <img src="http://ddnvci6v3n3lw.cloudfront.net/alex/ferarri.jpg" alt="I won a ferarri, actually"/>
                       </a>
                       <a target="_blank" rel="noopener" className="home__wrapper--section-memorable-content_other">
                         <img src="http://www.sheltieplanet.com/img/sheltie-puppy-smile.jpg" alt="Something else here"/>

@@ -25,7 +25,7 @@ class Work extends React.Component {
             <div className="work__wrapper">
               <div className="work__wrapper--cards">
                 <Card
-                  imageUrl="../static/images/photos/card-i2m.png"
+                  imageUrl="http://ddnvci6v3n3lw.cloudfront.net/alex/card-i2m.png"
                   imageAlt="Application to assist I2M clients."
                   href="https://github.com/nicer00ster/i2m-mobile-app"
                   title="I2M Mobile App"
@@ -34,7 +34,7 @@ class Work extends React.Component {
                   buttonText="REPO 👀"
                 />
                 <Card
-                  imageUrl="../static/images/photos/card-coconutcash.png"
+                  imageUrl="http://ddnvci6v3n3lw.cloudfront.net/alex/card-coconutcash.png"
                   imageAlt="Application to help manage finances."
                   href="https://github.com/nicer00ster/icon-project-nicer00ster"
                   title="Coconut Cash"
@@ -43,7 +43,7 @@ class Work extends React.Component {
                   buttonText="REPO 👀"
                 />
                 <Card
-                  imageUrl="../static/images/photos/card-reactrecipes.png"
+                  imageUrl="http://ddnvci6v3n3lw.cloudfront.net/alex/card-reactrecipes.png"
                   imageAlt="My beginners course on React"
                   href="https://www.youtube.com/channel/UC7jI5rJsn7TmlCpb-RPwdvg?view_as=subscriber"
                   title="React Recipes!"
@@ -52,7 +52,7 @@ class Work extends React.Component {
                   buttonText="YouTube 👀"
                 />
                 <Card
-                  imageUrl="../static/images/photos/card-oldblog.png"
+                  imageUrl="http://ddnvci6v3n3lw.cloudfront.net/alex/card-oldblog.png"
                   imageAlt="Flowers"
                   imageClass="work__wrapper--cards-oldblog"
                   href="https://alexanderbusch.com"

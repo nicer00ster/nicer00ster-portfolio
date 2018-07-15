@@ -27,13 +27,7 @@ class Connect extends React.Component {
                   <Form />
                 </div>
                 <div className="connect__wrapper--self">
-                  <picture>
-                    <source
-                      media="(min-width: 850px)"
-                      srcSet="../static/images/photos/home-img.png"
-                    />
-                    <img src="" alt="nicer00ster"/>
-                  </picture>
+                  <img src="http://ddnvci6v3n3lw.cloudfront.net/alex/home-img.png" alt="nicer00ster"/>
                 </div>
               </div>
               <Seperator />

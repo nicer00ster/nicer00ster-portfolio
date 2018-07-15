@@ -42,7 +42,7 @@ class Wrapper extends React.Component {
     return (
         <div className="wrapper">
         <div className={`wrapper__image--${page}`}>
-            <img src={`../static/images/photos/${page}-img.png`} alt="nicer00ster"/>
+            <img src={`http://ddnvci6v3n3lw.cloudfront.net/alex/${page}-img.png`} alt="nicer00ster"/>
         </div>
         <div className={`wrapper__${page}`}>
           <div className={`wrapper__${page}--header`}>
