@@ -27,20 +27,24 @@ class Layout extends React.Component {
           <style dangerouslySetInnerHTML={{__html: `
             @font-face {
               font-family: 'Courier Prime Sans';
+              font-display: auto;
               src: url('../static/fonts/Courier Prime Sans.ttf');
             }
 
             @font-face {
               font-family: 'Squada One';
+              font-display: auto;
               src: url('../static/fonts/SquadaOne-Regular.ttf');
             }
 
             @font-face {
               font-family: 'Raleway';
+              font-display: auto;
               src: url('../static/fonts/Raleway-Regular.ttf');
             }
 
             body {
+              font-display: auto;
               font-family: 'Squada One';
             }
 
