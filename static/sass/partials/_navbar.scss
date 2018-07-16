@@ -39,8 +39,11 @@
     display: flex;
     flex: 1;
     .logo {
-      filter: drop-shadow(3px 3px 1.5px #3f3f3f);
       margin: 1em;
+      transition: all .25s;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
   &__navigation {

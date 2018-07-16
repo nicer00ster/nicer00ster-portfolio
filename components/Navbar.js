@@ -6,7 +6,7 @@ import Menu from './Menu';
 import { toggleMenu } from './store';
 import { connect } from 'react-redux';
 
-import Chicken from 'svg-react-loader?name=Chicken!../static/images/svg/nav/chicken.svg';
+import Nicer00ster from 'svg-react-loader?name=Nicer00ster!../static/images/svg/nav/nicer00ster.svg';
 import Smartphone from 'svg-react-loader?name=Smartphone!../static/images/svg/nav/smartphone.svg';
 import House from 'svg-react-loader?name=House!../static/images/svg/nav/house.svg';
 import Telephone from 'svg-react-loader?name=Telephone!../static/images/svg/nav/telephone.svg';
@@ -30,7 +30,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
           <ul className="navbar__links">
             <li className="navbar__item">
               <Link prefetch href="/">
-                <Chicken className="logo" width={200} height={100}/>
+                <Nicer00ster className="logo" width={200} height={100}/>
               </Link>
               <Menu />
             </li>
