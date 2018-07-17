@@ -1,4 +1,5 @@
 import Layout from '../components/Layout';
+import LazyLoad from 'react-lazyload';
 import Footer from '../components/Footer';
 import Wrapper from '../components/Wrapper';
 import Seperator from '../components/Seperator';
@@ -27,7 +28,9 @@ class Connect extends React.Component {
                   <Form />
                 </div>
                 <div className="connect__wrapper--self">
-                  <img src="http://ddnvci6v3n3lw.cloudfront.net/alex/home-img.png" alt="nicer00ster"/>
+                  <LazyLoad height={200}>
+                    <img src="http://ddnvci6v3n3lw.cloudfront.net/alex/home-img.png" alt="nicer00ster"/>
+                  </LazyLoad>
                 </div>
               </div>
               <Seperator />

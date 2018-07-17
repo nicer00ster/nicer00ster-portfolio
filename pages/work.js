@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import Wrapper from '../components/Wrapper';
 import Card from '../components/Card';
 import Seperator from '../components/Seperator';
+import LazyLoad from 'react-lazyload';
 import svg from '../static/scripts/svgimports';
 import Link from 'next/link';
 import { nextConnect } from '../components/store';
@@ -24,6 +25,7 @@ class Work extends React.Component {
             <Seperator />
             <div className="work__wrapper">
               <div className="work__wrapper--cards">
+                <LazyLoad height={200}>
                 <Card
                   imageUrl="http://ddnvci6v3n3lw.cloudfront.net/alex/card-i2m.png"
                   imageAlt="Application to assist I2M clients."
@@ -61,6 +63,7 @@ class Work extends React.Component {
                   tags={[svg.Javascript, svg.Python, svg.Django, svg.Bootstrap]}
                   buttonText="LINK 👀"
                 />
+              </LazyLoad>
               </div>
             </div>
             <Seperator />

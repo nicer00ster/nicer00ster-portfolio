@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import LazyLoad from 'react-lazyload';
 import Footer from '../components/Footer';
 import Layout from '../components/Layout';
 import Wrapper from '../components/Wrapper';
@@ -27,6 +28,7 @@ class Index extends React.Component {
                     <h1>Recent work</h1>
                   </div>
                   <div className="home__wrapper--latest-content">
+                    <LazyLoad height={200}>
                     <div className="home__wrapper--latest-content_first">
                       <img src="http://ddnvci6v3n3lw.cloudfront.net/alex/phone-coconuts.png" alt="Money saving app built with React Native"/>
                     </div>
@@ -37,6 +39,7 @@ class Index extends React.Component {
                     <div className="home__wrapper--latest-content_third">
                       <img src="http://ddnvci6v3n3lw.cloudfront.net/alex/phone-i2m.png" alt="Company I2M application built with React Native"/>
                     </div>
+                    </LazyLoad>
                   </div>
                 </div>
                 <Seperator />
@@ -47,6 +50,7 @@ class Index extends React.Component {
                       <h1>Memorable Moments</h1>
                     </div>
                     <div className="home__wrapper--section-memorable-content">
+                      <LazyLoad height={200}>
                       <a target="_blank" rel="noopener" href="https://30under30.zagat.com/2015/philadelphia#4" className="home__wrapper--section-memorable-content_zagat">
                         <img src="http://ddnvci6v3n3lw.cloudfront.net/alex/zagat.png" alt="Picture of culinary award"/>
                       </a>
@@ -56,6 +60,7 @@ class Index extends React.Component {
                       <a target="_blank" rel="noopener" className="home__wrapper--section-memorable-content_other">
                         <img src="http://www.sheltieplanet.com/img/sheltie-puppy-smile.jpg" alt="Something else here"/>
                       </a>
+                      </LazyLoad>
                     </div>
                   </div>
                   <div className="home__wrapper--section-item2">

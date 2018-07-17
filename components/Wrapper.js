@@ -1,5 +1,6 @@
 import svg from '../static/scripts/svgimports';
 import TextLoop from 'react-text-loop';
+import LazyLoad from 'react-lazyload';
 import { connect } from 'react-redux';
 
 class Wrapper extends React.Component {
@@ -41,6 +42,7 @@ class Wrapper extends React.Component {
     ];
     return (
         <div className="wrapper">
+        <LazyLoad height={400}>
         <div className={`wrapper__image--${page}`}>
             <img src={`http://ddnvci6v3n3lw.cloudfront.net/alex/${page}-img.png`} alt="nicer00ster"/>
         </div>
@@ -70,6 +72,7 @@ class Wrapper extends React.Component {
               })}
           </ul>
         </div>
+      </LazyLoad>
       </div>
     )
   }
