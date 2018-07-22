@@ -28,9 +28,9 @@ class Connect extends React.Component {
                   <Form />
                 </div>
                 <div className="connect__wrapper--self">
-                  <LazyLoad height={200}>
-                    <img src="http://ddnvci6v3n3lw.cloudfront.net/alex/home-img.png" alt="nicer00ster"/>
-                  </LazyLoad>
+                  {/* <LazyLoad height={200}>
+                    <img src="../static/images/photos/portland_beach.jpg" alt="nicer00ster"/>
+                  </LazyLoad> */}
                 </div>
               </div>
               <Seperator />
